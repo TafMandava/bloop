@@ -1,0 +1,101 @@
+version: '2'
+services: 
+  zookeeper: 
+    image: confluentinc/cp-zookeeper:7.2.1
+    container_name: zookeeper
+    networks:
+      - bloop_kafka_network
+    environment: 
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports: 
+      - 22181:2181  
+
+  kafka-broker-1: 
+    image: confluentinc/cp-kafka:7.2.1
+    container_name: kafka-broker-1
+    networks:
+      - bloop_kafka_network
+    depends_on: 
+      - zookeeper
+    ports: 
+      - 19092:19092
+      - 9997:9997
+    environment:
+      # Set a unique ID
+      KAFKA_BROKER_ID: 1
+      # Set the Zookeer URL which is necessary to reach Zookeeper for meta data in our organisation 
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: EXTERNAL_SAME_HOST://:19092,EXTERNAL_DIFFERENT_HOST://:9997,INTERNAL://kafka-broker-1:9092
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-broker-1:9092,EXTERNAL_SAME_HOST://localhost:19092,EXTERNAL_DIFFERENT_HOST://157.245.80.232:9997
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL_SAME_HOST:PLAINTEXT,EXTERNAL_DIFFERENT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  kafka-broker-2: 
+    image: confluentinc/cp-kafka:7.2.1
+    container_name: kafka-broker-2
+    networks:
+      - bloop_kafka_network
+    depends_on: 
+      - zookeeper
+    ports: 
+      - 29092:29092
+      - 9998:9998
+    environment:
+      # Set a unique ID
+      KAFKA_BROKER_ID: 2
+      # Set the Zookeer URL which is necessary to reach Zookeeper for meta data in our organisation 
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: EXTERNAL_SAME_HOST://:29092,EXTERNAL_DIFFERENT_HOST://:9998,INTERNAL://kafka-broker-2:9092
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-broker-2:9092,EXTERNAL_SAME_HOST://localhost:29092,EXTERNAL_DIFFERENT_HOST://157.245.80.232:9998
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL_SAME_HOST:PLAINTEXT,EXTERNAL_DIFFERENT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  kafka-broker-3: 
+    image: confluentinc/cp-kafka:7.2.1
+    container_name: kafka-broker-3
+    networks:
+      - bloop_kafka_network
+    depends_on: 
+      - zookeeper
+    ports: 
+      - 39092:39092
+      - 9999:9999
+    environment:
+      # Set a unique ID
+      KAFKA_BROKER_ID: 3
+      # Set the Zookeer URL which is necessary to reach Zookeeper for meta data in our organisation 
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: EXTERNAL_SAME_HOST://:39092,EXTERNAL_DIFFERENT_HOST://:9999,INTERNAL://kafka-broker-3:9092
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-broker-3:9092,EXTERNAL_SAME_HOST://localhost:39092,EXTERNAL_DIFFERENT_HOST://157.245.80.232:9999
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL_SAME_HOST:PLAINTEXT,EXTERNAL_DIFFERENT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1      
+
+  # The schema registry is needed because we are going to be communicating with the Schema and the Avro file. For those purposes we need the schema registry
+  schema-registry:
+    image: confluentinc/cp-schema-registry:7.2.1
+    container_name: schema-registry    
+    networks:
+      - bloop_kafka_network
+    depends_on:
+      - zookeeper
+      - kafka-broker-1
+      - kafka-broker-2
+      - kafka-broker-3
+    ports:
+      - 8081:8081
+    restart: always
+    environment:
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka-broker-1:9092,kafka-broker-2:9092,kafka-broker-3:9092
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
+
+networks:
+  bloop_kafka_network:
+    name: flash_bloop_network
+
+
+    

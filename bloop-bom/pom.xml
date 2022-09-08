@@ -104,6 +104,12 @@
 				<version>${mapstruct.version}</version>
 			</dependency>
 
+			<dependency>
+	            <groupId>com.microservices.flash</groupId>
+	            <artifactId>bloop-common-data</artifactId>
+		    	<version>${project.version}</version>
+		    </dependency>	
+
             <!-- https://mvnrepository.com/artifact/org.apache.avro/avro -->
 			<!-- Creating the Avro schemas .avsc files -->
             <dependency>

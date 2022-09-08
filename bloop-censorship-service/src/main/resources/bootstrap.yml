@@ -1,0 +1,32 @@
+# Add bootstrap.yml file to setup spring-cloud-properties
+# Use bootstrap.yml because fetching of the config server properties should be before loading the application 
+
+spring:
+  application: 
+    name: bloop-censorship-service
+
+  profiles:
+    active: bloop_censorship_service
+
+  config:
+    import: configserver:http://localhost:8888
+
+  cloud:
+    config:
+      # We used the prefix "config-client" in the configuration of config server repository
+      # That means we want to get config data from that configuration file for bloop-censorship-service
+      name: bloop-censorship-service, config-client
+      uri: http://localhost:8888
+      username: Bloop
+      password: '{cipher}9e4b9811dd5678f92c1671ce4c85ae3b478552e87f44e8de709bf12174488b64'
+         
+  # The security dependency sets up Spring Boot security with a random password on startup. To prevent this, specify the username and password
+  ## This will set autoconfiguration of basic security for our spring boot config serrver
+  ## This will secure the endpoints for us and we will have to use HTTPS Basic Authentication with this
+  security:
+      user:
+        name: Bloop
+        password: '{cipher}5c2f1d7234da64ac7b03959c9dcea5801544dff389d02c8d64be3b9e0a5eb188'
+
+encrypt:
+  key: ${ENCRYPTION_KEY}

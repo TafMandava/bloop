@@ -1,0 +1,42 @@
+# Required in case of loading configuration in bootstrap phase which has priority over application.yml
+## This file is loaded by a Parent Spring application context
+## It will be loaded before application.yml file
+### bootstrap.yml requires the dependency spring-cloud-starter-bootstrap
+spring:
+  application:
+    name: bloop-config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          # Set where we are going to be getting information from 
+          ## https://javatodev.com/microservices-centralized-configurations-with-spring-cloud-config/
+          ## For high availability and repository caching. Use ssh with shared file system or http with remote git repository
+          uri: https://github.com/TafMandava/bloop-config.git
+          # Take the applicatiin name and search for paths with that application. 
+          ## Tell Spring Cloud Config to look in the folder of the application name for configuration for that application
+          search-paths: '{application}'
+          # Branch that configurations server should check for configurations
+          default-label: main
+          ## if you are using a private repository set authentication. No need for authentication if the repository is a public repo
+          username: TafMandava
+          password: '{cipher}06c69712cf1e91c21eaa6f5f2c86f6addf6ec556d6275d36c20e57b91a6516918f5bdfd318204b5db3d94ce60443adcfe3c1afae8f328da256cc7411482128d2'
+          # Clone on start. 
+          ## Tell the server that when we startup we want to clnne it 
+          ## Spring Cloud Config is going to clone to a temporary directory 
+          ## Running this can cause the startup time to take a little bit longer, but the down side is that if we do not do that, the initial request is going to take a little bit longer. We will either do it on startup or initial request
+          clone-on-start: true
+      # If twimbo-config-server cannot reach the twimbo-config repository and load to configuration it will stop immediately
+      fail-fast: true
+
+  # The security dependency sets up Spring Boot security with a random password on startup. To prevent this, specify the username and password
+  ## This will set autoconfiguration of basic security for our spring boot config serrver
+  ## This will secure the endpoints for us and we will have to use HTTPS Basic Authentication with this
+  security:
+      user:
+        name: Bloop
+        password: '{cipher}a67e98495ec9e352a92da2b431cb2527d5dae7d889df2a31bc7c4ed196823432'
+
+encrypt:
+  key: ${ENCRYPTION_KEY} 

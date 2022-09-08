@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+    
+    <!-- Write to console -->
+    <!-- Set a pattern only to the message -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n
+            </pattern>    
+        </layout>
+    </appender>
+
+    <!-- Write to a file -->
+    <!-- Specify a filename for logging and a pattern for the log message -->
+    <!-- Define a structure of the log message such as showing the class name, thread ID, time and the log level in the message  -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${DEV_HOME}/${APP_NAME}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>    
+        </encoder>
+
+        <!-- We have a rolling policy to create a new file and to compress and keep the old one after a file reaches a certain size -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>
+                ${DEV_HOME}/archived/${APP_NAME}-log.%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Match the appenders to any package e.g below we set appenders to all microservices that start with com.microservices.flash package -->
+    <!-- That means that all of our application classes will be logged by using tools to appenders  -->
+    <!-- Different log levels trace, debug, info, warn, error --> 
+    <!-- In production we wouldn't want to  print out logs because of the high cost -->
+    <logger name="com.microservices.flash" level="INFO" additivity="false">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    
+    <!-- Here the root logger will set the log level as a root which can be overwritten using a specific logger as we did here -->
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</included>

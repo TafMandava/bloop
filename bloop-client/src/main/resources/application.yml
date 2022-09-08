@@ -1,0 +1,126 @@
+
+server:
+  port: 8280
+    
+spring:
+  application:
+    name: bloop-client
+
+  kafka:
+    bootstrap-servers: localhost:19092,localhost:29092,localhost:39092
+    properties:   
+      bootstrap:
+        servers: localhost:19092,localhost:29092,localhost:39092
+
+      schema:
+        registry:
+          url: http://localhost:8081
+
+      # Best practice for higher availability in Apache Kafka clients prior to 3.0
+      session:
+        timeout:
+          ms: 45000
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.LongSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      properties:
+        schema:
+          registry:
+            url: http://localhost:8081
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: bloop
+    password: '{cipher}19f1459df8b53ba851021b89f5bbfd435d76fa3f79f7882437a79fe328d6a21c'
+
+    dbcp2:
+      test-while-idle: true
+      validation-query: select 1    
+    
+    # Recommended settings
+    hikari:
+      data-source-properties:
+        cachePrepStmts: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        rewriteBatchedStatements: true
+        useLocalSessionState: true
+        useServerPrepStmts: true
+      # The number of connections that Hikari is going to do to MySQL
+      maximum-pool-size: 5
+
+  # Only to initialize data when it is an embedded database. Therefore, this will only work when it's on H2. When not using the bootstrap BeerLoader
+  # ith Spring Boot 2.5.1 and above, the new SQL initialization properties support detection of embedded datasources for JDBC and R2DBC. By default, SQL database initialization is only performed when using an embedded in-memory database. To always initialize a SQL database, irrespective of its type, set spring.sql.init.mode to always. Similarly, to disable initialization, set spring.sql.init.mode to never
+  # https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5-Release-Notes/99c8a8903c9a0a94e2ca29e520d09aee7ec6bac4
+  sql:
+    init:
+      mode: never
+
+  security:
+    oauth2:
+      client:
+        registration:
+          # google registration id
+          google:
+            client-id: '{cipher}b6edfd9684a964aa5929047e715bb9eb4c3bdfc98fc830b33af56a10a9907efb0508a2ba97fd6c99e5515380e630af4490c43713637da98e647afa6c5ebf8bef7177629e1ef7b072b34df8899e20c7970989701a25c93f7ab9aa7c336311b469'
+            client-secret: '{cipher}7aacedae8cc95de69236d056f76da487ac8a229bc21e60c37fd034dbb829964fd2bfd9ca1ca06a37ddc291612dc68b3e1b198e8ef49101de616a42f0851592bb'
+            scope:
+            - email
+            - profile
+
+          # facebook registration id
+          facebook:
+            client-id: '{cipher}c56b42b47254002df1a6dcddcb01d8de80e5981f15f4401dd9b27b9089c6953f'
+            client-secret: '{cipher}4b8d97802c93956a76c424b4485ee6d03dffcc278d673579f8b9483669409d044b76ac20827a96bbf044d08685b6fc75af6e0b4486b7b6cc463ad7e49dea3fb9'   
+            scope:
+            - email
+            - public_profile            
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        '[format_sql]': false
+    show-sql: true
+
+    ## Bootstrap
+    # Among the changes introduced in 2.5.0, it seems now the data.sql script is executed before Hibernate is initialized
+    # Since we are relying on the ORM mechanism (i.e. Hibernate) to create the schema from the entity definition, the database table does not exist at the moment the initialization SQL script is executed.    
+    defer-datasource-initialization: true
+
+# Setup the log level of a debug for everything in the package structure for "com.microservices"
+logging:
+  level:
+    com:
+      microservices: DEBUG
+      zaxxer:
+        hikari:
+          HikariConfig: DEBUG
+
+    # Enable logging for config troubleshooting
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+avro:
+  topic:
+    name: "avro.stream.word.censorship.topic.v1"               
+
+encrypt:
+  key: ${ENCRYPTION_KEY}
+
