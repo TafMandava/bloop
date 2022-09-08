@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.3</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.microservices.flash</groupId>
+	<artifactId>bloop-bom</artifactId>
+	<version>1.0.0</version>
+	<name>bloop-bom</name>
+
+	<!-- Implies that we will use this pom as a base configuration not for creating a runnable jar -->
+	<packaging>pom</packaging>
+
+	<description>Bloop Bill of Materials</description>
+
+	<!-- Overwrites organization and developer informaion in the effective pom -->
+	<organization>
+	    <name>Bloop</name>
+	</organization>
+
+	<developers>
+	    <developer>
+		    <name>Tafadzwa Mandava</name>
+			<organization>Bloop</organization>
+		</developer>
+	</developers>
+
+    <properties>
+        <java.version>11</java.version>
+        <spring-boot.version>2.7.3</spring-boot.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <lombok.version>1.18.24</lombok.version>
+        <!-- A property for mapstruct version so that we do not repeat it in multiple spots -->
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <avro.version>1.10.0</avro.version>
+        <spring-retry.version>1.3.0</spring-retry.version>
+        <kafka-avro-serializer.version>5.5.1</kafka-avro-serializer.version>
+        <netty-all.version>4.1.79.Final</netty-all.version>
+		<spring-cloud-dependencies.version>2021.0.3</spring-cloud-dependencies.version>
+		<spring-cloud.version>3.1.3</spring-cloud.version>
+    </properties>
+
+	<!-- The artifact kafka-avro-serializer is located at Confluent repository (https://packages.confluent.io/maven/) so we need to add a repository for the dependency because it is not on the maven repository -->
+	<!-- Specify the confluent URL to be able to download this dependency from the confluent repository -->
+	<!-- We can also set this repository in the maven settings file. We will leave it here for now  -->
+	<repositories>
+	    <repository>
+		    <id>confluent</id>
+			<url>https://packages.confluent.io/maven/</url>
+		</repository>
+	</repositories>
+
+	<!-- Inheriting version information -->
+	<!-- Dependency Management allow us to setup dependencies inherited from this pom downstream basically we are going to say l want this version of the dependency-->
+	<!-- When we declare them here there are not part of that project, there are not a transited (pass across or through) dependency of that project necessarily -->
+	<!-- We are not making a dependency of downstream projects -->
+	<!-- It is basically saying if you are going to be using this dependency you will inherit this version -->
+	<!-- It allows us to standardize a version. Lets say we have a dozon projects that are inheriting from this. Only 3 of them are using a specific version and now we can set them here and our version management inside the parent pom -->
+	<!-- The downstream projects do not declare a soecific version. They inherit a specific version from this. -->
+
+	<!-- Upstream projects that declare jaxb-api, jaxb-core, jaxb-impl or mapstruct dependencies will inherit the versions specified below in the parent pom -->
+	<!-- This allows us to centralize the specific versions of dependencies that will be inherited. Not every prooject is going to use MapStruct - These are overall dependencies-->
+	<!-- Dependency Management can also handle scope dependencies  -->
+	<dependencyManagement>
+	    <dependencies>
+	    	<dependency>
+	    		<groupId>org.springframework.boot</groupId>
+	    		<artifactId>spring-boot-starter</artifactId>
+				<version>${spring-boot.version}</version>
+	    	</dependency>
+    
+	    	<dependency>
+	    		<groupId>org.springframework.boot</groupId>
+	    		<artifactId>spring-boot-starter-test</artifactId>
+				<version>${spring-boot.version}</version>
+	    		<scope>test</scope>
+	    	</dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-webflux</artifactId>
+				<version>${spring-boot.version}</version>
+            </dependency>			
+
+		    <dependency>
+		    	<groupId>com.microservices.flash</groupId>
+		    	<artifactId>app-config-data</artifactId>
+		    	<version>${project.version}</version>
+		    </dependency>	
+
+		    <dependency>
+				<groupId>com.microservices.flash</groupId>
+				<artifactId>common-config</artifactId>
+				<version>${project.version}</version>
+		    </dependency>
+
+			<!-- Lombok updates classes with additional methods during compilation and the resulting byte codes that will be run by the JVM will include the methods generated by Lombok  -->
+		    <dependency>
+		    	<groupId>org.projectlombok</groupId>
+		    	<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+		    	<scope>provided</scope>
+		    </dependency>
+
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.avro/avro -->
+			<!-- Creating the Avro schemas .avsc files -->
+            <dependency>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro</artifactId>
+                <version>${avro.version}</version>
+            </dependency>
+
+		    <dependency>
+		    	<groupId>org.springframework.kafka</groupId>
+		    	<artifactId>spring-kafka</artifactId>
+				<version>${spring-boot.version}</version>
+		    </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.springframework.retry/spring-retry -->
+            <dependency>
+                <groupId>org.springframework.retry</groupId>
+                <artifactId>spring-retry</artifactId>
+                <version>${spring-retry.version}</version>
+            </dependency>
+
+			<!-- https://mvnrepository.com/artifact/io.confluent/kafka-avro-serializer/5.5.1 -->
+			<!-- https://mvnrepository.com/artifact/io.confluent/kafka-avro-serializer -->
+			<!-- Add exclusions to kafka-avro-serializer dependency for Slf4j, log4j and Swagger because we do not want to use these dependencies from the kafka-avro-serializer library -->
+			<dependency>
+				<groupId>io.confluent</groupId>
+				<artifactId>kafka-avro-serializer</artifactId>
+				<version>${kafka-avro-serializer.version}</version>
+				<exclusions>
+				    <exclusion>
+				        <groupId>org.slf4j</groupId>
+				        <artifactId>slf4j-log4j12</artifactId>					    
+					</exclusion>
+				    <exclusion>
+				        <groupId>log4j</groupId>
+				        <artifactId>log4j</artifactId>						
+					</exclusion>
+				    <exclusion>
+				        <groupId>io.swagger</groupId>
+				        <artifactId>swagger-annotations</artifactId>						
+					</exclusion>
+				    <exclusion>
+				        <groupId>io.swagger</groupId>
+				        <artifactId>swagger-core</artifactId>						
+					</exclusion>					
+				</exclusions>
+			</dependency>
+		    <dependency>
+		    	<groupId>io.confluent</groupId>
+		    	<artifactId>kafka-schema-registry-client</artifactId>
+		    	<version>${kafka-avro-serializer.version}</version>					
+		    </dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud-dependencies.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		    <dependency>
+		    	<groupId>org.springframework.cloud</groupId>
+		    	<artifactId>spring-cloud-config-server</artifactId>
+		    	<version>${spring-cloud.version}</version>
+		    </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bootstrap</artifactId>
+				<version>${spring-cloud.version}</version>
+            </dependency>
+
+		    <dependency>
+		    	<groupId>org.springframework.cloud</groupId>
+		    	<artifactId>spring-cloud-starter-config</artifactId>
+				<version>${spring-cloud.version}</version>
+		    </dependency>
+
+	    </dependencies>
+	</dependencyManagement>
+
+	<!-- common dependencies -->
+	<!-- If you setup standalone "dependencies" here. Everything that inherits from this will becomes a dependency of that project-->
+	<dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+		<dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>${netty-all.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+	    <!-- Add a maven compiler plugin. By default maven uses java 1.6 version for source and traget settings and since we need to use Java 11, we will use maven compiler plugin to set this property  -->
+		<!-- Do not add it in the pluginManagement section because we need to use it in sub modules without having to overwrite and one more thing is that starting with java 9 we need to use release property so we will replace the source and target with the release property. -->
+		<!-- If we use java 8 we will leave the source and target -->
+		<!-- https://maven.apache.org/plugins/maven-compiler-plugin -->
+		<!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-source-and-target.html -->
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<!-- add an annotation path -->
+                <configuration>
+                    <release>11</release>
+					<!-- because we are using mapstruct and lombok combined together we have to tell the maven compiler processor about the annotation processor paths that we are bringing in to the project. we are excusively telling  maven compiler processor to use these two annotation processors -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+							<version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok-mapstruct-binding</artifactId>
+							<version>0.2.0</version>
+						</path>							
+                    </annotationProcessorPaths>
+					<!-- for mapstruct we want to give it a parameter -->
+					<compilerArgs>
+						<!-- the default component model setting that equal to "spring" then it is going to tell mapStruct to go ahead and configure when it generates the classes it is going to tell MapStruct to annotate those classes with the Spring Component Annotation. so this is one of the overrides for MapStruct. telling mpstruct (that is an option for mapstruct) that is telling mapstruct the classes it generates should be annotated as spring framework components. tell mapstruct to generate the mapstruct generated classes with the spring dependency annotation   -->
+						<compilerArg>-Amapstruct.defaultComponentModel=spring</compilerArg>
+					</compilerArgs>						
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+	    <!-- Any service that wants to use this plugin will simply create a plugin section in the module itself without specifing the version -->
+		<!-- By creating any property or goals for this task specifically -->
+		<!-- The plugin can be used to create executable archive files such as jar file or war files that contain all the application dependencies and can be run with a single java command -->
+		<!-- We just need to add the dependency to the project. It is preconfigured to create a target runnable jar  -->
+		<!-- In addition this plugin helps to run Spring Boot Applications, generate build information and start our Spring boot application prior to running integration tests -->
+		<!-- The plugin also helps to create docker images with the build image call. We will use this property to create docker images for our microservices -->
+	    <pluginManagement>
+		    <plugins>
+		    	<plugin>
+		    		<groupId>org.springframework.boot</groupId>
+		    		<artifactId>spring-boot-maven-plugin</artifactId>
+		    		<version>${spring-boot.version}</version>
+		    	</plugin>
+		    </plugins>
+		</pluginManagement>
+	</build>
+
+</project>
