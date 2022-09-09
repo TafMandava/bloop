@@ -46,6 +46,17 @@
         <netty-all.version>4.1.79.Final</netty-all.version>
 		<spring-cloud-dependencies.version>2021.0.3</spring-cloud-dependencies.version>
 		<spring-cloud.version>3.1.3</spring-cloud.version>
+
+		<spring-boot-starter-thymeleaf.version>2.7.2</spring-boot-starter-thymeleaf.version>
+		<thymeleaf-extras-springsecurity5.version>3.0.4.RELEASE</thymeleaf-extras-springsecurity5.version>
+		<bootstrap.version>4.3.1</bootstrap.version>
+		<jquery.version>3.4.1</jquery.version>
+		<webjars-locator-core>0.50</webjars-locator-core>
+		<spring-boot-starter-data-jpa.version>2.7.2</spring-boot-starter-data-jpa.version>
+		<mysql-connector-java.version>8.0.29</mysql-connector-java.version>
+
+		<spring-boot-starter-mail.version>2.7.2</spring-boot-starter-mail.version>
+		<spring-boot-starter-oauth2-client.version>2.7.2</spring-boot-starter-oauth2-client.version>
     </properties>
 
 	<!-- The artifact kafka-avro-serializer is located at Confluent repository (https://packages.confluent.io/maven/) so we need to add a repository for the dependency because it is not on the maven repository -->
@@ -188,6 +199,63 @@
 		    	<artifactId>spring-cloud-starter-config</artifactId>
 				<version>${spring-cloud.version}</version>
 		    </dependency>
+
+
+    		<dependency>
+    			<groupId>org.springframework.boot</groupId>
+    			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+    			<version>${spring-boot-starter-thymeleaf.version}</version>	
+    		</dependency>
+    
+    		<dependency>
+    			<groupId>org.thymeleaf.extras</groupId>
+    			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+    			<version>${thymeleaf-extras-springsecurity5.version}</version>	
+    		</dependency>		
+    
+    		<dependency>
+    			<groupId>org.webjars</groupId>
+    			<artifactId>bootstrap</artifactId>
+    			<version>${bootstrap.version}</version>	
+    		</dependency>
+    
+    		<dependency>
+    			<groupId>org.webjars</groupId>
+    			<artifactId>jquery</artifactId>
+    			<version>${jquery.version}</version>	
+    		</dependency>
+    
+    		<!-- For discovery and reference of bootsrap and jquery files by the application. Use the default version provided by Spring Boot -->
+    		<dependency>
+    			<groupId>org.webjars</groupId>
+    			<artifactId>webjars-locator-core</artifactId>
+    			<version>${webjars-locator-core}</version>
+    		</dependency>
+    
+    		<dependency>
+    			<groupId>org.springframework.boot</groupId>
+    			<artifactId>spring-boot-starter-data-jpa</artifactId>
+    			<version>${spring-boot-starter-data-jpa.version}</version>
+    		</dependency>
+    
+    		<dependency>
+    			<groupId>mysql</groupId>
+    			<artifactId>mysql-connector-java</artifactId>
+    			<version>${mysql-connector-java.version}</version>
+    			<scope>runtime</scope>
+    		</dependency>
+
+	        <dependency>
+		    	<groupId>org.springframework.boot</groupId>
+		    	<artifactId>spring-boot-starter-mail</artifactId>
+				<version>${spring-boot-starter-mail.version}</version>
+		    </dependency>
+
+		    <dependency>
+		    	<groupId>org.springframework.boot</groupId>
+		    	<artifactId>spring-boot-starter-oauth2-client</artifactId>
+				<version>${spring-boot-starter-oauth2-client.version}</version>
+		    </dependency>						
 
 	    </dependencies>
 	</dependencyManagement>
