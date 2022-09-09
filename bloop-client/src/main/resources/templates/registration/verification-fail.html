@@ -5,20 +5,41 @@
     <head th:replace="fragments :: page_head('Verification failed', 'none')"></head>
 
     <body>
-        <!-- CSS class for a responsive web page provided by the bootstrap framework -->
-        <div class="container-fluid">
+		<!-- CSS class for a responsive web page provided by the bootstrap framework -->
+        <div class="container-fluid m-5">
 
-            <div th:replace="navigation :: header-menu"></div>
+        	<div th:replace="navigation :: header-menu"></div>
 
-            <div class="text-center m-3">
-                <h2>Member Verification</h2>
-                <h4>Your account was already verified or the verification code is invalid</h4>
-            </div>
+			<div class="container h-100">
 
-            <div th:replace="navigation :: footer-menu"></div>                 
+    			<div class="row align-items-center justify-content-center h-100">
+    
+    			   <div class="col-sm-6 h-100 align-middle">
+    
+            			<div class="card">
+            				<div class="card-header text-center">
+            					<h2>Member Verification</h2>
+            				</div> 
             
-        </div>     
+            				<div class="card-body">
+            					<div class="my-3 text-center">
+                                    <h4>Your account was already verified or the verification code is invalid</h4>
+            					</div>                                
+            				</div>
+            
+            				<div class="card-footer text-center">
+            				</div>
+            			</div>
+    
+    			    </div>
+    
+    			</div>
+
+		   </div>
+
+        </div>
 
     </body>
+
 
 </html>

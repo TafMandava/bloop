@@ -21,7 +21,7 @@ public class MainController {
         if (ObjectUtils.isEmpty(authentication) || authentication instanceof AnonymousAuthenticationToken ) {
             return "login";
         }
-        /**
+        /**,
          * Else the member is authenticated 
          */
         return "redirect:/";

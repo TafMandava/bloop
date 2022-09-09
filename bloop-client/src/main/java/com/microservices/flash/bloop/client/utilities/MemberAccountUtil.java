@@ -15,7 +15,6 @@ import org.springframework.security.oauth2.client.authentication.OAuth2Authentic
 
 import com.microservices.flash.bloop.client.security.MemberUserDetails;
 import com.microservices.flash.bloop.client.security.oauth.MemberOAuth2User;
-import com.microservices.flash.bloop.client.services.SettingService;
 import com.microservices.flash.bloop.common.data.configs.MailServerConfigData;
 import com.microservices.flash.bloop.common.data.entities.Member;
 import com.microservices.flash.bloop.common.data.entities.setttings.EmailSettingBag;
@@ -26,9 +25,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 public class MemberAccountUtil {
-
-
-
 
     public static void sendVerificationEmail(HttpServletRequest request, Member member, MailServerConfigData mailServerConfigData, EmailSettingBag emailTemplateSettings) throws MessagingException, UnsupportedEncodingException {
 

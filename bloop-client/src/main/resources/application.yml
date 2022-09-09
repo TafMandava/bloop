@@ -68,8 +68,8 @@ spring:
         registration:
           # google registration id
           google:
-            client-id: '{cipher}b6edfd9684a964aa5929047e715bb9eb4c3bdfc98fc830b33af56a10a9907efb0508a2ba97fd6c99e5515380e630af4490c43713637da98e647afa6c5ebf8bef7177629e1ef7b072b34df8899e20c7970989701a25c93f7ab9aa7c336311b469'
-            client-secret: '{cipher}7aacedae8cc95de69236d056f76da487ac8a229bc21e60c37fd034dbb829964fd2bfd9ca1ca06a37ddc291612dc68b3e1b198e8ef49101de616a42f0851592bb'
+            client-id: '{cipher}f8e52c3bd4a85233d9d46d42a74181c8044f62035b213a9770e220c4f44463583c24fd76f31c8f8b08558e477111f3814a414a5267ef671e50cc7915706ca57025ab7911f03d504dc83382f2bb6eef2b479942977c6dd646a76d23c4acea3023'
+            client-secret: '{cipher}ee95ba3b07dced35aa4960179d3d4193ed5ba5923ef781a7d13c5f2a21227e84048b05d541c00c0e5ed0dc5f66614849465044a659d0760a5dc4af5bc89d7b2a'
             scope:
             - email
             - profile

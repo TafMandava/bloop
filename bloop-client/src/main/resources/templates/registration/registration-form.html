@@ -6,68 +6,62 @@
 
     <body>
         <!-- CSS class for a responsive web page provided by the bootstrap framework -->
-        <div class="container-fluid">
+        <div class="container-fluid m-5">
 
             <div th:replace="navigation :: header-menu"></div>
 
-            <div class="text-center">
-                <h2>Member Registration</h2>
-            </div>
+			<div class="container h-100">
 
-            <form th:action="@{/create-member}" method="post" style="max-width: 700px; margin: 0 auto;" th:object="${member}" onsubmit="return checkEmailUniqueness(this)">
-                <div class="border border-secondary rounded m-3">
-                    <div class="form-group row m-3">
-                        <label class="col-sm-4 col-form-label">First  Name</label>
-                        <div class="col-sm-8">
-                            <input type="text" th:field="*{firstName}" class="form-control" required="required" minlength="2" maxlength="45"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row m-3">
-                        <label class="col-sm-4 col-form-label">Last  Name</label>
-                        <div class="col-sm-8">
-                            <input type="text" th:field="*{lastName}" class="form-control" required="required" minlength="2" maxlength="45"/>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row m-3">
-                        <label class="col-sm-4 col-form-label">Email</label>
-                        <div class="col-sm-8">
-                            <input type="email" th:field="*{email}" class="form-control" required="required" minlength="8" maxlength="45"/>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row m-3">
-                        <label class="col-sm-4 col-form-label">Password</label>
-                        <div class="col-sm-8">
-                            <input type="password" th:field="*{password}" class="form-control" required="required" minlength="6" maxlength="15" oninput="checkPasswordMatch(document.getElementById('confirmPassword'))"/>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row m-3">
-                        <label class="col-sm-4 col-form-label">Confirm Password</label>
-                        <div class="col-sm-8">
-                            <input type="password" id="confirmPassword" class="form-control" required="required" minlength="6" maxlength="15" oninput="checkPasswordMatch(this)"/>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row m-3">
-                        <label class="col-sm-4 col-form-label">Phone Number</label>
-                        <div class="col-sm-8">
-                            <input type="text" th:field="*{phoneNumber}" class="form-control" required="required" minlength="8" maxlength="15"/>
-                        </div>
-                    </div>    
-
-                    <div class="text-center m-3">
-                        <input type="submit" value="Create Account" class="btn btn-primary"/>
-                    </div>
-                </div>
-            </form>
+    			<div class="row align-items-center justify-content-center h-100">
+    
+    			   <div class="col-sm-6 h-100 align-middle">
+    
+            			<div class="card">
+            				<div class="card-header text-center">
+                                <h2>Member Registration</h2>
+            				</div> 
             
-            <div th:replace="modal-fragments :: modal-dialog"></div>
-
-            <div th:replace="navigation :: footer-menu"></div>                 
+            				<div class="card-body">
+            					<form th:action="@{/create-member}" method="post" th:object="${member}" onsubmit="return checkEmailUniqueness(this)">
             
+            						<div class="form-group">
+                                        <input type="text" th:field="*{firstName}" class="form-control" placeholder="First Name" required="required" minlength="2" maxlength="45"/>
+            						</div>
+            						<div class="form-group">
+                                        <input type="text" th:field="*{lastName}" class="form-control" placeholder="Last Name" required="required" minlength="2" maxlength="45"/>
+            						</div>                                  
+            						<div class="form-group">
+                                        <input type="email" th:field="*{email}" class="form-control" placeholder="Email" required="required" minlength="8" maxlength="45"/>
+            						</div>
+            						<div class="form-group">
+                                        <input type="password" th:field="*{password}" class="form-control" placeholder="Password" required="required" minlength="6" maxlength="15" oninput="checkPasswordMatch(document.getElementById('confirmPassword'))"/>
+            						</div>	                                    
+            						<div class="form-group">
+                                        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required="required" minlength="6" maxlength="15" oninput="checkPasswordMatch(this)"/>
+            						</div>	
+            						<div class="form-group">
+                                        <input type="text" th:field="*{phoneNumber}" class="form-control" placeholder="Phone Number" required="required" minlength="8" maxlength="15"/>
+            						</div>                                    
+            						<div class="text-center">
+            							<input type="submit" value="Create Account" class="btn btn-success btn-md"/>
+            						</div>
+            					
+            					</form>
+
+                                <div th:replace="modal-fragments :: modal-dialog"></div>
+            
+            				</div>
+            
+            				<div class="card-footer text-center">
+            				</div>
+            			</div>
+    
+    			    </div>
+    
+    			</div>
+
+		   </div>
+
         </div>
 
         <script type="text/javascript">
