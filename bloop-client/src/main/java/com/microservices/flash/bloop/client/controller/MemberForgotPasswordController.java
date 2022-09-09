@@ -16,7 +16,7 @@ import com.microservices.flash.bloop.client.exceptions.MemberNotFoundException;
 import com.microservices.flash.bloop.client.services.MemberService;
 import com.microservices.flash.bloop.client.utilities.MailUtil;
 import com.microservices.flash.bloop.client.utilities.MemberAccountUtil;
-import com.microservices.flash.bloop.common.data.configs.MailConfigData;
+import com.microservices.flash.bloop.common.data.configs.MailServerConfigData;
 import com.microservices.flash.bloop.common.data.entities.Member;
 
 import lombok.RequiredArgsConstructor;
@@ -29,7 +29,7 @@ public class MemberForgotPasswordController {
 
     private final MemberService memberService;
 
-    private final MailConfigData mailConfigData;
+    private final MailServerConfigData mailConfigData;
 
     @GetMapping("/forgot-password")
     public String requestForm() {

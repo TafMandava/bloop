@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- Use thymeleaf to direct to the URL properly whilst taking the context into consideration-->
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="fragments :: page_head('Verification failed', 'none')"></head>
+
+    <body>
+        <!-- CSS class for a responsive web page provided by the bootstrap framework -->
+        <div class="container-fluid">
+
+            <div th:replace="navigation :: header-menu"></div>
+
+            <div class="text-center m-3">
+                <h2>Member Verification</h2>
+                <h4>Your account was already verified or the verification code is invalid</h4>
+            </div>
+
+            <div th:replace="navigation :: footer-menu"></div>                 
+            
+        </div>     
+
+    </body>
+
+</html>

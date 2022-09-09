@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.microservices.flash.bloop.client.services.MemberService;
+import com.microservices.flash.bloop.client.services.SettingService;
 import com.microservices.flash.bloop.client.utilities.MemberAccountUtil;
-import com.microservices.flash.bloop.common.data.configs.MailConfigData;
+import com.microservices.flash.bloop.common.data.configs.MailServerConfigData;
 import com.microservices.flash.bloop.common.data.entities.Member;
 
 import lombok.RequiredArgsConstructor;
@@ -25,9 +26,11 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class MemberController {
 
+    private final SettingService settingService;
+
     private final MemberService memberService;
 
-    private final MailConfigData mailConfigData;
+    private final MailServerConfigData mailServerConfigData;
 
     @GetMapping("/register")
     public String register(Model model) {
@@ -49,7 +52,7 @@ public class MemberController {
     public String createMember(Member member, Model model, HttpServletRequest request) throws UnsupportedEncodingException, MessagingException {
 
         memberService.registerMember(member);
-        MemberAccountUtil.sendVerificationEmail(request, member, mailConfigData);
+        MemberAccountUtil.sendVerificationEmail(request, member, mailServerConfigData, settingService.getMailSettings());
 
         model.addAttribute("pageTitle", "Registration completed successfully");
 

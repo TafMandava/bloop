@@ -15,26 +15,33 @@ import org.springframework.security.oauth2.client.authentication.OAuth2Authentic
 
 import com.microservices.flash.bloop.client.security.MemberUserDetails;
 import com.microservices.flash.bloop.client.security.oauth.MemberOAuth2User;
-import com.microservices.flash.bloop.common.data.configs.MailConfigData;
+import com.microservices.flash.bloop.client.services.SettingService;
+import com.microservices.flash.bloop.common.data.configs.MailServerConfigData;
 import com.microservices.flash.bloop.common.data.entities.Member;
+import com.microservices.flash.bloop.common.data.entities.setttings.EmailSettingBag;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
+@RequiredArgsConstructor
 public class MemberAccountUtil {
 
 
-    public static void sendVerificationEmail(HttpServletRequest request, Member member, MailConfigData mailConfigData) throws MessagingException, UnsupportedEncodingException {
-        JavaMailSenderImpl javaMailSender = MailUtil.prepareMailSender(mailConfigData);
+
+
+    public static void sendVerificationEmail(HttpServletRequest request, Member member, MailServerConfigData mailServerConfigData, EmailSettingBag emailTemplateSettings) throws MessagingException, UnsupportedEncodingException {
+
+        JavaMailSenderImpl javaMailSender = MailUtil.prepareMailSender(mailServerConfigData);
 
         String toAddress = member.getEmail();
-        String subject = mailConfigData.getMemberVerificationSubject();
-        String content = mailConfigData.getMemberVerificationContent();
+        String subject = emailTemplateSettings.getCustomerVerifySubject();
+        String content = emailTemplateSettings.getCustomerVerifyContent();
 
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage);
 
-        mimeMessageHelper.setFrom(mailConfigData.getMailFrom(), mailConfigData.getMailSenderName());
+        mimeMessageHelper.setFrom(mailServerConfigData.getMailFrom(), mailServerConfigData.getMailSenderName());
         mimeMessageHelper.setTo(toAddress);
         mimeMessageHelper.setSubject(subject);
 
@@ -104,8 +111,8 @@ public class MemberAccountUtil {
     }
 
 
-    public static void sentEmail(String resetPasswordUrl, String email, MailConfigData mailConfigData) throws UnsupportedEncodingException, MessagingException {
-        JavaMailSenderImpl javaMailSender = MailUtil.prepareMailSender(mailConfigData);
+    public static void sentEmail(String resetPasswordUrl, String email, MailServerConfigData mailServerConfigData) throws UnsupportedEncodingException, MessagingException {
+        JavaMailSenderImpl javaMailSender = MailUtil.prepareMailSender(mailServerConfigData);
 
         String toAddress = email;
         String subject = "Here is the link to reset your password";
@@ -121,7 +128,7 @@ public class MemberAccountUtil {
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage);
 
-        mimeMessageHelper.setFrom(mailConfigData.getMailFrom(), mailConfigData.getMailSenderName());
+        mimeMessageHelper.setFrom(mailServerConfigData.getMailFrom(), mailServerConfigData.getMailSenderName());
         mimeMessageHelper.setTo(toAddress);
         mimeMessageHelper.setSubject(subject);
 

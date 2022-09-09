@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Use thymeleaf to direct to the URL properly whilst taking the context into consideration-->
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+    <head th:replace="fragments :: page_head('Beauty For You Shop', 'none')"></head>
+
+    <body>
+        <div class="container-fluid text-center">
+        	<div th:replace="navigation :: header-menu"></div>
+
+        	<div>
+        		<h2>Member Login</h2>
+        	</div>
+
+			<div class="m-3">
+				<!-- The URI /oauth2/authorization/google is defined by the Spring Security OAuth 2.0 Client dependency -->
+				<a class="btn btn-lg btn-secondary fab fa-google" th:href="@{/oauth2/authorization/google}">
+					<span>
+						Continue with Google
+					</span>
+				</a>
+			</div>
+
+			<div class="m-3">
+				<!-- The URI /oauth2/authorization/facebook is defined by the Spring Security OAuth 2.0 Client dependency -->
+				<a class="btn btn-lg btn-secondary fab fa-facebook" th:href="@{/oauth2/authorization/facebook}">
+					<span>
+						Continue with Facebook
+					</span>
+				</a>
+			</div>			
+
+        	<form th:action="@{/login}" method="post" style="max-width: 700px; margin: 0 auto;">
+
+        		<div th:if="${param.error}">
+					<!-- Display the original error thrown by Spring Security in case of any authentication error -->
+        			<p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+        		</div>
+
+        		<div th:if="${param.logout}">
+        			<p class="text-warning">You have been logged out.</p>
+        		</div>
+        
+        		<div class="border border-secondary rounded p-5">
+        			<p>
+        				<input type="email" name="email" class="form-control" placeholder="E-mail" required />
+        			</p>
+        			<p>
+        				<input type="password" name="password" class="form-control" placeholder="Password" required />
+        			</p>
+        			<p>
+						<!-- The name should be remember-me so that it is picked up by Spring Security -->
+        				<input type="checkbox" name="remember-me" />&nbsp;Remember Me
+        			</p>
+        			<p>
+        				<input type="submit" value="Login" class="btn btn-primary" />
+        			</p>			
+        		</div>
+        	</form>
+        	
+        	<div class="m-3">
+        		<a th:href="@{/forgot-password}">Forgot Password</a>
+        	</div>
+
+        	<div class="m-3">
+        		Don't have an account? <a th:href="@{/register}"><b>Sign up</b></a>
+        	</div>
+
+        	<div th:replace="navigation :: footer-menu"></div>
+        </div>	
+    </body>
+</html> 

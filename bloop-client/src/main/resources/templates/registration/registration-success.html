@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Use thymeleaf to direct to the URL properly whilst taking the context into consideration-->
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="fragments :: page_head(${pageTitle}, 'none')"></head>
+
+    <body>
+        <!-- CSS class for a responsive web page provided by the bootstrap framework -->
+        <div class="container-fluid">
+
+            <div th:replace="navigation :: header-menu"></div>
+
+            <div class="text-center m-3">
+                <h2>Member Registration</h2>
+                <h4>Your registration as a member has been successful</h4>
+                <p>Please check your email to verify your account</p>
+                <p>
+                    <a th:href="@{/login}">Login here</a>
+                </p>
+            </div>
+
+            <div th:replace="navigation :: footer-menu"></div>                 
+            
+        </div>     
+
+    </body>
+
+</html>

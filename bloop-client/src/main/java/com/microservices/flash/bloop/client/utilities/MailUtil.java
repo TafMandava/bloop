@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
-import com.microservices.flash.bloop.common.data.configs.MailConfigData;
+import com.microservices.flash.bloop.common.data.configs.MailServerConfigData;
 
 public class MailUtil {
 
@@ -25,21 +25,21 @@ public class MailUtil {
 
     }
 
-    public static JavaMailSenderImpl prepareMailSender(MailConfigData mailConfigData) {
+    public static JavaMailSenderImpl prepareMailSender(MailServerConfigData mailServerConfigData) {
 
         JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
 
-        javaMailSender.setHost(mailConfigData.getMailHost());
-        javaMailSender.setPort(mailConfigData.getMailPort());
-        javaMailSender.setUsername(mailConfigData.getMailUsername());
-        javaMailSender.setPassword(mailConfigData.getMailPassword());
+        javaMailSender.setHost(mailServerConfigData.getMailHost());
+        javaMailSender.setPort(mailServerConfigData.getMailPort());
+        javaMailSender.setUsername(mailServerConfigData.getMailUsername());
+        javaMailSender.setPassword(mailServerConfigData.getMailPassword());
 
         /**
          * Set mail properties of our SMTP Authentication and SMTP secure connection
          */
         Properties mailProperties = new Properties();
-        mailProperties.setProperty("mail.smtp.auth", mailConfigData.getSmtpAuth());
-        mailProperties.setProperty("mail.smtp.starttls.enable", mailConfigData.getSmtpSecured());
+        mailProperties.setProperty("mail.smtp.auth", mailServerConfigData.getSmtpAuth());
+        mailProperties.setProperty("mail.smtp.starttls.enable", mailServerConfigData.getSmtpSecured());
 
         javaMailSender.setJavaMailProperties(mailProperties);
 
