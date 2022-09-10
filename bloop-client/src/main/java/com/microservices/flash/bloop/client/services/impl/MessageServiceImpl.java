@@ -73,11 +73,11 @@ public class MessageServiceImpl implements MessageService {
 
             dbMessage.setText(formMessage.getText());
             
-            // Bloop
+            // Invoke Bloop Service
             return messageRepository.save(dbMessage);
 
         } else {
-            // Bloop
+            // Invoke Bloop Service
             return messageRepository.save(formMessage);
         }
     }
@@ -87,7 +87,8 @@ public class MessageServiceImpl implements MessageService {
         Message dbMessage = messageRepository.getReferenceById(formMessage.getId());
 
         dbMessage.setText(formMessage.getText());
-
+        
+        // Invoke Bloop Service
         return messageRepository.save(dbMessage);
     }
 
