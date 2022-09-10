@@ -44,14 +44,20 @@
                                 </th:block>
                                 
         
-                                <th:block sec:authorize="isAuthenticated()">		
-                                    <li class="nav-item">
-                                        <b>
-                                            <a class="nav-link" th:href="@{/account-details}" sec:authentication="principal.fullname"></a>
-                                        </b>	
+                                <th:block sec:authorize="isAuthenticated()">                               
+                                
+                                    <li>
+                                        <span class="fas fa-user fa-2x icon-silver"></span>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <!-- principle indicates the StoreUserDetails class -->
+                                        <a class="nav-link dropdown-toggle" th:href="@{/account-details}" data-toggle="dropdown" sec:authentication="principal.fullname"></a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" id="accountLink" th:href="@{/account-details}">Edit Profile</a>
+                                        </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" th:href="@{/bloop}">Bloop</a>
+                                        <a class="nav-link" th:href="@{/text}">Text</a>
                                     </li>
             
                                     <li class="nav-item">

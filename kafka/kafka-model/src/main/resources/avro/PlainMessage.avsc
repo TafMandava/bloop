@@ -1,0 +1,30 @@
+{
+    "type": "record",
+    "name": "PlainMessageAvroModel",
+    "namespace": "com.microservices.flash.kafka.avro.model",
+    "fields": [
+        {
+            "name": "id",
+            "type": {
+                "type": "string",
+                "logicalType": "uuid"
+            }
+        },
+        {
+            "name": "userId",
+            "type": {
+                "type": "string",
+                "logicalType": "uuid"
+            }
+        },
+        {
+            "name": "text",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name": "dateCreated", 
+            "type": ["null", "long"], "logicalType": ["null", "date"]
+        }       
+    ]
+}

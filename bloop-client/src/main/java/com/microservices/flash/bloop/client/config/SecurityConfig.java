@@ -89,7 +89,7 @@ public class SecurityConfig {
                  * Only these URIs require authentication 
                  * Spring Security requires authentication for only these URLs
                  */
-                .antMatchers("/bloop/**")
+                .antMatchers("/text/**")
                 /**
                  * Access to the application will require Authentication 
                  */
