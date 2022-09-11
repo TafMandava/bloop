@@ -70,7 +70,7 @@
 
 
                 <div class="row p-2">
-                    <div class="col text-end p-1" th:unless="${totalElements > 0}">
+                    <div class="col t my-3 text-center" th:unless="${totalElements > 0}">
                         <span>No messages found</span>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                                 <a class="page-link" th:href="@{ '/messages/page/' + ${currentPage - 1} + '?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">Previous</a>
                             </li>
     
-                            <li th:class="${currentPage != pageNumber ? 'page-item' : 'page-item active'}" th:each="pageNumber : ${#numbers.sequence(1, totalPages - 1)}">
+                            <li th:class="${currentPage != pageNumber ? 'page-item' : 'page-item active'}" th:each="pageNumber : ${#numbers.sequence(1, totalPages + 1)}">
                                 <a class="page-link" th:href="@{ '/messages/page/' + ${pageNumber} + '?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">[[${pageNumber}]]</a>
                             </li>
     
