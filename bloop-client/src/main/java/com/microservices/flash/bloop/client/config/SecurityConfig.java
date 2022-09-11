@@ -8,6 +8,7 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -34,6 +35,7 @@ import com.microservices.flash.bloop.client.security.oauth.OAuth2LoginSuccessHan
  *  remember-me cookie: expires after 14 days (default)
  *  Spring Security Filter intercepts requests to process authentication 
  */
+@EnableWebSecurity
 @Configuration
 public class SecurityConfig {
 
@@ -89,7 +91,7 @@ public class SecurityConfig {
                  * Only these URIs require authentication 
                  * Spring Security requires authentication for only these URLs
                  */
-                .antMatchers("/text/**")
+                .antMatchers("/messages/**")
                 /**
                  * Access to the application will require Authentication 
                  */

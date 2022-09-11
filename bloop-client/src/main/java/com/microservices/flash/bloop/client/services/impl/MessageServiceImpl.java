@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.springframework.data.domain.Page;
@@ -15,9 +16,9 @@ import org.springframework.util.ObjectUtils;
 
 import com.microservices.flash.bloop.client.exceptions.MessageNotFoundException;
 import com.microservices.flash.bloop.client.repositories.MessageRepository;
-import com.microservices.flash.bloop.client.security.MemberUserDetails;
 import com.microservices.flash.bloop.client.services.MemberService;
 import com.microservices.flash.bloop.client.services.MessageService;
+import com.microservices.flash.bloop.client.utilities.MemberAccountUtil;
 import com.microservices.flash.bloop.common.data.entities.Member;
 import com.microservices.flash.bloop.common.data.entities.Message;
 
@@ -40,12 +41,9 @@ public class MessageServiceImpl implements MessageService {
     }
 
     @Override
-    public Page<Message> listByPage(MemberUserDetails loggedMember, int pageNumber, String sortField, String sortDirection) {
+    public Page<Message> listByPage(HttpServletRequest request, int pageNumber, String sortField, String sortDirection) {
 
-        String email = loggedMember.getUsername();
-
-        Member member = memberService.findByEmail(email);
-
+        Member member = memberService.findByEmail(MemberAccountUtil.getAuthenticatedMemberEmail(request));
 
         Sort sort = Sort.by(sortField);
 
@@ -56,16 +54,15 @@ public class MessageServiceImpl implements MessageService {
          *    i.e the first page corresponds to page number zero 
          *        However, we will be passing page numbers starting from to number one. Therefor, we need to subtract fone from the value of pageNumber being passed
          */
-        Pageable pageable = PageRequest.of(pageNumber, MESSAGES_PER_PAGE, sort);
+        Pageable pageable = PageRequest.of(pageNumber - 1, MESSAGES_PER_PAGE, sort);
 
 
-        messageRepository.findAll(pageable);
+        return messageRepository.findByMemberAndIsDeletedEquals(member, false, pageable);
 
-        return messageRepository.findByMemberOrderByCreatedDateAsc(member, pageable);
     }
 
     @Override
-    public Message saveMessage(Message formMessage) {
+    public Message saveMessage(HttpServletRequest request, Message formMessage) {
         boolean isUpdateMode = !ObjectUtils.isEmpty(formMessage.getId());
 
         if (isUpdateMode) {
@@ -78,7 +75,8 @@ public class MessageServiceImpl implements MessageService {
 
         } else {
             // Invoke Bloop Service
-            return messageRepository.save(formMessage);
+            Member member = memberService.findByEmail(MemberAccountUtil.getAuthenticatedMemberEmail(request));
+            return messageRepository.save(formMessage.builder().text(formMessage.getText()).member(member).build());
         }
     }
 

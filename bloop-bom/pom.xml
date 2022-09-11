@@ -57,6 +57,11 @@
 
 		<spring-boot-starter-mail.version>2.7.2</spring-boot-starter-mail.version>
 		<spring-boot-starter-oauth2-client.version>2.7.2</spring-boot-starter-oauth2-client.version>
+
+		<java.version>11</java.version>
+		<jaxb.version>2.3.0</jaxb.version>
+
+		<jackson-databind.version>2.13.3</jackson-databind.version>
     </properties>
 
 	<!-- The artifact kafka-avro-serializer is located at Confluent repository (https://packages.confluent.io/maven/) so we need to add a repository for the dependency because it is not on the maven repository -->
@@ -255,7 +260,32 @@
 		    	<groupId>org.springframework.boot</groupId>
 		    	<artifactId>spring-boot-starter-oauth2-client</artifactId>
 				<version>${spring-boot-starter-oauth2-client.version}</version>
-		    </dependency>						
+		    </dependency>
+
+    	    <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+    		<dependency>
+    			<groupId>javax.xml.bind</groupId>
+    			<artifactId>jaxb-api</artifactId>
+    			<version>${jaxb.version}</version>
+    		</dependency>
+    		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-core -->
+    		<dependency>
+    			<groupId>com.sun.xml.bind</groupId>
+    			<artifactId>jaxb-core</artifactId>
+    			<version>${jaxb.version}</version>
+    		</dependency>
+    		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
+    		<dependency>
+    			<groupId>com.sun.xml.bind</groupId>
+    			<artifactId>jaxb-impl</artifactId>
+    			<version>${jaxb.version}</version>
+    		</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson-databind.version}</version>
+			</dependency>						
 
 	    </dependencies>
 	</dependencyManagement>
@@ -290,7 +320,56 @@
 		<!-- https://maven.apache.org/plugins/maven-compiler-plugin -->
 		<!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-source-and-target.html -->
         <plugins>
-
+			<!-- the spring auto clean plugin to do an auto clean. if we forget to clean we can get some garbage. this is a standard plugin of maven -->
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<!-- for an execution run the clean goal in the phase "initialize" of the build lifecycle steps. when we basically startup we are going to run the maven clean ans this is going to cleanout all old stuff. --> 
+				<!-- usually it's not costly when we do a compile it eill run the clean goal first and then proceed with that -->
+				<executions>
+				    <execution>
+					    <id>auto-clean</id>
+						<phase>post-clean</phase>
+						<goals>
+						    <goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- the maven enforcer plugin is a standard plugin of maven. it forces a set of rules. allows us to setup rules for our organisation -->
+			<!-- builder rules that we can fail our builder on -->
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<executions>
+				    <execution>
+					    <id>enforce-versions</id>
+						<goals>
+						    <goal>enforce</goal>
+						</goals>
+						<configuration>
+						    <!-- Rules for compliance and auditing -->
+						    <rules>
+							    <!-- required maven 3.6.0 or higher. the maven surefire and fail safe plugins had added compatibility for junit 5 -->
+							    <requireMavenVersion>
+								    <version>[3.6.0,)</version>
+								</requireMavenVersion>
+							    <!-- set everything to be running on Java 11 specifically -->
+							    <requireJavaVersion>
+								    <version>11</version>
+								</requireJavaVersion>
+							    <!-- require release versions. require release dependencies only when we release -->
+								<!-- meaning that we cannot have any snapshot dependencies in our build when we do a release -->
+								<!-- do not deploy artifacts against snapshot versions -->
+								<!-- no snapshot versions when we do a release -->
+							    <requireReleaseDeps>
+								    <onlyWhenRelease>true</onlyWhenRelease>
+									<message>Release builds must not have on snapshot dependencies</message>
+								</requireReleaseDeps>									
+							</rules> 
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

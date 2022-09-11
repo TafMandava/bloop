@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- Use thymeleaf to direct to the URL properly whilst taking the context into consideration-->
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="fragments :: page_head('Bloop - Manage Text Messages', 'none')"></head>
+
+    <body>
+		<!-- CSS class for a responsive web page provided by the bootstrap framework -->
+        <div class="container-fluid m-5">
+
+            <div th:replace="navigation :: header-menu"></div>
+
+            <div class="container h-100">
+
+                <div class="row p-2">
+                    <div th:if="${message != null}" class="col alert alert-success my-3 text-center">
+                        [[${message}]]
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col">
+                        <h1 class="display-4">Manage Texts</h1>
+                        <a title="Create a Text Message" th:href="@{/messages/create}" class="btn btn-outline-primary my-3"><i class="fas fa-plus"></i>Create</a>
+                    </div>
+                </div>
+    
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <!-- https://getbootstrap.com/docs/4.2/utilities/text/ -->
+                                    <a th:if="${sortField != 'text'}" class="text-dark text-decoration-none" th:href="@{'/messages/page/' + ${currentPage} + '?sortField=text&sortDirection=' + ${sortDirection}}">
+                                        Text
+                                    </a>
+                                    <a th:if="${sortField == 'text'}" class="text-dark text-decoration-none" th:href="@{'/messages/page/' + ${currentPage} + '?sortField=text&sortDirection=' + ${reverseSortDirection}}">
+                                        Text
+                                    </a>                                
+                                    <span th:if="${sortField == 'text'}" th:class="${sortDirection == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+                                </th>
+                                <th>
+                                    <!-- https://getbootstrap.com/docs/4.2/utilities/text/ -->
+                                    <a th:if="${sortField != 'createdDate'}" class="text-dark text-decoration-none" th:href="@{'/messages/page/' + ${currentPage} + '?sortField=createdDate&sortDirection=' + ${sortDirection}}">
+                                        Created Date
+                                    </a>
+                                    <a th:if="${sortField == 'createdDate'}" class="text-dark text-decoration-none" th:href="@{'/messages/page/' + ${currentPage} + '?sortField=createdDate&sortDirection=' + ${reverseSortDirection}}">
+                                        Created Date
+                                    </a>                                
+                                    <span th:if="${sortField == 'createdDate'}" th:class="${sortDirection == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+                                </th>
+                                <th>Last Modified Date</th>
+                                <th>Deleted</th>
+                            </tr>                            
+                        </thead>
+                        <tbody>
+                            <tr th:each="textMessage : ${textMessages}">
+                                <td class="align-middle">[[${textMessage.text}]]</td>
+                                <td class="align-middle">[[${textMessage.createdDate}]]</td>
+                                <td class="align-middle">[[${textMessage.lastModifiedDate}]]</td>
+                                <td class="align-middle">[[${textMessage.isDeleted}]]</td>
+    
+                                <td class="align-middle text-center">
+                                    <a class="btn btn-success" th:href="@{'/messages/edit/' + ${textMessage.id}}" title="Edit Message"><i class="fas fa-edit"></i></a> 
+                                    <a class="btn btn-danger link-delete" th:href="@{'/messages/delete/' + ${textMessage.id}}" th:textMessage="${textMessage.text}" title="Delete Message"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="row p-2">
+                    <div class="col text-end p-1" th:unless="${totalElements > 0}">
+                        <span>No messages found</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            <li th:class="${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
+                                <a class="page-link" th:href="@{ '/messages/page/1?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">First</a>
+                            </li>
+                            <li th:class="${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
+                                <a class="page-link" th:href="@{ '/messages/page/' + ${currentPage - 1} + '?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">Previous</a>
+                            </li>
+    
+                            <li th:class="${currentPage != pageNumber ? 'page-item' : 'page-item active'}" th:each="pageNumber : ${#numbers.sequence(1, totalPages - 1)}">
+                                <a class="page-link" th:href="@{ '/messages/page/' + ${pageNumber} + '?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">[[${pageNumber}]]</a>
+                            </li>
+    
+                            <li th:class="${currentPage < totalPages - 1 ? 'page-item' : 'page-item disabled'}">
+                                <a class="page-link" th:href="@{ '/messages/page/' + ${currentPage + 1} + '?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">Next</a>
+                            </li>
+                            <li th:class="${currentPage < totalPages - 1 ? 'page-item' : 'page-item disabled'}">
+                                <a class="page-link" th:href="@{ '/messages/page/' + ${totalPages - 1} + '?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">Last</a>
+                            </li>
+                        </ul>
+                    </nav>                
+                </div>
+    
+                <div class="modal fade text-center" id="messageDeletionModalDialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Deletion Confirmation</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <span id="messageDeletionModalBody"></span>
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn btn-success" href="#" id="confirmationButton">Yes</a>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                            </div>                        
+                        </div>
+                        
+                    </div>
+
+                </div>
+  
+            </div>
+
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $(".link-delete").on("click", function(e) {
+                    /**
+                     * Prevent the default behaviour of the hyperlink
+                     */
+                    e.preventDefault();
+
+                    /**
+                     * This refers to the  link itself
+                     * 
+                     * alert($(this).attr("href"))
+                     */
+
+                    link=$(this);
+
+                    textMessage=link.attr("textMessage");
+
+                    $("#confirmationButton").attr("href", link.attr("href"));
+
+                    $("#messageDeletionModalBody").text("Are you sure you want to delete the text message '" + textMessage + "'?");
+                    $("#messageDeletionModalDialog").modal();
+
+                })
+            });
+        </script>
+    </body>
+</html>

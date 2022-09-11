@@ -13,6 +13,6 @@ public interface MessageRepository extends JpaRepository<Message, UUID> {
 
     Long countById(UUID id);
 
-    Page<Message> findByMemberOrderByCreatedDateAsc(Member member, Pageable pageable);
+    Page<Message> findByMemberAndIsDeletedEquals(Member member, Boolean isDeleted, Pageable pageable);
 
 }

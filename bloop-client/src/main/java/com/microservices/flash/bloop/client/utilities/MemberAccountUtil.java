@@ -135,6 +135,23 @@ public class MemberAccountUtil {
         mimeMessageHelper.setText(content, true);
 
         javaMailSender.send(mimeMessage);                    
+    }
+
+    /**
+     * Get the email of the currently Authenticated Member 
+     *     There are several ways for a Member to login
+     */
+    public static String getAuthenticatedMemberEmail(HttpServletRequest request) {
+        Principal principal = request.getUserPrincipal();
+
+        if(principal instanceof UsernamePasswordAuthenticationToken || principal instanceof RememberMeAuthenticationToken) {
+            return principal.getName();
+        } else if(principal instanceof OAuth2AuthenticationToken) {
+            OAuth2AuthenticationToken oAuth2AuthenticationToken = (OAuth2AuthenticationToken) principal;
+            MemberOAuth2User customerOAuth2User = (MemberOAuth2User) oAuth2AuthenticationToken.getPrincipal();
+            return customerOAuth2User.getEmail();
+        }
+        return null;
     }    
     
 }

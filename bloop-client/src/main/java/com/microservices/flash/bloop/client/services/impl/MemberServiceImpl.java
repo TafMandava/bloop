@@ -195,6 +195,6 @@ public class MemberServiceImpl implements MemberService{
             String lastName = name.replaceFirst(firstName + " ", "");
             member.setLastName(lastName);
         }
-    }    
+    }
     
 }

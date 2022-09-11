@@ -17,7 +17,7 @@ public class MemberUserDetailsService implements UserDetailsService {
     /**
      * This method will be called by Spring Security when it is performing Authentication 
      *     Username equals email because we specified the email as the username in the SecurityConfig class
-     */    
+     */
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Member member = memberRepository.findByEmail(email);

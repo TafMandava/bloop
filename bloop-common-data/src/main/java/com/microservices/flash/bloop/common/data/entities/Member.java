@@ -39,7 +39,7 @@ public class Member extends BaseEntity {
     @Column(length = 45, nullable = false)
     private String lastName;
 
-    @Column(length = 15, nullable = false)
+    @Column(length = 15, nullable = true)
     private String phoneNumber;
     
     @Column(length = 64)

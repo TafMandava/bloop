@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Use thymeleaf to direct to the URL properly whilst taking the context into consideration-->
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="fragments :: page_head(${pageTitle}, 'none')"></head>
+
+    <body>
+
+        <!-- CSS class for a responsive web page provided by the bootstrap framework -->
+        <div class="container-fluid m-5">
+
+            <div th:replace="navigation :: header-menu"></div>
+
+			<div class="container h-100">
+
+    			<div class="row align-items-center justify-content-center h-100">
+    
+    			   <div class="col-sm-6 h-100 align-middle">
+    
+            			<div class="card">
+            				<div class="card-header text-center">
+                                <h2>[[${pageTitle}]]</h2>
+            				</div> 
+            
+            				<div class="card-body">
+            					<form th:action="@{/messages/save}" method="post" th:object="${textMessage}">
+
+                                    <input type="hidden" th:field="*{id}"/>
+                                           
+            						<div class="form-group">
+                                        <label class="col-form-label">Text Message</label>
+                                        <input type="text" class="form-control" th:field="*{text}" required minlength="1" maxlength="128" placeholder="Text Message"/>
+            						</div>                                                            
+            						<div class="text-center">
+                                        <input type="submit" value="Save" class="btn btn-primary btn-md" />
+                                        <input type="button" value="Cancel" class="btn btn-secondary btn-md" id="buttonCancel" />
+            						</div>
+            					
+            					</form>
+            
+            				</div>
+            
+            				<div class="card-footer text-center">
+            				</div>
+            			</div>
+    
+    			    </div>
+    
+    			</div>
+
+		   </div>
+
+           <div class="modal fade text-center" id="messageCreationModalDialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="messageCreationModalTitle">Warning</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <span id="messageCreationModalBody"></span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>                        
+                    </div>
+                </div>
+            </div>  
+
+        </div>             
+
+        <script type="text/javascript">
+
+            moduleUrl = "[[@{/messages}]]";
+
+            function showUserCreationModalDialog(title, message) {
+                $("#messageCreationModalTitle").text(title);
+                $("#messageCreationModalBody").text(message);
+                $("#messageCreationModalDialog").modal();
+            }
+
+        </script>
+
+        <script th:src="@{/js/common-form.js}"></script>
+
+    </body>
+
+</html>
