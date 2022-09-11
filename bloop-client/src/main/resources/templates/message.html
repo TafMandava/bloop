@@ -9,11 +9,10 @@
                 <h2>[[${title}]]</h2>
             </div>            
 
-            <div th:if="${message != null}" class="text-center m-3">
-                <h3>[[${message}]]</h3>
+            <div th:if="${message != null}" class="alert alert-success text-center m-3">
+                <p>[[${message}]]</p>
             </div>
             
-            <div th:replace="navigation :: footer-menu"></div>
         </div>
     </body>
 </html>

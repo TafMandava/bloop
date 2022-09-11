@@ -1,4 +1,4 @@
-package com.microservices.flash.bloop.client.utilities;
+package com.microservices.flash.bloop.client.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;

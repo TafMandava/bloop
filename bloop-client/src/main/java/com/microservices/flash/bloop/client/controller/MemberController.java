@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.microservices.flash.bloop.client.services.MemberService;
 import com.microservices.flash.bloop.client.services.SettingService;
-import com.microservices.flash.bloop.client.utilities.MemberAccountUtil;
+import com.microservices.flash.bloop.client.utils.MemberAccountUtil;
 import com.microservices.flash.bloop.common.data.configs.MailServerConfigData;
 import com.microservices.flash.bloop.common.data.entities.Member;
 

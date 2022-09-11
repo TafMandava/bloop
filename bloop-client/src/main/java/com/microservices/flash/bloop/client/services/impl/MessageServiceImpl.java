@@ -18,7 +18,7 @@ import com.microservices.flash.bloop.client.exceptions.MessageNotFoundException;
 import com.microservices.flash.bloop.client.repositories.MessageRepository;
 import com.microservices.flash.bloop.client.services.MemberService;
 import com.microservices.flash.bloop.client.services.MessageService;
-import com.microservices.flash.bloop.client.utilities.MemberAccountUtil;
+import com.microservices.flash.bloop.client.utils.MemberAccountUtil;
 import com.microservices.flash.bloop.common.data.entities.Member;
 import com.microservices.flash.bloop.common.data.entities.Message;
 

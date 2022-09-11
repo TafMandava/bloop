@@ -166,7 +166,14 @@ public class SecurityConfig {
          * Ignore authentication for static resources 
          */
         return (web) -> web.ignoring()
-                            .antMatchers("/images/**", "/js/**", "/webjars/**", "/css/**", "/fontawesome/**", "/richtext/**");
+                            .antMatchers(
+                                "/images/**", 
+                                "/js/**", 
+                                "/webjars/**", 
+                                "/css/**", 
+                                "/fontawesome/**", 
+                                "/richtext/**"
+                            );
     }
 
 

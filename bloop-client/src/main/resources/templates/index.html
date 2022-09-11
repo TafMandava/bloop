@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="fragments :: page_head('Beauty For You Store', 'none')"></head>
+
+    <head th:replace="fragments :: page_head('Bloop', 'none')"></head>
+
     <body>
-        <div class="container-fluid">
+        <!-- CSS class for a responsive web page provided by the bootstrap framework -->
+        <div class="container-fluid mt-5">
             <div th:replace="navigation :: header-menu"></div>
+
+            <div class="alert alert-success my-5 text-center">
+                <p>Bloop</p>
+            </div>
             
-            <div th:replace="navigation :: footer-menu"></div>
         </div>
     </body>
 </html>

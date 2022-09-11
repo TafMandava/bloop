@@ -89,7 +89,7 @@
                                 <a class="page-link" th:href="@{ '/messages/page/' + ${pageNumber} + '?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">[[${pageNumber}]]</a>
                             </li>
     
-                            <li th:class="${currentPage < totalPages - 1 ? 'page-item' : 'page-item disabled'}">
+                            <li th:class="${currentPage < totalPages ? 'page-item' : 'page-item disabled'}">
                                 <a class="page-link" th:href="@{ '/messages/page/' + ${currentPage + 1} + '?sortField=' + ${sortField} + '&sortDirection=' + ${sortDirection} }">Next</a>
                             </li>
                             <li th:class="${currentPage < totalPages - 1 ? 'page-item' : 'page-item disabled'}">

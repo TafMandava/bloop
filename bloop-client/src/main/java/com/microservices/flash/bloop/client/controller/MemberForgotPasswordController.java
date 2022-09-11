@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.microservices.flash.bloop.client.exceptions.MemberNotFoundException;
 import com.microservices.flash.bloop.client.services.MemberService;
-import com.microservices.flash.bloop.client.utilities.MailUtil;
-import com.microservices.flash.bloop.client.utilities.MemberAccountUtil;
+import com.microservices.flash.bloop.client.utils.MailUtil;
+import com.microservices.flash.bloop.client.utils.MemberAccountUtil;
 import com.microservices.flash.bloop.common.data.configs.MailServerConfigData;
 import com.microservices.flash.bloop.common.data.entities.Member;
 
