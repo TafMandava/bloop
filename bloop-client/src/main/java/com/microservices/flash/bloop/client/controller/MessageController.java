@@ -20,6 +20,7 @@ import com.microservices.flash.bloop.client.exceptions.MessageNotFoundException;
 import com.microservices.flash.bloop.client.services.MessageService;
 import com.microservices.flash.bloop.client.services.impl.MessageServiceImpl;
 import com.microservices.flash.bloop.common.data.entities.Message;
+import com.microservices.flash.bloop.common.data.mappers.MessageMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +32,8 @@ import lombok.extern.slf4j.Slf4j;
 public class MessageController {
  
     private final MessageService messageService;
+
+    private final MessageMapper messageMapper;
 
     @GetMapping
     public String listFirstPage(HttpServletRequest request, Model model) {

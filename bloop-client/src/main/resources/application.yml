@@ -131,6 +131,11 @@ mail-server-config:
   mail-from: "kuvaka.padombo@gmail.com"
   mail-sender-name: "KP Support Team"
 
+## Word-censorship-service (Override the application properties found in the main branch in the  main code)
+flash:
+  bloop: 
+    word-censorship-service-host: http://localhost:8180
+
 encrypt:
   key: ${ENCRYPTION_KEY}
 

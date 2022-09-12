@@ -18,6 +18,7 @@ import com.microservices.flash.bloop.client.exceptions.MessageNotFoundException;
 import com.microservices.flash.bloop.client.repositories.MessageRepository;
 import com.microservices.flash.bloop.client.services.MemberService;
 import com.microservices.flash.bloop.client.services.MessageService;
+import com.microservices.flash.bloop.client.services.WordCensorshipService;
 import com.microservices.flash.bloop.client.utils.MemberAccountUtil;
 import com.microservices.flash.bloop.common.data.entities.Member;
 import com.microservices.flash.bloop.common.data.entities.Message;
@@ -34,6 +35,8 @@ public class MessageServiceImpl implements MessageService {
     private final MessageRepository messageRepository;
 
     private final MemberService memberService;
+
+    private final WordCensorshipService wordCensorshipService;
 
     @Override
     public List<Message> listAllMessages() {
@@ -67,16 +70,16 @@ public class MessageServiceImpl implements MessageService {
 
         if (isUpdateMode) {
             Message dbMessage = messageRepository.getReferenceById(formMessage.getId());
-
-            dbMessage.setText(formMessage.getText());
             
-            // Invoke Bloop Service
+            // Invoke WordCensorshipService
+            dbMessage.setText(wordCensorshipService.censorWords(formMessage).getText());
             return messageRepository.save(dbMessage);
 
         } else {
-            // Invoke Bloop Service
             Member member = memberService.findByEmail(MemberAccountUtil.getAuthenticatedMemberEmail(request));
-            return messageRepository.save(formMessage.builder().text(formMessage.getText()).member(member).build());
+            
+            // Invoke WordCensorshipService
+            return messageRepository.save(formMessage.builder().text(wordCensorshipService.censorWords(formMessage).getText()).member(member).build());
         }
     }
 
@@ -84,9 +87,8 @@ public class MessageServiceImpl implements MessageService {
     public Message updateMessage(Message formMessage) {
         Message dbMessage = messageRepository.getReferenceById(formMessage.getId());
 
-        dbMessage.setText(formMessage.getText());
-        
-        // Invoke Bloop Service
+        // Invoke WordCensorshipService
+        dbMessage.setText(wordCensorshipService.censorWords(formMessage).getText());
         return messageRepository.save(dbMessage);
     }
 
