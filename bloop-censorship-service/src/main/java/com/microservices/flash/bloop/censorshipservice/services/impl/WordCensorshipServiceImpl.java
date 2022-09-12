@@ -45,9 +45,9 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
         return message;
     }
 
-    private String censorMessage(String text) {
+    private String censorMessage(String message) {
         String replacement = "*";
-        for(int index = 1; index < text.length(); index++){
+        for(int index = 1; index < message.length(); index++){
             replacement += replacement;
         }
         return replacement; 
