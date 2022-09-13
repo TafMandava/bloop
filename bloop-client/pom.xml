@@ -157,6 +157,26 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+				    <image>
+					    <name>${docker.image.prefix}/${docker.image.name}:${project.version}</name>
+					</image>
+				</configuration>
+				<executions>
+				    <execution>
+					    <!-- We want to create a docker image when we run the maven install command -->
+					    <phase>install</phase>
+						<goals>
+						    <!-- Create a docker image using buid-image -->
+							<!-- buid-image follows Layered approach and prevents single fat jar and use caching during image update-->
+							<!-- here won't be any need to update the whole jar-->
+							<!-- This is achieved with the help of Cloud Native build packs buildpacks.io -->
+							<!-- Library codes are less likely to change between builds so it is placed in its own layer -->
+							<!-- Application code is more likely to change between builds so it is isolated in a separate layer -->
+						    <goal>build-image</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

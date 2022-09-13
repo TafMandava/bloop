@@ -1,0 +1,42 @@
+# Java Maven CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-java/ for more details
+#
+version: 2
+jobs:
+    build:
+        docker:
+            # specify the version you desire here
+            - image: circleci/openjdk:11-browsers-legacy
+
+            # Specify service dependencies here if necessary
+            # CircleCI maintains a library of prebuilt images
+            # documented at https://circleci.com/docs/2.0/circleci-images/
+            # - image: circleci/progress:9.4
+
+        working_directory: ~/repo
+
+        environment:
+            # Customize the JVM maximum heap limit
+            MAVEN_OPTS: -Xmx3200m ## Sets JVM memory on Maven
+
+        steps:
+            - checkout ## Do a checkout from github
+                
+            # Download and cache dependencies
+            - restore_cache:
+                keys: ## What's nice about circle ci is that it will go and cache dependencies of the project and try to restore that
+                    - v1-dependencies-{{ checksum "pom.xml" }}
+                    # fallback to using the latest cache if no exact match is found
+                    - v1-dependencies-
+
+            - run: mvn dependency:go-offline ## tell maven to go and download all the dependencies for the project 
+
+            - save_cache:
+                paths:
+                    - ~/.m2
+                key: v1-dependencies-{{ checksum "pom.xml" }}
+
+            # run tests!
+            - run: mvn integration-test ## run the maven integration tests. maven will do a compile, run, test and also run integration tests
+
