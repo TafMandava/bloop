@@ -248,3 +248,86 @@
 2022-09-14 00:25:51 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select count(message0_.id) as col_0_0_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=?
 2022-09-14 00:25:51 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
 2022-09-14 00:25:51 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 01:19:20 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-14 01:19:20 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 01:19:20 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 01:19:23 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-14 01:19:25 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 01:19:25 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-14 01:19:25 [main] INFO  c.m.f.b.c.BloopClientApplication - The following 1 profile is active: "bloop_client"
+2022-09-14 01:19:25 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 01:19:25 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 01:19:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-14 01:19:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2022-09-14 01:19:26 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cf7f4c28-e3c3-3286-a014-43b02dab15e7
+2022-09-14 01:19:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8280 (http)
+2022-09-14 01:19:26 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8280"]
+2022-09-14 01:19:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-14 01:19:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 01:19:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-14 01:19:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1047 ms
+2022-09-14 01:19:26 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-14 01:19:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-14 01:19:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-14 01:19:26 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"bloop"
+2022-09-14 01:19:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-14 01:19:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-14 01:19:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-14 01:19:27 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-14 01:19:27 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-14 01:19:27 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-14 01:19:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1af29a19, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38624a3a, org.springframework.security.web.context.SecurityContextPersistenceFilter@22825762, org.springframework.security.web.header.HeaderWriterFilter@63f819a6, org.springframework.security.web.authentication.logout.LogoutFilter@1dd4c691, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@279e4506, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4582da06, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45ea6c24, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bb7fc38, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27ea7c8f, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1c10eb3a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23b02f37, org.springframework.security.web.session.SessionManagementFilter@2e871e93, org.springframework.security.web.access.ExceptionTranslationFilter@6441db2c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67c61551]
+2022-09-14 01:19:28 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 01:19:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/images/**']
+2022-09-14 01:19:28 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 01:19:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/js/**']
+2022-09-14 01:19:28 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 01:19:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/webjars/**']
+2022-09-14 01:19:28 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 01:19:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/css/**']
+2022-09-14 01:19:28 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/fontawesome/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 01:19:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/fontawesome/**']
+2022-09-14 01:19:28 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/richtext/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 01:19:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/richtext/**']
+2022-09-14 01:19:28 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-14 01:19:28 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-09-14 01:19:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8280"]
+2022-09-14 01:19:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8280 (http) with context path ''
+2022-09-14 01:19:29 [main] INFO  c.m.f.b.c.BloopClientApplication - Started BloopClientApplication in 13.642 seconds (JVM running for 14.396)
+2022-09-14 01:19:29 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from setting setting0_
+2022-09-14 01:19:57 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s848ms), soft-evicting connections from pool.
