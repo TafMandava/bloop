@@ -61,7 +61,7 @@ public class WordCensorshipServiceImplTest {
 
         Message message = Message.builder()
                             .id(UUID.randomUUID())
-                            .text("TAFADZWA CURRENT_SCHEMAIDX-SEQUENCE7")
+                            .text("TAFADZWA CURREnt_SCHEMAIDX-SEQUENCE7")
                             .build();
 
         Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
@@ -87,7 +87,7 @@ public class WordCensorshipServiceImplTest {
 
 
     @Test
-    void testComplexCensorSensitiveWords() {
+    void testEscapeSpeciaCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
         Message message = Message.builder()
@@ -97,7 +97,37 @@ public class WordCensorshipServiceImplTest {
 
         Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
 
-        //assertThat(censoredMessage.getText()).isEqualTo("*************");   
+        assertThat(censoredMessage.getText()).isEqualTo("*************");   
+        
+    }
+
+    @Test
+    void testUpperLowerEscapeSpeciaCensorSensitiveWords() {
+        Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
+
+        Message message = Message.builder()
+                            .id(UUID.randomUUID())
+                            .text("SELECT * from")
+                            .build();
+
+        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+
+        assertThat(censoredMessage.getText()).isEqualTo("*************");   
+        
+    }    
+
+    @Test
+    void testExtendedEscapeSpeciaCensorSensitiveWords() {
+        Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
+
+        Message message = Message.builder()
+                            .id(UUID.randomUUID())
+                            .text("TAFADZWASELECT * FROM MANDAVA")
+                            .build();
+
+        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+
+        assertThat(censoredMessage.getText()).isEqualTo("TAFADZWA************* MANDAVA");   
         
     }
 

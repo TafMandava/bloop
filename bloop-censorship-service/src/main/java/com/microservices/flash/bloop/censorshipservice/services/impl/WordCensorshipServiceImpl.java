@@ -45,7 +45,7 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
             // Replacement pattern
             String replacementText = StringUtils.repeat("*", regexText.length());;
             // Step 1: Allocate a Pattern object to compile a regex
-            Pattern pattern = Pattern.compile(regexText, Pattern.CASE_INSENSITIVE);
+            Pattern pattern = Pattern.compile(Pattern.quote(regexText), Pattern.CASE_INSENSITIVE);
             // Step 2: Allocate a Matcher object from the pattern, and provide the input
             Matcher matcher = pattern.matcher(stringBuilder);
             
@@ -90,8 +90,8 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
             // Pattern to be matched
             String regexText = sensitiveWord.getText();
 
-            // Step 1: Allocate a Pattern object to compile a regex
-            Pattern pattern = Pattern.compile(regexText, Pattern.CASE_INSENSITIVE);
+            // Step 1: Allocate a Pattern object to compile a regex. Pattern.quote is necessary to escape special chars that need to be treated as literal chars in the regex pattern.
+            Pattern pattern = Pattern.compile(Pattern.quote(regexText), Pattern.CASE_INSENSITIVE);
             // Step 2: Allocate a Matcher object from the pattern, and provide the input
             Matcher matcher = pattern.matcher(stringBuilder);
 
