@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.microservices.flash.bloop.censorshipservice.services.WordCensorshipService;
 import com.microservices.flash.bloop.common.data.dtos.MessageDto;
-import com.microservices.flash.bloop.common.data.entities.Message;
 
 import lombok.RequiredArgsConstructor;
 
