@@ -93,7 +93,12 @@ spring:
             client-secret: '{cipher}0207b4593d40e673166eac9f22bf98e1b6e93a0bc152b7e20bedecb6b6c4b3d51927a234e19d8ece0963400d8884e16ba9564f92693a712fd7bcc61ff28a4af2'
             scope:
             - email
-            - public_profile            
+            - public_profile    
+
+    user:
+      name: BloopCensorshipService
+      password: '{cipher}40d3cf8dfb2dc77981e8d2d3e2630cc7de9d131729ebaa484914f05564ec8c61'
+                  
 
   jpa:
     hibernate:
