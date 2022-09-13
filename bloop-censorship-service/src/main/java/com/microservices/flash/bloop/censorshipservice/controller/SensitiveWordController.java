@@ -23,7 +23,7 @@ public class SensitiveWordController {
 
     @PostMapping
     public ResponseEntity<Message> censorWords(@NotNull @RequestBody Message message) {
-        return new ResponseEntity<>(wordCensorshipService.censorSensitiveWords(message), HttpStatus.OK);
+        return new ResponseEntity<Message>(wordCensorshipService.censorSensitiveWords(message), HttpStatus.OK);
     }    
     
 }

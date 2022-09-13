@@ -29,11 +29,12 @@ import com.microservices.flash.bloop.common.data.entities.Message;
 @WebMvcTest(WordCensorshipServiceImpl.class)
 public class WordCensorshipServiceImplTest {
 
-    WordCensorshipService wordCensorshipService;
-
     @Autowired
     MockMvc mockMvc;
     
+    @Autowired
+    WordCensorshipService wordCensorshipService;
+
     /**
      * Set the property for the url automatically and get everything configured
      */
@@ -55,8 +56,24 @@ public class WordCensorshipServiceImplTest {
         wordCensorshipService = new WordCensorshipServiceImpl(sensitiveWordRepository);
     }
 
+
     @Test
     void testCensorSensitiveWords() {
+        Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
+
+        Message message = Message.builder()
+                            .id(UUID.randomUUID())
+                            .text("TAFADZWA CURRENT_SCHEMAIDX-SEQUENCE7")
+                            .build();
+
+        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+
+        assertThat(censoredMessage.getText()).isEqualTo("TAFADZWA ****************X-********7");
+
+    }
+
+    @Test
+    void testUpperLowerCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
         Message message = Message.builder()
@@ -87,7 +104,7 @@ public class WordCensorshipServiceImplTest {
 
 
     @Test
-    void testEscapeSpeciaCensorSensitiveWords() {
+    void testEscapeSpecialCharCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
         Message message = Message.builder()
@@ -102,7 +119,7 @@ public class WordCensorshipServiceImplTest {
     }
 
     @Test
-    void testUpperLowerEscapeSpeciaCensorSensitiveWords() {
+    void testUpperLowerEscapeSpecialCharCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
         Message message = Message.builder()
@@ -117,7 +134,7 @@ public class WordCensorshipServiceImplTest {
     }    
 
     @Test
-    void testExtendedEscapeSpeciaCensorSensitiveWords() {
+    void testExtendedEscapeSpecialCharCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
         Message message = Message.builder()

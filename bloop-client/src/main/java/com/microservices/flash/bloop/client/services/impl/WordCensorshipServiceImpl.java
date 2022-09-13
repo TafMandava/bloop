@@ -13,13 +13,17 @@ import com.microservices.flash.bloop.common.data.entities.Message;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@ConfigurationProperties(prefix = "flash.bloop", ignoreUnknownFields = false)
+@ConfigurationProperties(prefix = "flash.bloop", ignoreUnknownFields = true)
 @Service
 public class WordCensorshipServiceImpl implements WordCensorshipService {
 
-    public static final String MESSAGE_PATH_V1 = "/api/v1/message/";
+    public static final String MESSAGE_PATH_V1 = "/api/v1/message";
 
     private String wordCensorshipServiceHost;
+
+    public void setWordCensorshipServiceHost(String wordCensorshipServiceHost) {
+        this.wordCensorshipServiceHost = wordCensorshipServiceHost;
+    }
 
     private final RestTemplate restTemplate;
 

@@ -142,7 +142,13 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
-		</dependency>								
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.JensPiegsa</groupId> 
+			<artifactId>wiremock-extension</artifactId>
+			<scope>test</scope>
+		</dependency>									
 				
 	</dependencies>
 

@@ -64,6 +64,8 @@
 		<jackson-databind.version>2.13.3</jackson-databind.version>
 
 		<springdoc-openapi-ui.version>1.6.11</springdoc-openapi-ui.version>
+
+		<wiremock-extension.version>0.4.0</wiremock-extension.version>
     </properties>
 
 	<!-- The artifact kafka-avro-serializer is located at Confluent repository (https://packages.confluent.io/maven/) so we need to add a repository for the dependency because it is not on the maven repository -->
@@ -73,6 +75,11 @@
 	    <repository>
 		    <id>confluent</id>
 			<url>https://packages.confluent.io/maven/</url>
+		</repository>
+
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
 		</repository>
 	</repositories>
 
@@ -293,7 +300,14 @@
 				<groupId>org.springdoc</groupId>
 				<artifactId>springdoc-openapi-ui</artifactId>
 				<version>${springdoc-openapi-ui.version}</version>
-			</dependency>				
+			</dependency>
+
+			<dependency>
+		    	<groupId>com.github.JensPiegsa</groupId> 
+		    	<artifactId>wiremock-extension</artifactId>
+		    	<version>${wiremock-extension.version}</version>
+		    	<scope>test</scope>
+		    </dependency>				
 
 	    </dependencies>
 	</dependencyManagement>
