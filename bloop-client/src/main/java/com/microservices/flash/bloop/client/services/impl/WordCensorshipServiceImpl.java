@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class WordCensorshipServiceImpl implements WordCensorshipService {
 
-    public static final String MESSAGE_PATH_V1 = "/api/v1/message/";
+    public static final String MESSAGE_PATH_V1 = "/api/v1/message";
 
     private String wordCensorshipServiceHost;
 
