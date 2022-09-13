@@ -32,7 +32,7 @@ public class SensitiveWordRepositoryTest {
     private SensitiveWordRepository sensitiveWordRepository;
 
     @Test
-    void testFindByTextIgnoreCaseContainingTrue() {
+    void testFindByTextIgnoreCaseContaining() {
 
         String sensitiveWord = "SELECT * FROM";
 

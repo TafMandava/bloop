@@ -1,10 +1,18 @@
 package com.microservices.flash.bloop.censorshipservice.services.impl;
 
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ObjectUtils;
 
 import com.microservices.flash.bloop.censorshipservice.domain.SensitiveWord;
 import com.microservices.flash.bloop.censorshipservice.repositories.SensitiveWordRepository;
@@ -23,34 +31,79 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
     public Message censorSensitiveWords(Message message) {
 
         StringBuilder stringBuilder = new StringBuilder();
-        StringTokenizer stringTokenizer = new StringTokenizer(message.getText());
+        stringBuilder.append(message.getText());
+        
+        Map<String, Integer> sensitiveWordsSortedByLength = prioritizeCensorShipBySupersets(message);
+        Set uniqueSensitiveWordsSortedByLength = sensitiveWordsSortedByLength.entrySet();
+        Iterator iterator = uniqueSensitiveWordsSortedByLength.iterator();
 
-        while (stringTokenizer.hasMoreTokens()) {
+        while (iterator.hasNext()) {
+            Map.Entry mapEntry = (Map.Entry) iterator.next();
+            System.out.println(String.format("%s : %s", mapEntry.getKey(), sensitiveWordsSortedByLength.get(mapEntry.getKey())));
 
-            List<SensitiveWord> sensitiveWords = sensitiveWordRepository.findByTextIgnoreCaseContaining(stringTokenizer.nextToken());
-            if(!ObjectUtils.isEmpty(sensitiveWords)) {
-                stringBuilder.append( censorMessage( stringTokenizer.nextToken() ) );
-            } 
+            String regexText = mapEntry.getKey().toString();
+            // Replacement pattern
+            String replacementText = StringUtils.repeat("*", regexText.length());;
+            // Step 1: Allocate a Pattern object to compile a regex
+            Pattern pattern = Pattern.compile(regexText, Pattern.CASE_INSENSITIVE);
+            // Step 2: Allocate a Matcher object from the pattern, and provide the input
+            Matcher matcher = pattern.matcher(stringBuilder);
             
-            stringBuilder.append(message);
- 
-            if (stringTokenizer.hasMoreTokens()) {
-                stringBuilder.append(" ");
+            if(matcher.find()) {
+                stringBuilder.replace(0, stringBuilder.length(), matcher.replaceAll(replacementText));
+                System.out.println(String.format("Replacement text '%s'", stringBuilder.toString()));
             }
-
         }
 
-        message.setText(stringBuilder.toString());
+        message.setText(stringBuilder.toString()); 
 
         return message;
     }
 
-    private String censorMessage(String message) {
-        String replacement = "*";
-        for(int index = 1; index < message.length(); index++){
-            replacement += replacement;
+    /**
+     * 
+     * Longer sensitive words can also be supersets. Therefore, prioritize replacement of supersets values
+     *
+     */
+    private Map<String, Integer> prioritizeCensorShipBySupersets(Message message) {
+
+        Map<String, Integer> matchedSensitiveWords = findAllSensitiveWords(message);
+
+       return matchedSensitiveWords.entrySet()
+                                    .stream()
+                                    .sorted(Entry.comparingByValue( Comparator.reverseOrder() ))
+                                    .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (element1, element2) -> element1, LinkedHashMap::new));
+
+    }
+
+    private Map<String, Integer> findAllSensitiveWords(Message message) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(message.getText());
+
+        Map<String, Integer>  matchedSensitiveWords = new HashMap<>();
+
+        for(SensitiveWord sensitiveWord : sensitiveWordRepository.findAll()) {
+
+            System.out.println(String.format("Stored Sensitive Word  '%s'", sensitiveWord.getText()));
+
+            // Pattern to be matched
+            String regexText = sensitiveWord.getText();
+
+            // Step 1: Allocate a Pattern object to compile a regex
+            Pattern pattern = Pattern.compile(regexText, Pattern.CASE_INSENSITIVE);
+            // Step 2: Allocate a Matcher object from the pattern, and provide the input
+            Matcher matcher = pattern.matcher(stringBuilder);
+
+            if(matcher.find()) {
+                
+                matchedSensitiveWords.put(regexText, regexText.length());
+
+            }
+
         }
-        return replacement; 
+
+        return matchedSensitiveWords;
     }
     
 }
