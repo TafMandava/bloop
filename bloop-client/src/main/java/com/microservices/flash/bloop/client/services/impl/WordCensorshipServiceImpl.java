@@ -1,14 +1,12 @@
 package com.microservices.flash.bloop.client.services.impl;
 
-import java.util.Optional;
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.microservices.flash.bloop.client.services.WordCensorshipService;
-import com.microservices.flash.bloop.common.data.entities.Message;
+import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,11 +30,11 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
     }
 
     @Override
-    public Message censorWords(Message message) {
+    public MessageDto censorWords(MessageDto message) {
 
         try {
             log.debug("Posting to callback url");
-            return restTemplate.postForObject(wordCensorshipServiceHost + MESSAGE_PATH_V1, message, Message.class);
+            return restTemplate.postForObject(wordCensorshipServiceHost + MESSAGE_PATH_V1, message, MessageDto.class);
         } catch (Throwable throwable) {
             log.error("Error performing callback for word censorship"  + message.getText(), throwable);
         }

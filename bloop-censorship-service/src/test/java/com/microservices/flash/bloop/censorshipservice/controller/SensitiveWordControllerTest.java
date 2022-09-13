@@ -11,7 +11,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.microservices.flash.bloop.common.data.entities.Message;
+import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 
 /**
  * This should tell us whether our mapping is correct or not
@@ -29,19 +29,19 @@ public class SensitiveWordControllerTest {
 
     @Test
     void testCensorWords() {
-        Message message = Message.builder()
-                            .id(UUID.randomUUID())
-                            .text("TAFADZWA CURREnt_SCHEMAIDX-SEQUENCE7")
-                            .build();
+        MessageDto message = MessageDto.builder()
+                                .id(UUID.randomUUID())
+                                .text("TAFADZWA CURREnt_SCHEMAIDX-SEQUENCE7")
+                                .build();
                             
-        ResponseEntity<Message> response = postMessage(message, Message.class);
+        ResponseEntity<MessageDto> response = postMessage(message, MessageDto.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
 
         assertThat(response.getBody().getText()).isEqualTo("TAFADZWA ****************X-********7");
     }
 
-    private <T> ResponseEntity<T> postMessage(Message message, Class<T> responseType) {
+    private <T> ResponseEntity<T> postMessage(MessageDto message, Class<T> responseType) {
         return testRestTemplate.postForEntity(MESSAGE_PATH_V1, message, responseType);
     }
 

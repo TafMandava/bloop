@@ -49,7 +49,6 @@
                                     <span th:if="${sortField == 'createdDate'}" th:class="${sortDirection == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
                                 </th>
                                 <th>Last Modified Date</th>
-                                <th>Deleted</th>
                             </tr>                            
                         </thead>
                         <tbody>
@@ -57,7 +56,6 @@
                                 <td class="align-middle">[[${textMessage.text}]]</td>
                                 <td class="align-middle">[[${textMessage.createdDate}]]</td>
                                 <td class="align-middle">[[${textMessage.lastModifiedDate}]]</td>
-                                <td class="align-middle">[[${textMessage.isDeleted}]]</td>
     
                                 <td class="align-middle text-center">
                                     <a class="btn btn-success" th:href="@{'/messages/edit/' + ${textMessage.id}}" title="Edit Message"><i class="fas fa-edit"></i></a> 

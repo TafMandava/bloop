@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.data.domain.Page;
 
 import com.microservices.flash.bloop.client.exceptions.MessageNotFoundException;
-import com.microservices.flash.bloop.common.data.entities.Message;
+import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 
 public interface MessageService {
 
-    public List<Message> listAllMessages();
+    public List<MessageDto> listAllMessages();
 
-    public Page<Message> listByPage(HttpServletRequest request, int pageNumber, String sortField, String sortDirection);
+    public Page<MessageDto> listByPage(HttpServletRequest request, int pageNumber, String sortField, String sortDirection);
     
-    public Message saveMessage(HttpServletRequest request, Message formMessage);
+    public MessageDto saveMessage(HttpServletRequest request, MessageDto formMessage);
 
-    public Message updateMessage(Message formMessage);
+    public MessageDto updateMessage(MessageDto formMessage);
 
-    public Message findById(UUID id) throws MessageNotFoundException;
+    public MessageDto findById(UUID id) throws MessageNotFoundException;
 
     public void deleteMessage(UUID id) throws MessageNotFoundException;
 }

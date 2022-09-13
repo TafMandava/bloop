@@ -19,8 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.microservices.flash.bloop.client.exceptions.MessageNotFoundException;
 import com.microservices.flash.bloop.client.services.MessageService;
 import com.microservices.flash.bloop.client.services.impl.MessageServiceImpl;
-import com.microservices.flash.bloop.common.data.entities.Message;
-import com.microservices.flash.bloop.common.data.mappers.MessageMapper;
+import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,8 +31,6 @@ import lombok.extern.slf4j.Slf4j;
 public class MessageController {
  
     private final MessageService messageService;
-
-    private final MessageMapper messageMapper;
 
     @GetMapping
     public String listFirstPage(HttpServletRequest request, Model model) {
@@ -51,8 +48,8 @@ public class MessageController {
         log.debug("Sort field '{}'", sortField);
         log.debug("Sort direction '{}'", sortDirection);
 
-        Page<Message> page = messageService.listByPage(request, pageNumber, sortField, sortDirection);
-        List<Message> messages = page.getContent();
+        Page<MessageDto> page = messageService.listByPage(request, pageNumber, sortField, sortDirection);
+        List<MessageDto> messages = page.getContent();
 
         log.debug("Page number '{}'", pageNumber);
         log.debug("Total elements '{}'", page.getTotalElements());
@@ -87,7 +84,7 @@ public class MessageController {
     public String createMessage(HttpServletRequest request, Model model) {
         
 
-        Message message = Message.builder().isDeleted(false).build();
+        MessageDto message = MessageDto.builder().build();
         model.addAttribute("textMessage", message);
         model.addAttribute("pageTitle", "Create Message");
 
@@ -101,7 +98,7 @@ public class MessageController {
      * @throws IOException
      */
     @PostMapping("/save")
-    public String saveUser(HttpServletRequest request, Message message, RedirectAttributes redirectAttributes) throws IOException {
+    public String saveUser(HttpServletRequest request, MessageDto message, RedirectAttributes redirectAttributes) throws IOException {
 
 
         messageService.saveMessage(request, message);
@@ -116,7 +113,7 @@ public class MessageController {
     public String editMessage(@PathVariable("id") String id, RedirectAttributes redirectAttributes, Model model) {
 
         try {
-            Message message = messageService.findById(UUID.fromString(id));
+            MessageDto message = messageService.findById(UUID.fromString(id));
 
             model.addAttribute("textMessage", message);
             model.addAttribute("pageTitle", "Edit Text");
