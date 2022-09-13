@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import com.microservices.flash.bloop.censorshipservice.domain.SensitiveWord;
 import com.microservices.flash.bloop.censorshipservice.repositories.SensitiveWordRepository;
 import com.microservices.flash.bloop.censorshipservice.services.WordCensorshipService;
-import com.microservices.flash.bloop.common.data.entities.Message;
+import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -28,7 +28,7 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
     private final SensitiveWordRepository sensitiveWordRepository;
 
     @Override
-    public Message censorSensitiveWords(Message message) {
+    public MessageDto censorSensitiveWords(MessageDto message) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(message.getText());
@@ -65,7 +65,7 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
      * Longer sensitive words can also be supersets. Therefore, prioritize replacement of supersets values
      *
      */
-    private Map<String, Integer> prioritizeCensorShipBySupersets(Message message) {
+    private Map<String, Integer> prioritizeCensorShipBySupersets(MessageDto message) {
 
         Map<String, Integer> matchedSensitiveWords = findAllSensitiveWords(message);
 
@@ -76,7 +76,7 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
 
     }
 
-    private Map<String, Integer> findAllSensitiveWords(Message message) {
+    private Map<String, Integer> findAllSensitiveWords(MessageDto message) {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(message.getText());
