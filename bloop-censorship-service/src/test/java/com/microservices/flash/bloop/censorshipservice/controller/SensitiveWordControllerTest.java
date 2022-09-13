@@ -22,7 +22,7 @@ import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SensitiveWordControllerTest {
 
-    public static final String MESSAGE_PATH_V1 = "/api/v1/message";
+    public static final String CENSOR_PATH_V1 = "/api/v1/censor";
 
     @Autowired
     TestRestTemplate testRestTemplate;
@@ -42,7 +42,7 @@ public class SensitiveWordControllerTest {
     }
 
     private <T> ResponseEntity<T> postMessage(MessageDto message, Class<T> responseType) {
-        return testRestTemplate.postForEntity(MESSAGE_PATH_V1, message, responseType);
+        return testRestTemplate.postForEntity(CENSOR_PATH_V1, message, responseType);
     }
 
 }
