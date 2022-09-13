@@ -7435,3 +7435,85 @@ Caused by: java.lang.IllegalStateException: Could not register object [ConfigCli
 2022-09-13 23:29:54 [http-nio-8180-exec-3] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
 2022-09-13 23:30:32 [http-nio-8180-exec-4] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
 2022-09-13 23:31:47 [http-nio-8180-exec-6] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 318 ms
+2022-09-13 23:42:20 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-13 23:42:20 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-13 23:42:20 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-13 23:42:23 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-13 23:42:26 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-censorship-service, config-client, profiles=[default], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-13 23:42:26 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-13 23:42:26 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - The following 1 profile is active: "bloop_censorship_service"
+2022-09-13 23:42:26 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-13 23:42:26 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-13 23:42:27 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-13 23:42:27 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+2022-09-13 23:42:27 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cfce6099-2c34-3e33-ac48-8e8c37fc9390
+2022-09-13 23:42:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8180 (http)
+2022-09-13 23:42:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8180"]
+2022-09-13 23:42:27 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-13 23:42:27 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-13 23:42:27 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-13 23:42:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 856 ms
+2022-09-13 23:42:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-13 23:42:27 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-13 23:42:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-13 23:42:28 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"bloop"
+2022-09-13 23:42:28 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-13 23:42:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-13 23:42:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-13 23:42:28 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-13 23:42:28 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-13 23:42:28 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-13 23:42:29 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-13 23:42:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8180"]
+2022-09-13 23:42:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8180 (http) with context path ''
+2022-09-13 23:42:30 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - Started BloopCensorshipServiceApplication in 13.205 seconds (JVM running for 13.719)
+2022-09-13 23:42:30 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from sensitive_word sensitivew0_
+2022-09-13 23:44:59 [http-nio-8180-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-13 23:44:59 [http-nio-8180-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-13 23:44:59 [http-nio-8180-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 61 ms
+2022-09-13 23:44:59 [http-nio-8180-exec-1] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:45:08 [http-nio-8180-exec-3] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:45:26 [http-nio-8180-exec-2] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:45:32 [http-nio-8180-exec-4] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:45:38 [http-nio-8180-exec-5] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:45:43 [http-nio-8180-exec-6] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:46:22 [http-nio-8180-exec-7] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:46:45 [http-nio-8180-exec-8] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:46:59 [http-nio-8180-exec-9] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:47:12 [http-nio-8180-exec-10] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-13 23:47:36 [http-nio-8180-exec-1] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
