@@ -31,7 +31,7 @@ public class MailSettingLoader implements CommandLineRunner {
     private void loadMailSettingObjects() {
         if(settingRepository.count() == 0) {
 
-             createSiteNameGeneralSettings();
+            createSiteNameGeneralSettings();
             createMailServerSettings();
             createMailTemplatesSettings();        
 
