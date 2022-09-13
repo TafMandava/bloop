@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class WordCensorshipServiceImpl implements WordCensorshipService {
 
-    public static final String MESSAGE_PATH_V1 = "/api/v1/message";
+    public static final String CENSOR_PATH_V1 = "/api/v1/censor";
 
     private String wordCensorshipServiceHost;
 
@@ -34,7 +34,7 @@ public class WordCensorshipServiceImpl implements WordCensorshipService {
 
         try {
             log.debug("Posting to callback url");
-            return restTemplate.postForObject(wordCensorshipServiceHost + MESSAGE_PATH_V1, message, MessageDto.class);
+            return restTemplate.postForObject(wordCensorshipServiceHost + CENSOR_PATH_V1, message, MessageDto.class);
         } catch (Throwable throwable) {
             log.error("Error performing callback for word censorship"  + message.getText(), throwable);
         }

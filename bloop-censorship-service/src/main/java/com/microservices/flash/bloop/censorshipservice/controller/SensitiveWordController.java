@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/v1/message")
+@RequestMapping("/api/v1/censor")
 public class SensitiveWordController {
 
     private final  WordCensorshipService  wordCensorshipService;
