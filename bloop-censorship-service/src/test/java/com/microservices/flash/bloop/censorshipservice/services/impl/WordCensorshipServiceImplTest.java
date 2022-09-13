@@ -18,7 +18,7 @@ import com.microservices.flash.bloop.censorshipservice.domain.SensitiveWord;
 import com.microservices.flash.bloop.censorshipservice.repositories.SensitiveWordRepository;
 import com.microservices.flash.bloop.censorshipservice.services.WordCensorshipService;
 import com.microservices.flash.bloop.censorshipservice.utils.SensitiveWordsList;
-import com.microservices.flash.bloop.common.data.entities.Message;
+import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 
 /**
  * This should tell us whether our mapping is correct or not
@@ -61,12 +61,12 @@ public class WordCensorshipServiceImplTest {
     void testCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
-        Message message = Message.builder()
-                            .id(UUID.randomUUID())
-                            .text("TAFADZWA CURRENT_SCHEMAIDX-SEQUENCE7")
-                            .build();
+        MessageDto message = MessageDto.builder()
+                                .id(UUID.randomUUID())
+                                .text("TAFADZWA CURRENT_SCHEMAIDX-SEQUENCE7")
+                                .build();
 
-        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+        MessageDto censoredMessage = wordCensorshipService.censorSensitiveWords(message);
 
         assertThat(censoredMessage.getText()).isEqualTo("TAFADZWA ****************X-********7");
 
@@ -76,12 +76,12 @@ public class WordCensorshipServiceImplTest {
     void testUpperLowerCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
-        Message message = Message.builder()
-                            .id(UUID.randomUUID())
-                            .text("TAFADZWA CURREnt_SCHEMAIDX-SEQUENCE7")
-                            .build();
+        MessageDto message = MessageDto.builder()
+                                .id(UUID.randomUUID())
+                                .text("TAFADZWA CURREnt_SCHEMAIDX-SEQUENCE7")
+                                .build();
 
-        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+        MessageDto censoredMessage = wordCensorshipService.censorSensitiveWords(message);
 
         assertThat(censoredMessage.getText()).isEqualTo("TAFADZWA ****************X-********7");
 
@@ -91,12 +91,12 @@ public class WordCensorshipServiceImplTest {
     void testCensorSensitiveWordsHappyPath() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
-        Message message = Message.builder()
-                            .id(UUID.randomUUID())
-                            .text("TAFADZWA MANDAVA")
-                            .build();
+        MessageDto message = MessageDto.builder()
+                                .id(UUID.randomUUID())
+                                .text("TAFADZWA MANDAVA")
+                                .build();
 
-        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+        MessageDto censoredMessage = wordCensorshipService.censorSensitiveWords(message);
 
         assertThat(censoredMessage.getText()).isEqualTo("TAFADZWA MANDAVA");
 
@@ -107,12 +107,12 @@ public class WordCensorshipServiceImplTest {
     void testEscapeSpecialCharCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
-        Message message = Message.builder()
-                            .id(UUID.randomUUID())
-                            .text("SELECT * FROM")
-                            .build();
+        MessageDto message = MessageDto.builder()
+                                .id(UUID.randomUUID())
+                                .text("SELECT * FROM")
+                                .build();
 
-        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+        MessageDto censoredMessage = wordCensorshipService.censorSensitiveWords(message);
 
         assertThat(censoredMessage.getText()).isEqualTo("*************");   
         
@@ -122,12 +122,12 @@ public class WordCensorshipServiceImplTest {
     void testUpperLowerEscapeSpecialCharCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
-        Message message = Message.builder()
-                            .id(UUID.randomUUID())
-                            .text("SELECT * from")
-                            .build();
+        MessageDto message = MessageDto.builder()
+                                .id(UUID.randomUUID())
+                                .text("SELECT * from")
+                                .build();
 
-        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+        MessageDto censoredMessage = wordCensorshipService.censorSensitiveWords(message);
 
         assertThat(censoredMessage.getText()).isEqualTo("*************");   
         
@@ -137,12 +137,12 @@ public class WordCensorshipServiceImplTest {
     void testExtendedEscapeSpecialCharCensorSensitiveWords() {
         Mockito.when(sensitiveWordRepository.findAll()).thenReturn(mockSensitiveWords);
 
-        Message message = Message.builder()
-                            .id(UUID.randomUUID())
-                            .text("TAFADZWASELECT * FROM MANDAVA")
-                            .build();
+        MessageDto message = MessageDto.builder()
+                                .id(UUID.randomUUID())
+                                .text("TAFADZWASELECT * FROM MANDAVA")
+                                .build();
 
-        Message censoredMessage = wordCensorshipService.censorSensitiveWords(message);
+        MessageDto censoredMessage = wordCensorshipService.censorSensitiveWords(message);
 
         assertThat(censoredMessage.getText()).isEqualTo("TAFADZWA************* MANDAVA");   
         

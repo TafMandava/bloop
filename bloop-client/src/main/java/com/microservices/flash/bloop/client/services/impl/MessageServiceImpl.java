@@ -3,6 +3,7 @@ package com.microservices.flash.bloop.client.services.impl;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
@@ -15,13 +16,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import com.microservices.flash.bloop.client.exceptions.MessageNotFoundException;
+import com.microservices.flash.bloop.client.model.MessagePagedList;
 import com.microservices.flash.bloop.client.repositories.MessageRepository;
 import com.microservices.flash.bloop.client.services.MemberService;
 import com.microservices.flash.bloop.client.services.MessageService;
 import com.microservices.flash.bloop.client.services.WordCensorshipService;
 import com.microservices.flash.bloop.client.utils.MemberAccountUtil;
+import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 import com.microservices.flash.bloop.common.data.entities.Member;
 import com.microservices.flash.bloop.common.data.entities.Message;
+import com.microservices.flash.bloop.common.data.mappers.MessageMapper;
 
 import lombok.RequiredArgsConstructor;
 
@@ -38,13 +42,19 @@ public class MessageServiceImpl implements MessageService {
 
     private final WordCensorshipService wordCensorshipService;
 
+    private final MessageMapper messageMapper;
+
     @Override
-    public List<Message> listAllMessages() {
-        return (List<Message>) messageRepository.findAll();
+    public List<MessageDto> listAllMessages() {
+
+        return messageRepository.findAll()
+                .stream()
+                .map(messageMapper::messageToMessageDto)
+                .collect(Collectors.toList());
     }
 
     @Override
-    public Page<Message> listByPage(HttpServletRequest request, int pageNumber, String sortField, String sortDirection) {
+    public MessagePagedList listByPage(HttpServletRequest request, int pageNumber, String sortField, String sortDirection) {
 
         Member member = memberService.findByEmail(MemberAccountUtil.getAuthenticatedMemberEmail(request));
 
@@ -60,12 +70,20 @@ public class MessageServiceImpl implements MessageService {
         Pageable pageable = PageRequest.of(pageNumber - 1, MESSAGES_PER_PAGE, sort);
 
 
-        return messageRepository.findByMemberAndIsDeletedEquals(member, false, pageable);
+        Page<Message> messagePage = messageRepository.findByMemberAndIsDeletedEquals(member, false, pageable);
+
+        return new MessagePagedList(messagePage.getContent()
+                        .stream()
+                        .map(messageMapper::messageToMessageDto)
+                        .collect(Collectors.toList()),
+                            PageRequest.of(messagePage.getPageable().getPageNumber(), messagePage.getPageable().getPageSize()),
+                         messagePage.getTotalElements()
+                    );
 
     }
 
     @Override
-    public Message saveMessage(HttpServletRequest request, Message formMessage) {
+    public MessageDto saveMessage(HttpServletRequest request, MessageDto formMessage) {
         boolean isUpdateMode = !ObjectUtils.isEmpty(formMessage.getId());
 
         if (isUpdateMode) {
@@ -73,30 +91,49 @@ public class MessageServiceImpl implements MessageService {
             
             // Invoke WordCensorshipService
             dbMessage.setText(wordCensorshipService.censorWords(formMessage).getText());
-            return messageRepository.save(dbMessage);
+
+            return messageMapper.messageToMessageDto( messageRepository.save(dbMessage) );
 
         } else {
             Member member = memberService.findByEmail(MemberAccountUtil.getAuthenticatedMemberEmail(request));
+
+            Message message = messageMapper.messageDtoToMessage(formMessage);
             
             // Invoke WordCensorshipService
-            return messageRepository.save(formMessage.builder().text(wordCensorshipService.censorWords(formMessage).getText()).member(member).build());
+            return  messageMapper.messageToMessageDto( 
+                                    messageRepository.save(  
+                                        message.builder()
+                                                .text(
+                                                    wordCensorshipService.censorWords(formMessage).getText()
+                                                )
+                                                .isDeleted(false)
+                                                .member(member)
+                                                .build() 
+                                    ) 
+                                );
         }
     }
 
     @Override
-    public Message updateMessage(Message formMessage) {
+    public MessageDto updateMessage(MessageDto formMessage) {
         Message dbMessage = messageRepository.getReferenceById(formMessage.getId());
 
         // Invoke WordCensorshipService
         dbMessage.setText(wordCensorshipService.censorWords(formMessage).getText());
-        return messageRepository.save(dbMessage);
+
+        return messageMapper.messageToMessageDto( 
+                    messageRepository.save(dbMessage) 
+                );
     }
 
     @Override
-    public Message findById(UUID id) throws MessageNotFoundException {
+    public MessageDto findById(UUID id) throws MessageNotFoundException {
         try {
 
-            return messageRepository.findById(id).get();
+            return messageMapper.messageToMessageDto( 
+                        messageRepository.findById(id)
+                                         .get() 
+                    );
 
         } catch (NoSuchElementException e) {
 

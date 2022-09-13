@@ -1,9 +1,9 @@
 package com.microservices.flash.bloop.censorshipservice.services;
 
-import com.microservices.flash.bloop.common.data.entities.Message;
+import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 
 public interface WordCensorshipService {
 
-    Message censorSensitiveWords(Message message);
+    MessageDto censorSensitiveWords(MessageDto message);
     
 }
