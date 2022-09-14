@@ -38,5 +38,14 @@ spring:
         name: Bloop
         password: '{cipher}a67e98495ec9e352a92da2b431cb2527d5dae7d889df2a31bc7c4ed196823432'
 
+# Where to find Eureka Server (Including HTTP Basic Access for the Confiogurtion Server to be able to talk to Eureka)
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Netflix:Eureka@127.0.0.1:8761/eureka
+      
+  instance:
+     instance-id: ${spring.application.name}:${instanceId:${random.value}}
+
 encrypt:
   key: ${ENCRYPTION_KEY} 

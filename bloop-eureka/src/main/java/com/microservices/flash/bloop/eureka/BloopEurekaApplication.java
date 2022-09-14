@@ -1,4 +1,4 @@
-package com.microservices.flash.bloopeureka;
+package com.microservices.flash.bloop.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
