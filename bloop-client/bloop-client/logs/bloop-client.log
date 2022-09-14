@@ -248,3 +248,385 @@
 2022-09-14 00:25:51 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select count(message0_.id) as col_0_0_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=?
 2022-09-14 00:25:51 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
 2022-09-14 00:25:51 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:20:06 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.microservices.flash.bloopclient.BloopClientApplicationTests], using SpringBootContextLoader
+2022-09-14 04:20:06 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.microservices.flash.bloopclient.BloopClientApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-09-14 04:20:06 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.microservices.flash.bloopclient.BloopClientApplicationTests]: BloopClientApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-09-14 04:26:14 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-14 04:26:14 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 04:26:14 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 04:26:17 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-14 04:26:21 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 04:26:21 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-14 04:26:21 [main] INFO  c.m.f.b.c.BloopClientApplication - The following 1 profile is active: "bloop_client"
+2022-09-14 04:26:21 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 04:26:21 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 04:26:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-14 04:26:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 156 ms. Found 3 JPA repository interfaces.
+2022-09-14 04:26:23 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=fd77b855-5058-3690-b4ab-a9e4980d9e52
+2022-09-14 04:26:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8280 (http)
+2022-09-14 04:26:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8280"]
+2022-09-14 04:26:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-14 04:26:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 04:26:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-14 04:26:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4823 ms
+2022-09-14 04:26:26 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-14 04:26:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-14 04:26:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-14 04:26:27 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"bloop"
+2022-09-14 04:26:27 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-14 04:26:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-14 04:26:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-14 04:26:28 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-14 04:26:29 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-14 04:26:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-14 04:26:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b67b359, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@98c4a8b, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b132063, org.springframework.security.web.header.HeaderWriterFilter@21252bef, org.springframework.security.web.authentication.logout.LogoutFilter@59eb987a, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@76a86677, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3b863b4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5687ba39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a486851, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52539624, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7e2c8622, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@130bd00e, org.springframework.security.web.session.SessionManagementFilter@52984065, org.springframework.security.web.access.ExceptionTranslationFilter@597a5ead, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b9b9cb9]
+2022-09-14 04:26:30 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:26:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/images/**']
+2022-09-14 04:26:30 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:26:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/js/**']
+2022-09-14 04:26:30 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:26:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/webjars/**']
+2022-09-14 04:26:30 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:26:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/css/**']
+2022-09-14 04:26:30 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/fontawesome/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:26:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/fontawesome/**']
+2022-09-14 04:26:30 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/richtext/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:26:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/richtext/**']
+2022-09-14 04:26:30 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-14 04:26:30 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-09-14 04:26:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8280"]
+2022-09-14 04:26:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8280 (http) with context path ''
+2022-09-14 04:26:32 [main] INFO  c.m.f.b.c.BloopClientApplication - Started BloopClientApplication in 22.35 seconds (JVM running for 24.183)
+2022-09-14 04:26:32 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from setting setting0_
+2022-09-14 04:33:34 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-14 04:33:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-09-14 04:33:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-09-14 04:33:38 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-14 04:33:38 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 04:33:38 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 04:33:41 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-14 04:33:44 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 04:33:44 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-14 04:33:44 [main] INFO  c.m.f.b.c.BloopClientApplication - The following 1 profile is active: "bloop_client"
+2022-09-14 04:33:44 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 04:33:44 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 04:33:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-14 04:33:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136 ms. Found 3 JPA repository interfaces.
+2022-09-14 04:33:46 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2ef54d55-d1f3-3711-9860-cb9354776692
+2022-09-14 04:33:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8280 (http)
+2022-09-14 04:33:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8280"]
+2022-09-14 04:33:46 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-14 04:33:46 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 04:33:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-14 04:33:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1726 ms
+2022-09-14 04:33:46 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-14 04:33:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-14 04:33:46 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-14 04:33:46 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"bloop"
+2022-09-14 04:33:47 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-14 04:33:47 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-14 04:33:47 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-14 04:33:47 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-14 04:33:48 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-14 04:33:48 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-14 04:33:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50c462b8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77d03738, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fb9695a, org.springframework.security.web.header.HeaderWriterFilter@6bea0866, org.springframework.security.web.authentication.logout.LogoutFilter@6dccdc50, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@7cecd959, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7f514dfe, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6d2413e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@712eb075, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cd4082a, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@3f33c5e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@566dc0c3, org.springframework.security.web.session.SessionManagementFilter@471b7c9c, org.springframework.security.web.access.ExceptionTranslationFilter@6124a7c0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c4fc610]
+2022-09-14 04:33:49 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:33:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/images/**']
+2022-09-14 04:33:49 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:33:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/js/**']
+2022-09-14 04:33:49 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:33:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/webjars/**']
+2022-09-14 04:33:49 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:33:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/css/**']
+2022-09-14 04:33:49 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/fontawesome/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:33:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/fontawesome/**']
+2022-09-14 04:33:49 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/richtext/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 04:33:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/richtext/**']
+2022-09-14 04:33:49 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-14 04:33:49 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-09-14 04:33:50 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2022-09-14 04:33:50 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-14 04:33:50 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2022-09-14 04:33:50 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2022-09-14 04:33:50 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2022-09-14 04:33:51 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1663122831297 with initial instances count: 2
+2022-09-14 04:33:51 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application BLOOP-CLIENT with eureka with status UP
+2022-09-14 04:33:51 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1663122831301, current=UP, previous=STARTING]
+2022-09-14 04:33:51 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BLOOP-CLIENT/bloop-client:2ecddd376e277bb42ff4e7ba302e3080: registering service...
+2022-09-14 04:33:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8280"]
+2022-09-14 04:33:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8280 (http) with context path ''
+2022-09-14 04:33:51 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8280
+2022-09-14 04:33:51 [main] INFO  c.m.f.b.c.BloopClientApplication - Started BloopClientApplication in 16.648 seconds (JVM running for 17.388)
+2022-09-14 04:33:51 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from setting setting0_
+2022-09-14 04:33:51 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BLOOP-CLIENT/bloop-client:2ecddd376e277bb42ff4e7ba302e3080 - registration status: 204
+2022-09-14 04:38:51 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2022-09-14 04:43:51 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2022-09-14 04:45:22 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BLOOP-CLIENT/bloop-client:2ecddd376e277bb42ff4e7ba302e3080 - Re-registering apps/BLOOP-CLIENT
+2022-09-14 04:45:22 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BLOOP-CLIENT/bloop-client:2ecddd376e277bb42ff4e7ba302e3080: registering service...
+2022-09-14 04:45:22 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_BLOOP-CLIENT/bloop-client:2ecddd376e277bb42ff4e7ba302e3080 - registration status: 204
+2022-09-14 04:45:52 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2022-09-14 04:45:52 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2022-09-14 04:45:52 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2022-09-14 04:45:52 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2022-09-14 04:45:52 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2022-09-14 04:45:52 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2022-09-14 04:45:52 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2022-09-14 04:45:52 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2022-09-14 04:47:44 [http-nio-8280-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-14 04:47:44 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-14 04:47:45 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 214 ms
+2022-09-14 04:48:51 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2022-09-14 04:49:30 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:49:30 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:49:30 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - update member set authentication_type=? where id=?
+2022-09-14 04:49:30 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [GOOGLE]
+2022-09-14 04:49:30 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:36 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:49:36 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:49:36 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:49:36 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:36 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:49:36 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select count(message0_.id) as col_0_0_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=?
+2022-09-14 04:49:36 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:36 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:49:47 [http-nio-8280-exec-1] DEBUG org.hibernate.SQL - select message0_.id as id1_1_0_, message0_.created_date as created_2_1_0_, message0_.last_modified_date as last_mod3_1_0_, message0_.version as version4_1_0_, message0_.is_deleted as is_delet5_1_0_, message0_.member_fk as member_f7_1_0_, message0_.text as text6_1_0_, member1_.id as id1_0_1_, member1_.created_date as created_2_0_1_, member1_.last_modified_date as last_mod3_0_1_, member1_.version as version4_0_1_, member1_.authentication_type as authenti5_0_1_, member1_.email as email6_0_1_, member1_.enabled as enabled7_0_1_, member1_.first_name as first_na8_0_1_, member1_.last_name as last_nam9_0_1_, member1_.password as passwor10_0_1_, member1_.phone_number as phone_n11_0_1_, member1_.reset_password_token as reset_p12_0_1_, member1_.verification_code as verific13_0_1_ from message message0_ left outer join member member1_ on message0_.member_fk=member1_.id where message0_.id=?
+2022-09-14 04:49:47 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [2c6f96f8-5ab0-4941-b2f9-144d1cf1a736]
+2022-09-14 04:49:47 [http-nio-8280-exec-1] DEBUG org.hibernate.SQL - update message set last_modified_date=?, version=?, is_deleted=?, member_fk=?, text=? where id=? and version=?
+2022-09-14 04:49:47 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:49:47.436]
+2022-09-14 04:49:47 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [1]
+2022-09-14 04:49:47 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BOOLEAN] - [true]
+2022-09-14 04:49:47 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:47 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [H**ey]
+2022-09-14 04:49:47 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [2c6f96f8-5ab0-4941-b2f9-144d1cf1a736]
+2022-09-14 04:49:47 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [0]
+2022-09-14 04:49:47 [http-nio-8280-exec-4] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:49:47 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:49:47 [http-nio-8280-exec-4] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:49:47 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:47 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:49:53 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select message0_.id as id1_1_0_, message0_.created_date as created_2_1_0_, message0_.last_modified_date as last_mod3_1_0_, message0_.version as version4_1_0_, message0_.is_deleted as is_delet5_1_0_, message0_.member_fk as member_f7_1_0_, message0_.text as text6_1_0_, member1_.id as id1_0_1_, member1_.created_date as created_2_0_1_, member1_.last_modified_date as last_mod3_0_1_, member1_.version as version4_0_1_, member1_.authentication_type as authenti5_0_1_, member1_.email as email6_0_1_, member1_.enabled as enabled7_0_1_, member1_.first_name as first_na8_0_1_, member1_.last_name as last_nam9_0_1_, member1_.password as passwor10_0_1_, member1_.phone_number as phone_n11_0_1_, member1_.reset_password_token as reset_p12_0_1_, member1_.verification_code as verific13_0_1_ from message message0_ left outer join member member1_ on message0_.member_fk=member1_.id where message0_.id=?
+2022-09-14 04:49:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [c1c9cbb6-9f62-4d46-bab0-913a262a62d4]
+2022-09-14 04:49:53 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - update message set last_modified_date=?, version=?, is_deleted=?, member_fk=?, text=? where id=? and version=?
+2022-09-14 04:49:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:49:53.094]
+2022-09-14 04:49:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [1]
+2022-09-14 04:49:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BOOLEAN] - [true]
+2022-09-14 04:49:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [Huchi]
+2022-09-14 04:49:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [c1c9cbb6-9f62-4d46-bab0-913a262a62d4]
+2022-09-14 04:49:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [0]
+2022-09-14 04:49:53 [http-nio-8280-exec-2] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:49:53 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:49:53 [http-nio-8280-exec-2] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:49:53 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:53 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:49:57 [http-nio-8280-exec-5] DEBUG org.hibernate.SQL - select message0_.id as id1_1_0_, message0_.created_date as created_2_1_0_, message0_.last_modified_date as last_mod3_1_0_, message0_.version as version4_1_0_, message0_.is_deleted as is_delet5_1_0_, message0_.member_fk as member_f7_1_0_, message0_.text as text6_1_0_, member1_.id as id1_0_1_, member1_.created_date as created_2_0_1_, member1_.last_modified_date as last_mod3_0_1_, member1_.version as version4_0_1_, member1_.authentication_type as authenti5_0_1_, member1_.email as email6_0_1_, member1_.enabled as enabled7_0_1_, member1_.first_name as first_na8_0_1_, member1_.last_name as last_nam9_0_1_, member1_.password as passwor10_0_1_, member1_.phone_number as phone_n11_0_1_, member1_.reset_password_token as reset_p12_0_1_, member1_.verification_code as verific13_0_1_ from message message0_ left outer join member member1_ on message0_.member_fk=member1_.id where message0_.id=?
+2022-09-14 04:49:57 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [b6293396-16c8-4275-8694-4a2cb4db6735]
+2022-09-14 04:49:57 [http-nio-8280-exec-5] DEBUG org.hibernate.SQL - update message set last_modified_date=?, version=?, is_deleted=?, member_fk=?, text=? where id=? and version=?
+2022-09-14 04:49:57 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:49:57.467]
+2022-09-14 04:49:57 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [2]
+2022-09-14 04:49:57 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BOOLEAN] - [true]
+2022-09-14 04:49:57 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:57 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [**i**]
+2022-09-14 04:49:57 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [b6293396-16c8-4275-8694-4a2cb4db6735]
+2022-09-14 04:49:57 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2022-09-14 04:49:57 [http-nio-8280-exec-6] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:49:57 [http-nio-8280-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:49:57 [http-nio-8280-exec-6] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:49:57 [http-nio-8280-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:49:57 [http-nio-8280-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:50:02 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - select message0_.id as id1_1_0_, message0_.created_date as created_2_1_0_, message0_.last_modified_date as last_mod3_1_0_, message0_.version as version4_1_0_, message0_.is_deleted as is_delet5_1_0_, message0_.member_fk as member_f7_1_0_, message0_.text as text6_1_0_, member1_.id as id1_0_1_, member1_.created_date as created_2_0_1_, member1_.last_modified_date as last_mod3_0_1_, member1_.version as version4_0_1_, member1_.authentication_type as authenti5_0_1_, member1_.email as email6_0_1_, member1_.enabled as enabled7_0_1_, member1_.first_name as first_na8_0_1_, member1_.last_name as last_nam9_0_1_, member1_.password as passwor10_0_1_, member1_.phone_number as phone_n11_0_1_, member1_.reset_password_token as reset_p12_0_1_, member1_.verification_code as verific13_0_1_ from message message0_ left outer join member member1_ on message0_.member_fk=member1_.id where message0_.id=?
+2022-09-14 04:50:02 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [dd082bab-9ff3-4579-8ce9-6a7458cce29a]
+2022-09-14 04:50:02 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - update message set last_modified_date=?, version=?, is_deleted=?, member_fk=?, text=? where id=? and version=?
+2022-09-14 04:50:02 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:50:02.012]
+2022-09-14 04:50:02 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [1]
+2022-09-14 04:50:02 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BOOLEAN] - [true]
+2022-09-14 04:50:02 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:50:02 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [occasi**]
+2022-09-14 04:50:02 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [dd082bab-9ff3-4579-8ce9-6a7458cce29a]
+2022-09-14 04:50:02 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [0]
+2022-09-14 04:50:02 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:50:02 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:50:02 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:50:02 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:50:02 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:50:10 [http-nio-8280-exec-10] DEBUG org.hibernate.SQL - select message0_.id as id1_1_0_, message0_.created_date as created_2_1_0_, message0_.last_modified_date as last_mod3_1_0_, message0_.version as version4_1_0_, message0_.is_deleted as is_delet5_1_0_, message0_.member_fk as member_f7_1_0_, message0_.text as text6_1_0_, member1_.id as id1_0_1_, member1_.created_date as created_2_0_1_, member1_.last_modified_date as last_mod3_0_1_, member1_.version as version4_0_1_, member1_.authentication_type as authenti5_0_1_, member1_.email as email6_0_1_, member1_.enabled as enabled7_0_1_, member1_.first_name as first_na8_0_1_, member1_.last_name as last_nam9_0_1_, member1_.password as passwor10_0_1_, member1_.phone_number as phone_n11_0_1_, member1_.reset_password_token as reset_p12_0_1_, member1_.verification_code as verific13_0_1_ from message message0_ left outer join member member1_ on message0_.member_fk=member1_.id where message0_.id=?
+2022-09-14 04:50:10 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [f44dc7e9-d600-4704-ba4b-87a1fa9eae1b]
+2022-09-14 04:50:10 [http-nio-8280-exec-10] DEBUG org.hibernate.SQL - update message set last_modified_date=?, version=?, is_deleted=?, member_fk=?, text=? where id=? and version=?
+2022-09-14 04:50:10 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:50:10.722]
+2022-09-14 04:50:10 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [1]
+2022-09-14 04:50:10 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BOOLEAN] - [true]
+2022-09-14 04:50:10 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:50:10 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [Sweet]
+2022-09-14 04:50:10 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [f44dc7e9-d600-4704-ba4b-87a1fa9eae1b]
+2022-09-14 04:50:10 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [0]
+2022-09-14 04:50:10 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:50:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:50:10 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:50:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:50:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:50:14 [http-nio-8280-exec-4] DEBUG org.hibernate.SQL - select message0_.id as id1_1_0_, message0_.created_date as created_2_1_0_, message0_.last_modified_date as last_mod3_1_0_, message0_.version as version4_1_0_, message0_.is_deleted as is_delet5_1_0_, message0_.member_fk as member_f7_1_0_, message0_.text as text6_1_0_, member1_.id as id1_0_1_, member1_.created_date as created_2_0_1_, member1_.last_modified_date as last_mod3_0_1_, member1_.version as version4_0_1_, member1_.authentication_type as authenti5_0_1_, member1_.email as email6_0_1_, member1_.enabled as enabled7_0_1_, member1_.first_name as first_na8_0_1_, member1_.last_name as last_nam9_0_1_, member1_.password as passwor10_0_1_, member1_.phone_number as phone_n11_0_1_, member1_.reset_password_token as reset_p12_0_1_, member1_.verification_code as verific13_0_1_ from message message0_ left outer join member member1_ on message0_.member_fk=member1_.id where message0_.id=?
+2022-09-14 04:50:14 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [cc05672e-b548-4a07-9a2f-3eb1b46c4cb6]
+2022-09-14 04:50:14 [http-nio-8280-exec-4] DEBUG org.hibernate.SQL - update message set last_modified_date=?, version=?, is_deleted=?, member_fk=?, text=? where id=? and version=?
+2022-09-14 04:50:14 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:50:14.393]
+2022-09-14 04:50:14 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [1]
+2022-09-14 04:50:14 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BOOLEAN] - [true]
+2022-09-14 04:50:14 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:50:14 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [**]
+2022-09-14 04:50:14 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [cc05672e-b548-4a07-9a2f-3eb1b46c4cb6]
+2022-09-14 04:50:14 [http-nio-8280-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [0]
+2022-09-14 04:50:14 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:50:14 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:50:14 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:50:14 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:50:14 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:52:24 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:52:24 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:52:24 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - insert into message (created_date, last_modified_date, version, is_deleted, member_fk, text, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-09-14 04:52:24 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:52:24.462]
+2022-09-14 04:52:24 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-14 04:52:24.462]
+2022-09-14 04:52:24 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [0]
+2022-09-14 04:52:24 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [BOOLEAN] - [false]
+2022-09-14 04:52:24 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:52:24 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [TAFADZWA ************* MANDAVA]
+2022-09-14 04:52:24 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [4f9482aa-79ea-41fb-b387-2cf3c05860dc]
+2022-09-14 04:52:24 [http-nio-8280-exec-10] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:52:24 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:52:24 [http-nio-8280-exec-10] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:52:24 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:52:24 [http-nio-8280-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-14 04:53:51 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2022-09-14 04:54:53 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - update member set last_modified_date=?, version=?, authentication_type=?, email=?, enabled=?, first_name=?, last_name=?, password=?, phone_number=?, reset_password_token=?, verification_code=? where id=? and version=?
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:54:53.689]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [3]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GOOGLE]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BOOLEAN] - [true]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Tafadzwa]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Mandava]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [$2a$10$yOWwMY9hBTwVlEkiu0LcQepmk82HqLzSWIyz9M7zmQLVD94jEj6JC]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [RIw1JIs112ds8Fgq0EEWWqqyJAcwCB]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:54:53 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [BIGINT] - [2]
+2022-09-14 04:55:35 [http-nio-8280-exec-5] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.reset_password_token=?
+2022-09-14 04:55:35 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [RIw1JIs112ds8Fgq0EEWWqqyJAcwCB]
+2022-09-14 04:55:59 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.reset_password_token=?
+2022-09-14 04:55:59 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [RIw1JIs112ds8Fgq0EEWWqqyJAcwCB]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - update member set last_modified_date=?, version=?, authentication_type=?, email=?, enabled=?, first_name=?, last_name=?, password=?, phone_number=?, reset_password_token=?, verification_code=? where id=? and version=?
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:56:00.038]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [4]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GOOGLE]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BOOLEAN] - [true]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Tafadzwa]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Mandava]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [$2a$10$ThHZBsOmyZHLnC1YUA/Ecekm4D5NLVAbWP60SL6nF8aPzNS0jJgim]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [56fbaf49-7547-4d70-a714-0c37fc4bf29e]
+2022-09-14 04:56:00 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [BIGINT] - [3]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kuvaka.padombo@gmail.com]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] DEBUG org.hibernate.SQL - insert into member (created_date, last_modified_date, version, authentication_type, email, enabled, first_name, last_name, password, phone_number, reset_password_token, verification_code, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-14 04:56:28.125]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-14 04:56:28.125]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [0]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [GOOGLE]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [kuvaka.padombo@gmail.com]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [BOOLEAN] - [true]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Kuvaka]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Padombo]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - []
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [null]
+2022-09-14 04:56:28 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [be6eab12-571f-4bd3-bd4a-4375ee82d168]
+2022-09-14 04:56:31 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-14 04:56:31 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kuvaka.padombo@gmail.com]
+2022-09-14 04:56:31 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
+2022-09-14 04:56:31 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [be6eab12-571f-4bd3-bd4a-4375ee82d168]
+2022-09-14 04:56:31 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]

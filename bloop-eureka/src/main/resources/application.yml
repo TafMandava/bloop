@@ -1,0 +1,49 @@
+server:
+  port: 8761
+
+# Properties defined in this bootstrap file will be found before the properties in the application.properties or application.yml file
+# If we are going to configure Eureka to work with Spring Cloud config server then we need to define the application name property here in the bootstrap properties file
+
+spring:
+    
+  application:
+    # It is better to move this property to a bootstrap properties file. This is because this property is used in Spring Cloud and often in the earliest phases of application configuration. Create a new file called bootstrap.properties or bootstrap.yml and move this property to the bootstrap file
+    name: bloop-eureka-discovery-service
+
+  # The security dependency sets up Spring Boot security with a random password on startup. To prevent this, specify the username and password
+  ## This will set autoconfiguration of basic security for our spring boot config serrver
+  ## This will secure the endpoints for us and we will have to use HTTPS Basic Authentication with this
+  ## Ideally we should pass these in as environment variables with encrypted properties, but for simplicity we are passing them here
+  security:
+    user:
+      name: Netflix
+      password: Eureka
+
+
+eureka:
+  client:
+    # Specify that this Eureka Client should not register with other Eurek Servers
+    # By default, Eureka tries to register itself, but we will have to disable this property for now. 
+    # If there is more than one instance of Eureka running, then Eureka instances can register with each other, but at this moment we are going to start only one instance of Eureka Server    
+    registerWithEureka: false
+    # Tell Eureka not the fetch registry from other Eureka instances
+    fetchRegistry: false    
+
+# If we run our application with the properties above defined only, we will eventually see exceptions in the log file
+# This is because when registering starts, it will complain that there are no replica nodes which Eureka can connect
+# In the production environment we would want more than one instance of Eureka running
+# Even though we specifies that Eureka Client should not register with other Eureka Servers, there wll still be exceptions thrown
+  
+  # “EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY’RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE“
+  # We get this because Eureka server expects the eureka clients to send a heart beat to it (simple REST call for health check up) every now and then. You need to configure how often this should happen on the server.
+  # Simply adding the below property on the server’s application.yml will remove this error :
+  server:
+    renewal-percent-threshold: 0.85
+
+# So when we are eworking with a single Eureka instance only, we can turn off this logging and this is also mentioned in the Spring Cloud Eureka Documentation
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
