@@ -1,10 +1,10 @@
-package com.microservices.flash.bloopclient;
+package com.microservices.flash.bloop.eureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BloopClientApplicationTests {
+class BloopEurekaApplicationTests {
 
 	@Test
 	void contextLoads() {

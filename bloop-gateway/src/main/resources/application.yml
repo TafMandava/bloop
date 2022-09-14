@@ -1,0 +1,18 @@
+server:
+    port: 9090
+
+spring: 
+    application:
+        name: bloop-gateway
+    
+eureka:
+  client:
+    serviceUrl:
+      # Where to find Eureka Server
+      defaultZone: http://Netflix:Eureka@127.0.0.1:8761/eureka
+    
+  instance:
+    instance-id: ${spring.application.name}:${instanceId:${random.value}}
+
+
+

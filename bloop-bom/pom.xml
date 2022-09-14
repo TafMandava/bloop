@@ -66,6 +66,16 @@
 		<springdoc-openapi-ui.version>1.6.11</springdoc-openapi-ui.version>
 
 		<wiremock-extension.version>0.4.0</wiremock-extension.version>
+
+
+		<spring-cloud-starter-openfeign.version>3.1.3</spring-cloud-starter-openfeign.version>
+		<spring-cloud-starter-netflix-eureka-client.version>3.1.3</spring-cloud-starter-netflix-eureka-client.version>
+		<spring-cloud-starter-circuitbreaker-resilience4j.version>2.1.3</spring-cloud-starter-circuitbreaker-resilience4j.version>
+		<spring-cloud-starter-circuitbreaker-reactor-resilience4j.version>2.1.4</spring-cloud-starter-circuitbreaker-reactor-resilience4j.version>
+		<spring-cloud-starter-sleuth.version>3.1.3</spring-cloud-starter-sleuth.version>
+		<spring-cloud-sleuth-zipkin.version>3.1.3</spring-cloud-sleuth-zipkin.version>
+		<logstash-logback-encoder.version>6.6</logstash-logback-encoder.version>
+
     </properties>
 
 	<!-- The artifact kafka-avro-serializer is located at Confluent repository (https://packages.confluent.io/maven/) so we need to add a repository for the dependency because it is not on the maven repository -->
@@ -307,7 +317,51 @@
 		    	<artifactId>wiremock-extension</artifactId>
 		    	<version>${wiremock-extension.version}</version>
 		    	<scope>test</scope>
-		    </dependency>				
+		    </dependency>
+
+
+			<dependency>
+		    	<groupId>org.springframework.cloud</groupId>
+		    	<artifactId>spring-cloud-starter-openfeign</artifactId>
+				<version>${spring-cloud-starter-openfeign.version}</version>
+		    </dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+				<version>${spring-cloud-starter-netflix-eureka-client.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+				<version>${spring-cloud-starter-circuitbreaker-resilience4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
+				<version>${spring-cloud-starter-circuitbreaker-reactor-resilience4j.version}</version>
+			</dependency>		
+			
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-sleuth</artifactId>
+				<version>${spring-cloud-starter-sleuth.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+				<version>${spring-cloud-sleuth-zipkin.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/net.logstash.logback/logstash-logback-encoder -->
+			<dependency>
+				<groupId>net.logstash.logback</groupId>
+				<artifactId>logstash-logback-encoder</artifactId>
+				<version>${logstash-logback-encoder.version}</version>
+			</dependency>
 
 	    </dependencies>
 	</dependencyManagement>
