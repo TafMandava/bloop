@@ -24,9 +24,15 @@ import com.microservices.flash.bloop.client.services.MessageService;
 import com.microservices.flash.bloop.client.services.impl.MessageServiceImpl;
 import com.microservices.flash.bloop.common.data.dtos.MessageDto;
 
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+@SecurityScheme(name = "messageapi", scheme = "basic", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
+@SecurityRequirement(name = "messageapi")
 @Slf4j
 @RequiredArgsConstructor
 @RestController

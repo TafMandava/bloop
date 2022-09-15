@@ -316,3 +316,459 @@
 2022-09-15 13:14:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8280 (http) with context path ''
 2022-09-15 13:14:20 [main] INFO  c.m.f.b.c.BloopClientApplication - Started BloopClientApplication in 20.942 seconds (JVM running for 21.728)
 2022-09-15 13:14:20 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from setting setting0_
+2022-09-15 13:16:23 [http-nio-8280-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-15 13:16:23 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-15 13:16:23 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 274 ms
+2022-09-15 13:16:25 [http-nio-8280-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 330 ms
+2022-09-15 13:17:38 [http-nio-8280-exec-5] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email is null
+2022-09-15 13:17:38 [http-nio-8280-exec-5] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where (message0_.member_fk is null) and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:17:38 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BOOLEAN] - [false]
+2022-09-15 13:18:46 [http-nio-8280-exec-6] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email is null
+2022-09-15 13:18:46 [http-nio-8280-exec-6] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where (message0_.member_fk is null) and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:18:46 [http-nio-8280-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BOOLEAN] - [false]
+2022-09-15 13:19:14 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email is null
+2022-09-15 13:19:14 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where (message0_.member_fk is null) and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:19:14 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BOOLEAN] - [false]
+2022-09-15 13:19:52 [http-nio-8280-exec-1] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email is null
+2022-09-15 13:19:52 [http-nio-8280-exec-1] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where (message0_.member_fk is null) and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:19:52 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BOOLEAN] - [false]
+2022-09-15 13:20:41 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:20:41 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:20:42 [http-nio-8280-exec-1] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:20:42 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:20:42 [http-nio-8280-exec-1] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:20:42 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:20:42 [http-nio-8280-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-15 13:20:47 [http-nio-8280-exec-2] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:20:47 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:20:48 [http-nio-8280-exec-2] DEBUG org.hibernate.SQL - insert into message (created_date, last_modified_date, version, is_deleted, member_fk, text, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-09-15 13:20:48 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 13:20:48.444]
+2022-09-15 13:20:48 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 13:20:48.444]
+2022-09-15 13:20:48 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [0]
+2022-09-15 13:20:48 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [BOOLEAN] - [false]
+2022-09-15 13:20:48 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:20:48 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [sugar]
+2022-09-15 13:20:48 [http-nio-8280-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [443ae6d0-dcb1-4a92-8cad-71dbfd3242cb]
+2022-09-15 13:20:48 [http-nio-8280-exec-5] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:20:48 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:20:48 [http-nio-8280-exec-5] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:20:48 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:20:48 [http-nio-8280-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-15 13:20:59 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:20:59 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:20:59 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - insert into message (created_date, last_modified_date, version, is_deleted, member_fk, text, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-09-15 13:20:59 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 13:20:59.291]
+2022-09-15 13:20:59 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 13:20:59.291]
+2022-09-15 13:20:59 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [0]
+2022-09-15 13:20:59 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [BOOLEAN] - [false]
+2022-09-15 13:20:59 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:20:59 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Administrator]
+2022-09-15 13:20:59 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [57fef22c-091c-4e93-a926-f8167f4217ae]
+2022-09-15 13:20:59 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:20:59 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:20:59 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:20:59 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:20:59 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-15 13:25:00 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-15 13:25:00 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:25:00 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:25:03 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-15 13:25:05 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:25:05 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-15 13:25:05 [main] INFO  c.m.f.b.c.BloopClientApplication - The following 1 profile is active: "bloop_client"
+2022-09-15 13:25:05 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:25:05 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:25:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-15 13:25:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
+2022-09-15 13:25:07 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2216fc4a-335b-39cc-aabc-17d3c837e5bb
+2022-09-15 13:25:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8280 (http)
+2022-09-15 13:25:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8280"]
+2022-09-15 13:25:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-15 13:25:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-15 13:25:07 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-15 13:25:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2032 ms
+2022-09-15 13:25:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.microsoft.sqlserver.jdbc.SQLServerDriver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-15 13:25:07 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-15 13:25:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-15 13:25:08 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.microsoft.sqlserver.jdbc.SQLServerDriver"
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:sqlserver://localhost:1433;databaseName=test;encrypt=true;trustServerCertificate=true
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"SA"
+2022-09-15 13:25:08 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-15 13:25:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-15 13:25:09 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-15 13:25:09 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-09-15 13:25:10 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-15 13:25:10 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-15 13:25:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18a538a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70736b19, org.springframework.security.web.context.SecurityContextPersistenceFilter@106c3e0a, org.springframework.security.web.header.HeaderWriterFilter@7ef34eb3, org.springframework.security.web.authentication.logout.LogoutFilter@3f9ee527, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5dfd4fac, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1d2aa638, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@eea69a9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@154cbb46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58fbecde, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@67c1fc9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@183e64a8, org.springframework.security.web.session.SessionManagementFilter@5dfc7b3f, org.springframework.security.web.access.ExceptionTranslationFilter@4d86f330, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@cf82c58]
+2022-09-15 13:25:11 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:25:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/images/**']
+2022-09-15 13:25:11 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:25:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/js/**']
+2022-09-15 13:25:11 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:25:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/webjars/**']
+2022-09-15 13:25:11 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:25:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/css/**']
+2022-09-15 13:25:11 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/fontawesome/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:25:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/fontawesome/**']
+2022-09-15 13:25:11 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/richtext/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:25:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/richtext/**']
+2022-09-15 13:25:11 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-15 13:25:11 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-09-15 13:25:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8280"]
+2022-09-15 13:25:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8280 (http) with context path ''
+2022-09-15 13:25:12 [main] INFO  c.m.f.b.c.BloopClientApplication - Started BloopClientApplication in 15.528 seconds (JVM running for 16.453)
+2022-09-15 13:25:13 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from setting setting0_
+2022-09-15 13:25:29 [http-nio-8280-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-15 13:25:29 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-15 13:25:29 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 30 ms
+2022-09-15 13:25:39 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:25:39 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:29:05 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-15 13:29:05 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:29:05 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:29:08 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-15 13:29:09 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:29:09 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-15 13:29:09 [main] INFO  c.m.f.b.c.BloopClientApplication - The following 1 profile is active: "bloop_client"
+2022-09-15 13:29:09 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:29:09 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:29:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-15 13:29:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2022-09-15 13:29:10 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2216fc4a-335b-39cc-aabc-17d3c837e5bb
+2022-09-15 13:29:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8280 (http)
+2022-09-15 13:29:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8280"]
+2022-09-15 13:29:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-15 13:29:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-15 13:29:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-15 13:29:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1330 ms
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.microsoft.sqlserver.jdbc.SQLServerDriver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-15 13:29:11 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-15 13:29:11 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-15 13:29:11 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.microsoft.sqlserver.jdbc.SQLServerDriver"
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:sqlserver://localhost:1433;databaseName=test;encrypt=true;trustServerCertificate=true
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"SA"
+2022-09-15 13:29:11 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-15 13:29:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-15 13:29:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-15 13:29:12 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-09-15 13:29:13 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-15 13:29:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-15 13:29:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5dfd4fac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d2aa638, org.springframework.security.web.context.SecurityContextPersistenceFilter@2719139f, org.springframework.security.web.header.HeaderWriterFilter@40e41f88, org.springframework.security.web.authentication.logout.LogoutFilter@30d3f583, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@696a6506, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1134a934, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@cf82c58, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b641c97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f065f9e, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@534c3b9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f08e6d3, org.springframework.security.web.session.SessionManagementFilter@4d86f330, org.springframework.security.web.access.ExceptionTranslationFilter@4ff00844, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b3cbc0e]
+2022-09-15 13:29:13 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:29:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/images/**']
+2022-09-15 13:29:13 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:29:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/js/**']
+2022-09-15 13:29:13 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:29:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/webjars/**']
+2022-09-15 13:29:13 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:29:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/css/**']
+2022-09-15 13:29:13 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/fontawesome/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:29:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/fontawesome/**']
+2022-09-15 13:29:13 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/richtext/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:29:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/richtext/**']
+2022-09-15 13:29:14 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-15 13:29:14 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-09-15 13:29:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8280"]
+2022-09-15 13:29:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8280 (http) with context path ''
+2022-09-15 13:29:15 [main] INFO  c.m.f.b.c.BloopClientApplication - Started BloopClientApplication in 12.563 seconds (JVM running for 13.039)
+2022-09-15 13:29:15 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from setting setting0_
+2022-09-15 13:34:21 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-15 13:34:21 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:34:22 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:34:31 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-15 13:34:34 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:34:34 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-15 13:35:09 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-15 13:35:09 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:35:09 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:35:12 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-15 13:35:14 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:35:14 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-15 13:35:14 [main] INFO  c.m.f.b.c.BloopClientApplication - The following 1 profile is active: "bloop_client"
+2022-09-15 13:35:14 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:35:14 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:35:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-15 13:35:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+2022-09-15 13:35:15 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2216fc4a-335b-39cc-aabc-17d3c837e5bb
+2022-09-15 13:35:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8280 (http)
+2022-09-15 13:35:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8280"]
+2022-09-15 13:35:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-15 13:35:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-15 13:35:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-15 13:35:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1586 ms
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.microsoft.sqlserver.jdbc.SQLServerDriver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-15 13:35:16 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-15 13:35:16 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-15 13:35:16 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.microsoft.sqlserver.jdbc.SQLServerDriver"
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:sqlserver://localhost:1433;databaseName=test;encrypt=true;trustServerCertificate=true
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"SA"
+2022-09-15 13:35:16 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-15 13:35:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-15 13:35:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-15 13:35:17 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-09-15 13:35:18 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-15 13:35:18 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-15 13:35:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c94d4b8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4400026, org.springframework.security.web.context.SecurityContextPersistenceFilter@75f9a35a, org.springframework.security.web.header.HeaderWriterFilter@655d5285, org.springframework.security.web.authentication.logout.LogoutFilter@570089c4, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@298cfe89, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@189fb01b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@22bbbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49d5c751, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40e90634, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@77587422, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@308d8de8, org.springframework.security.web.session.SessionManagementFilter@1c2273f6, org.springframework.security.web.access.ExceptionTranslationFilter@1e3689e7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4f96e484]
+2022-09-15 13:35:19 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:35:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/images/**']
+2022-09-15 13:35:19 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:35:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/js/**']
+2022-09-15 13:35:19 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:35:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/webjars/**']
+2022-09-15 13:35:19 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:35:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/css/**']
+2022-09-15 13:35:19 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/fontawesome/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:35:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/fontawesome/**']
+2022-09-15 13:35:19 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/richtext/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:35:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/richtext/**']
+2022-09-15 13:35:19 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-15 13:35:19 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-09-15 13:35:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8280"]
+2022-09-15 13:35:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8280 (http) with context path ''
+2022-09-15 13:35:22 [main] INFO  c.m.f.b.c.BloopClientApplication - Started BloopClientApplication in 17.08 seconds (JVM running for 18.195)
+2022-09-15 13:35:22 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from setting setting0_
+2022-09-15 13:35:24 [http-nio-8280-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-15 13:35:24 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-15 13:35:24 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2022-09-15 13:36:13 [http-nio-8280-exec-2] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 229 ms
+2022-09-15 13:37:01 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-15 13:37:01 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:37:01 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:37:04 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-15 13:37:06 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:37:06 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-15 13:37:06 [main] INFO  c.m.f.b.c.BloopClientApplication - The following 1 profile is active: "bloop_client"
+2022-09-15 13:37:06 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 13:37:06 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 13:37:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-15 13:37:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2022-09-15 13:37:06 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2216fc4a-335b-39cc-aabc-17d3c837e5bb
+2022-09-15 13:37:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8280 (http)
+2022-09-15 13:37:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8280"]
+2022-09-15 13:37:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-15 13:37:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-15 13:37:07 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-15 13:37:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1149 ms
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.microsoft.sqlserver.jdbc.SQLServerDriver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-15 13:37:07 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-15 13:37:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-15 13:37:07 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.microsoft.sqlserver.jdbc.SQLServerDriver"
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:sqlserver://localhost:1433;databaseName=test;encrypt=true;trustServerCertificate=true
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"SA"
+2022-09-15 13:37:07 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-15 13:37:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-15 13:37:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-15 13:37:08 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-09-15 13:37:09 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-15 13:37:09 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-15 13:37:09 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@308d8de8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c08461b, org.springframework.security.web.context.SecurityContextPersistenceFilter@49d5c751, org.springframework.security.web.header.HeaderWriterFilter@1c2273f6, org.springframework.security.web.authentication.logout.LogoutFilter@2ab1c7a9, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@49522bdf, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@77587422, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@240c626d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78b29e00, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c438795, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5c94d4b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c37c36, org.springframework.security.web.session.SessionManagementFilter@4e58eda2, org.springframework.security.web.access.ExceptionTranslationFilter@655d5285, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22db12f6]
+2022-09-15 13:37:09 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:37:09 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/images/**']
+2022-09-15 13:37:09 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:37:09 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/js/**']
+2022-09-15 13:37:09 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:37:09 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/webjars/**']
+2022-09-15 13:37:09 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:37:09 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/css/**']
+2022-09-15 13:37:09 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/fontawesome/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:37:09 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/fontawesome/**']
+2022-09-15 13:37:09 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/richtext/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-15 13:37:09 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/richtext/**']
+2022-09-15 13:37:09 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-15 13:37:10 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-09-15 13:37:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8280"]
+2022-09-15 13:37:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8280 (http) with context path ''
+2022-09-15 13:37:11 [main] INFO  c.m.f.b.c.BloopClientApplication - Started BloopClientApplication in 12.754 seconds (JVM running for 13.333)
+2022-09-15 13:37:11 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from setting setting0_
+2022-09-15 13:37:16 [http-nio-8280-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-15 13:37:16 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-15 13:37:16 [http-nio-8280-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2022-09-15 13:37:17 [http-nio-8280-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 384 ms
+2022-09-15 13:37:44 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:37:44 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:37:44 [http-nio-8280-exec-3] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Empty encoded password
+2022-09-15 13:37:54 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:37:54 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:37:57 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:37:57 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - update member set last_modified_date=?, version=?, authentication_type=?, email=?, enabled=?, first_name=?, last_name=?, password=?, phone_number=?, reset_password_token=?, verification_code=? where id=? and version=?
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 13:38:10.36]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [1]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GOOGLE]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BOOLEAN] - [true]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Tafadzwa]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Mandava]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - []
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [YebOFj5JtiRiEOsneOsRtjiolPrIHq]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:38:10 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [BIGINT] - [0]
+2022-09-15 13:38:34 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.reset_password_token=?
+2022-09-15 13:38:34 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [YebOFj5JtiRiEOsneOsRtjiolPrIHq]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.reset_password_token=?
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [YebOFj5JtiRiEOsneOsRtjiolPrIHq]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] DEBUG org.hibernate.SQL - update member set last_modified_date=?, version=?, authentication_type=?, email=?, enabled=?, first_name=?, last_name=?, password=?, phone_number=?, reset_password_token=?, verification_code=? where id=? and version=?
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 13:38:43.968]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BIGINT] - [2]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GOOGLE]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [BOOLEAN] - [true]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Tafadzwa]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Mandava]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [$2a$10$qV3fnxetGfjzobQQZ5op9.HPwTiQpJMoVSBQPvc4gSLxeGz4JWGPW]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:38:43 [http-nio-8280-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [BIGINT] - [1]
+2022-09-15 13:38:55 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:38:55 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:38:56 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - update member set authentication_type=? where id=?
+2022-09-15 13:38:56 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [DATABASE]
+2022-09-15 13:38:56 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:39:28 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:39:28 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:39:28 [http-nio-8280-exec-7] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:39:28 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:39:28 [http-nio-8280-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-15 13:40:16 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select member0_.id as id1_0_, member0_.created_date as created_2_0_, member0_.last_modified_date as last_mod3_0_, member0_.version as version4_0_, member0_.authentication_type as authenti5_0_, member0_.email as email6_0_, member0_.enabled as enabled7_0_, member0_.first_name as first_na8_0_, member0_.last_name as last_nam9_0_, member0_.password as passwor10_0_, member0_.phone_number as phone_n11_0_, member0_.reset_password_token as reset_p12_0_, member0_.verification_code as verific13_0_ from member member0_ where member0_.email=?
+2022-09-15 13:40:16 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [taf.mandava@gmail.com]
+2022-09-15 13:40:16 [http-nio-8280-exec-8] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc offset 0 rows fetch next ? rows only
+2022-09-15 13:40:16 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [81fac584-ec31-4b65-9375-1cabe20df5bf]
+2022-09-15 13:40:16 [http-nio-8280-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
