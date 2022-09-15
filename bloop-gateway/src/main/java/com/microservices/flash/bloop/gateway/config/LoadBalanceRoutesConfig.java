@@ -13,9 +13,9 @@ public class LoadBalanceRoutesConfig {
         return builder.routes()
             .route("bloop-censorship-service", 
                     r -> r.path("/api/v1/censor*", "/api/v1/censor/*")
-                            .filters(f -> f.circuitBreaker(c -> c.setName("censorCircuitBreaker")
-                                                                    .setFallbackUri("forward:/censor-failover")
-                                                                    .setRouteId("censor-failback")
+                            .filters(f -> f.circuitBreaker(c -> c.setName("censorshipCircuitBreaker")
+                                                                    .setFallbackUri("forward:/censorship-failover")
+                                                                    .setRouteId("censorship-failback")
                                                         )
                             )
                             .uri("lb://bloop-censorship-service")

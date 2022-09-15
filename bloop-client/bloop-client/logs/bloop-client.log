@@ -630,3 +630,13 @@
 2022-09-14 04:56:31 [http-nio-8280-exec-3] DEBUG org.hibernate.SQL - select message0_.id as id1_1_, message0_.created_date as created_2_1_, message0_.last_modified_date as last_mod3_1_, message0_.version as version4_1_, message0_.is_deleted as is_delet5_1_, message0_.member_fk as member_f7_1_, message0_.text as text6_1_ from message message0_ where message0_.member_fk=? and message0_.is_deleted=? order by message0_.text asc limit ?
 2022-09-14 04:56:31 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [be6eab12-571f-4bd3-bd4a-4375ee82d168]
 2022-09-14 04:56:31 [http-nio-8280-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [BOOLEAN] - [false]
+2022-09-15 21:40:00 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-15 21:40:00 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 21:40:00 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-15 21:40:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-15 21:40:03 [restartedMain] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-15 21:40:06 [restartedMain] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-client, config-client, profiles=[default], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-15 21:40:06 [restartedMain] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-15 21:40:06 [restartedMain] INFO  c.m.f.b.c.BloopClientApplication - The following 1 profile is active: "bloop_client"
+2022-09-15 21:40:06 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 21:40:06 [restartedMain] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-client, config-client, profiles=[bloop_client], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null

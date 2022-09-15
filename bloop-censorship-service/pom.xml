@@ -61,7 +61,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>	
+        </dependency>
 
 		<!-- To be able to use the Spring Boot application annotation on the service itself -->
 		<dependency>
