@@ -137,7 +137,16 @@ flash:
     word-censorship-service-host: http://localhost:8180
 
     word-censorship-service-user: BloopCensorshipService
-    word-censorship-service-password: '{cipher}96ef0d0b2e18e77c9c279d26cb5266121cfa49906d5639dd2cd2a41f61f5df65'    
+    word-censorship-service-password: '{cipher}96ef0d0b2e18e77c9c279d26cb5266121cfa49906d5639dd2cd2a41f61f5df65'
+
+# Where to find Eureka Server (Including HTTP Basic Access for the Confiogurtion Server to be able to talk to Eureka)
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Netflix:Eureka@127.0.0.1:8761/eureka
+      
+  instance:
+     instance-id: ${spring.application.name}:${instanceId:${random.value}}       
 
 encrypt:
   key: ${ENCRYPTION_KEY}
