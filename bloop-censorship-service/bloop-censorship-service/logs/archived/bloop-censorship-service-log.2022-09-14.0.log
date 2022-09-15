@@ -1,0 +1,262 @@
+2022-09-14 00:11:04 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-14 00:11:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-09-14 00:11:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-09-14 00:11:17 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-14 00:11:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 00:11:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 00:11:20 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-14 00:11:23 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-censorship-service, config-client, profiles=[default], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 00:11:23 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-14 00:11:23 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - The following 1 profile is active: "bloop_censorship_service"
+2022-09-14 00:11:23 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 00:11:23 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 00:11:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-14 00:11:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
+2022-09-14 00:11:24 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cfce6099-2c34-3e33-ac48-8e8c37fc9390
+2022-09-14 00:11:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8180 (http)
+2022-09-14 00:11:24 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8180"]
+2022-09-14 00:11:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-14 00:11:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 00:11:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-14 00:11:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 930 ms
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-14 00:11:24 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-14 00:11:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-14 00:11:24 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"bloop"
+2022-09-14 00:11:24 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-14 00:11:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-14 00:11:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-14 00:11:25 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-14 00:11:25 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-14 00:11:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-14 00:11:26 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-14 00:11:26 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8180"]
+2022-09-14 00:11:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8180 (http) with context path ''
+2022-09-14 00:11:27 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - Started BloopCensorshipServiceApplication in 13.172 seconds (JVM running for 13.613)
+2022-09-14 00:11:27 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from sensitive_word sensitivew0_
+2022-09-14 00:11:50 [http-nio-8180-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-14 00:11:50 [http-nio-8180-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-14 00:11:50 [http-nio-8180-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2022-09-14 00:11:50 [http-nio-8180-exec-1] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:11:52 [http-nio-8180-exec-3] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:11:53 [http-nio-8180-exec-4] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:11:54 [http-nio-8180-exec-5] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:23:26 [http-nio-8180-exec-7] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:23:43 [http-nio-8180-exec-8] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:23:58 [http-nio-8180-exec-9] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:24:05 [http-nio-8180-exec-10] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:24:12 [http-nio-8180-exec-2] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 00:26:15 [http-nio-8180-exec-6] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 349 ms
+2022-09-14 01:20:16 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-14 01:20:16 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 01:20:16 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 01:20:19 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-14 01:20:21 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-censorship-service, config-client, profiles=[default], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 01:20:21 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-14 01:20:21 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - The following 1 profile is active: "bloop_censorship_service"
+2022-09-14 01:20:21 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 01:20:21 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=a0cffd093c27898ec83d2d8e88694e9c603eba17, state=null
+2022-09-14 01:20:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-14 01:20:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2022-09-14 01:20:22 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cfce6099-2c34-3e33-ac48-8e8c37fc9390
+2022-09-14 01:20:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8180 (http)
+2022-09-14 01:20:23 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8180"]
+2022-09-14 01:20:23 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-14 01:20:23 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 01:20:23 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-14 01:20:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1167 ms
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-14 01:20:23 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-14 01:20:23 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-14 01:20:23 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"bloop"
+2022-09-14 01:20:23 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-14 01:20:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-14 01:20:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-14 01:20:23 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-14 01:20:24 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-14 01:20:24 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-14 01:20:24 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-14 01:20:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8180"]
+2022-09-14 01:20:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8180 (http) with context path ''
+2022-09-14 01:20:25 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - Started BloopCensorshipServiceApplication in 11.652 seconds (JVM running for 12.136)
+2022-09-14 01:20:25 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from sensitive_word sensitivew0_
+2022-09-14 10:05:12 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-14 10:05:12 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 10:05:12 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 10:05:14 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-14 10:05:16 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-censorship-service, config-client, profiles=[default], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 10:05:16 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-14 10:05:16 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - The following 1 profile is active: "bloop_censorship_service"
+2022-09-14 10:05:16 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-14 10:05:16 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=52e011e2844d9d3d2a45092696bc50582799a6d4, state=null
+2022-09-14 10:05:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-14 10:05:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2022-09-14 10:05:17 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cfce6099-2c34-3e33-ac48-8e8c37fc9390
+2022-09-14 10:05:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8180 (http)
+2022-09-14 10:05:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8180"]
+2022-09-14 10:05:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-14 10:05:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 10:05:18 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-14 10:05:18 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1401 ms
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-14 10:05:18 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-14 10:05:18 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-14 10:05:18 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"bloop"
+2022-09-14 10:05:18 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-14 10:05:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-14 10:05:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-14 10:05:18 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-14 10:05:19 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-14 10:05:19 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-14 10:05:19 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-14 10:05:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8180"]
+2022-09-14 10:05:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8180 (http) with context path ''
+2022-09-14 10:05:20 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - Started BloopCensorshipServiceApplication in 11.462 seconds (JVM running for 12.31)
+2022-09-14 10:05:20 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from sensitive_word sensitivew0_
+2022-09-14 10:08:18 [http-nio-8180-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-14 10:08:18 [http-nio-8180-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-14 10:08:18 [http-nio-8180-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 48 ms
+2022-09-14 10:08:18 [http-nio-8180-exec-1] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 10:08:39 [http-nio-8180-exec-2] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 10:08:50 [http-nio-8180-exec-3] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 10:09:02 [http-nio-8180-exec-4] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 10:09:07 [http-nio-8180-exec-5] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
+2022-09-14 10:35:01 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m41s974ms).
+2022-09-14 10:52:26 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m25s870ms).
+2022-09-14 10:58:55 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m28s350ms).
+2022-09-14 11:03:32 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s785ms).
+2022-09-14 12:10:04 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s813ms).
+2022-09-14 12:28:45 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m10s490ms).
+2022-09-14 12:32:39 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s1ms).
+2022-09-14 12:36:44 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s392ms).
+2022-09-14 13:22:00 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m16s407ms).
+2022-09-14 13:30:28 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m27s997ms).
+2022-09-14 14:56:10 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m41s653ms).
+2022-09-14 16:02:02 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m51s538ms).
+2022-09-14 16:10:45 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m43s878ms).
+2022-09-14 16:22:57 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m11s574ms).
+2022-09-14 16:49:11 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m14s259ms).
+2022-09-14 17:16:14 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m2s217ms).
+2022-09-14 17:52:18 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m4s813ms).
+2022-09-14 18:03:56 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m37s833ms).
+2022-09-14 18:10:51 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m55s100ms).
+2022-09-14 18:20:07 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m45s950ms).
+2022-09-14 19:15:07 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s497ms).
+2022-09-14 19:24:26 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m49s111ms).
+2022-09-14 19:25:18 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s350ms).
+2022-09-14 19:58:39 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m21s164ms).
+2022-09-14 20:05:30 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m50s797ms).
+2022-09-14 20:06:36 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s83ms).
+2022-09-14 20:32:42 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m6s196ms).
+2022-09-14 21:08:47 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m4s854ms).
+2022-09-14 21:44:52 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m4s885ms).
+2022-09-14 22:06:59 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m7s253ms).
+2022-09-14 22:27:11 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m12s2ms).
+2022-09-14 22:28:06 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s17ms).
+2022-09-14 23:02:32 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m25s801ms).
+2022-09-14 23:22:23 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m50s742ms).
