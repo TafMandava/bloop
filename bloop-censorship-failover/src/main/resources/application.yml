@@ -1,0 +1,15 @@
+server:
+  port: 8380
+
+spring:
+  application:
+    name: bloop-censorship-service
+
+# Where to find Eureka Server (Including HTTP Basic Access for the Confiogurtion Server to be able to talk to Eureka)
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Netflix:Eureka@127.0.0.1:8761/eureka
+      
+  instance:
+     instance-id: ${spring.application.name}:${instanceId:${random.value}}   
