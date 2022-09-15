@@ -91,7 +91,7 @@ public class SecurityConfig {
                  * Only these URIs require authentication 
                  * Spring Security requires authentication for only these URLs
                  */
-                .antMatchers("/messages/**")
+                .antMatchers("/messages/**", "/swagger-ui/**")
                 /**
                  * Access to the application will require Authentication 
                  */
