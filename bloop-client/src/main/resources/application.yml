@@ -30,10 +30,10 @@ spring:
             url: http://localhost:8081
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/bloop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    username: bloop
-    password: '{cipher}19f1459df8b53ba851021b89f5bbfd435d76fa3f79f7882437a79fe328d6a21c'
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=test;encrypt=true;trustServerCertificate=true
+    username: SA
+    password: '{cipher}2a276ee1559d8e93fa5d86311eeb540bc47c7eaef0f3e8a7b98f15a912e8aa08d459985b6210766cdbae9d3875adab3f'
 
     dbcp2:
       test-while-idle: true
@@ -90,7 +90,7 @@ spring:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
         '[format_sql]': false
     show-sql: true
 

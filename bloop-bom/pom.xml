@@ -66,6 +66,8 @@
 		<springdoc-openapi-ui.version>1.6.11</springdoc-openapi-ui.version>
 
 		<wiremock-extension.version>0.4.0</wiremock-extension.version>
+
+		<sqlserver.version>10.2.1.jre8</sqlserver.version>
     </properties>
 
 	<!-- The artifact kafka-avro-serializer is located at Confluent repository (https://packages.confluent.io/maven/) so we need to add a repository for the dependency because it is not on the maven repository -->
@@ -251,13 +253,13 @@
     			<artifactId>spring-boot-starter-data-jpa</artifactId>
     			<version>${spring-boot-starter-data-jpa.version}</version>
     		</dependency>
-    
-    		<dependency>
-    			<groupId>mysql</groupId>
-    			<artifactId>mysql-connector-java</artifactId>
-    			<version>${mysql-connector-java.version}</version>
-    			<scope>runtime</scope>
-    		</dependency>
+
+		    <dependency>
+		    	<groupId>com.microsoft.sqlserver</groupId>
+		    	<artifactId>mssql-jdbc</artifactId>
+				<version>${sqlserver.version}</version>
+		    	<scope>runtime</scope>
+		    </dependency>
 
 	        <dependency>
 		    	<groupId>org.springframework.boot</groupId>
@@ -333,6 +335,7 @@
 			<artifactId>netty-all</artifactId>
 			<version>${netty-all.version}</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

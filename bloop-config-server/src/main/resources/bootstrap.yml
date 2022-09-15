@@ -18,7 +18,7 @@ spring:
           ## Tell Spring Cloud Config to look in the folder of the application name for configuration for that application
           search-paths: '{application}'
           # Branch that configurations server should check for configurations
-          default-label: staging
+          default-label: staging-mssql
           ## if you are using a private repository set authentication. No need for authentication if the repository is a public repo
           username: TafMandava
           password: '{cipher}06c69712cf1e91c21eaa6f5f2c86f6addf6ec556d6275d36c20e57b91a6516918f5bdfd318204b5db3d94ce60443adcfe3c1afae8f328da256cc7411482128d2'

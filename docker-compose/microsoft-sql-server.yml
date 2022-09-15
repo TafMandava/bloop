@@ -1,0 +1,24 @@
+version: '3.7'
+services: 
+  sqlserver-container: 
+    image: mcr.microsoft.com/azure-sql-edge:${MSSQL_SERVER_VERSION}
+    container_name: sqlserver-container
+    networks:
+      - ${GLOBAL_NETWORK:-mssqlserver}
+    environment: 
+      ACCEPT_EULA: 1
+      MSSQL_SA_PASSWORD: ${MSSQL_USER_PASSWORD}
+      MSSQL_PID: Developer      
+      MSSQL_USER: ${MSSQL_USER_NAME}
+    ports: 
+      - 1433:1433
+
+  identityserver:
+    build:
+      context: .
+      dockerfile: ./IdentityServer/Dockerfile
+    depends_on:
+      - qlserver-container
+    entrypoint: /bin/sh/ -c "update-c-certificates && dotnet IdentityServer.dll"
+
+
