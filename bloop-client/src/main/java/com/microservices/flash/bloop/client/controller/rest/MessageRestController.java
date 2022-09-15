@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -88,9 +89,9 @@ public class MessageRestController {
 
     
     @PutMapping("/edit/{id}")
-    public ResponseEntity<MessageDto> editMessage(@PathVariable("id") String id, MessageDto message) throws MessageNotFoundException {
+    public ResponseEntity<MessageDto> editMessage(@PathVariable("id") String id, @RequestBody MessageDto message) throws MessageNotFoundException {
 
-        return new ResponseEntity<>(messageService.saveMessage(null, message), HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(messageService.updateMessage(message), HttpStatus.NO_CONTENT);
 
     }
 
