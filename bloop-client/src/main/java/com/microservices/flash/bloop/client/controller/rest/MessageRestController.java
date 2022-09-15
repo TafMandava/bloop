@@ -82,22 +82,15 @@ public class MessageRestController {
      */
     @PostMapping("/save")
     public ResponseEntity<MessageDto> saveUser(HttpServletRequest request, MessageDto message) throws IOException {
-
-
-        messageService.saveMessage(request, message);
-
         
         return new ResponseEntity<>(messageService.saveMessage(request, message), HttpStatus.CREATED);
     }    
 
     
     @PutMapping("/edit/{id}")
-    public ResponseEntity<MessageDto> editMessage(@PathVariable("id") String id) throws MessageNotFoundException {
+    public ResponseEntity<MessageDto> editMessage(@PathVariable("id") String id, MessageDto message) throws MessageNotFoundException {
 
-
-        MessageDto message = messageService.findById(UUID.fromString(id));
-
-        return new ResponseEntity<>(message, HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(messageService.saveMessage(null, message), HttpStatus.NO_CONTENT);
 
     }
 
