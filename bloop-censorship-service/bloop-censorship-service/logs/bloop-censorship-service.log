@@ -3170,3 +3170,1444 @@ Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Cannot open database
 2022-09-15 12:29:34 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SELECT * FROM]
 2022-09-15 12:29:34 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
 2022-09-15 12:29:34 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [57be0001-8f3c-499f-9982-2a612fd022e9]
+2022-09-15 12:41:36 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-15 12:41:36 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 12:41:36 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 12:41:38 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2022-09-15 12:41:40 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=bloop-censorship-service, config-client, profiles=[default], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 12:41:40 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/TafMandava/bloop-config.git/config-client.yml'}]
+2022-09-15 12:41:40 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - The following 1 profile is active: "bloop_censorship_service"
+2022-09-15 12:41:40 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2022-09-15 12:41:40 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=bloop-censorship-service, config-client, profiles=[bloop_censorship_service], label=null, version=e6f08d3ee414ea132ea8d729ffa2fd5030dd9b36, state=null
+2022-09-15 12:41:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-15 12:41:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2022-09-15 12:41:41 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cfce6099-2c34-3e33-ac48-8e8c37fc9390
+2022-09-15 12:41:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8180 (http)
+2022-09-15 12:41:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8180"]
+2022-09-15 12:41:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-15 12:41:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-15 12:41:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-15 12:41:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1014 ms
+2022-09-15 12:41:41 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.microsoft.sqlserver.jdbc.SQLServerDriver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406
+2022-09-15 12:41:41 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-15 12:41:41 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-15 12:41:42 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{maintainTimeStats=false, password=<masked>, rewriteBatchedStatements=true, prepStmtCacheSqlLimit=2048, elideSetAutoCommits=true, cacheResultSetMetadata=true, cachePrepStmts=true, prepStmtCacheSize=250, useServerPrepStmts=true, useLocalSessionState=true, cacheServerConfiguration=true}
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.microsoft.sqlserver.jdbc.SQLServerDriver"
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:sqlserver://localhost:1433;databaseName=test;encrypt=true;trustServerCertificate=true
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................5
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"SA"
+2022-09-15 12:41:42 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2022-09-15 12:41:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-15 12:41:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-15 12:41:43 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-09-15 12:41:46 [main] DEBUG org.hibernate.SQL - create table sensitive_word (id VARCHAR(36) not null, created_date datetime2, last_modified_date datetime2, text varchar(255), version int, primary key (id))
+2022-09-15 12:41:46 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-15 12:41:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-15 12:41:47 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-15 12:41:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8180"]
+2022-09-15 12:41:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8180 (http) with context path ''
+2022-09-15 12:41:48 [main] INFO  c.m.f.b.c.BloopCensorshipServiceApplication - Started BloopCensorshipServiceApplication in 15.071 seconds (JVM running for 15.981)
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from sensitive_word sensitivew0_
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.725]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.725]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ACTION]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [3ec31b6a-2089-4423-9505-e11d22c848e1]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.818]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.818]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ADD]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [bce29f2b-91f0-4d21-8dc2-06b35770a1c7]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.834]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.834]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALL]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [10ff8944-2ebd-4ca1-a82a-57bb2f3340be]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.848]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.848]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLOCATE]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [97dead43-0ef8-4227-92dd-23a960ce1518]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.866]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.866]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALTER]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e1d0cdd9-c718-4749-8a76-6d075f20518b]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.877]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.877]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ANY]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c59e31f9-ac7a-4b06-9ced-e4cd58c8bc45]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.89]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.89]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [APPLICATION]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [b5ea5bab-c5c2-4db7-b663-adbbefd2d332]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.896]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.896]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ARE]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [32960359-31c2-42ac-ab37-a4e4bd701645]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.914]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.914]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AREA]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7e1bb697-91cf-49d1-951a-e9a37817056a]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.918]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.918]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ASC]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e7a87989-304e-4164-aba8-2e452afe7ae5]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.938]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.939]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ASSERTION]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [08817518-5c35-4ac6-b3e6-ded37981027f]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.953]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.953]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ATOMIC]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1ca4fd86-6bf5-4f14-9dc4-f48eb370de0e]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.957]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.957]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AUTHORIZATION]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [36d2b5fc-9a80-4275-912e-0b240e439725]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.97]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.97]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AVG]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5533412e-db16-4607-8d4d-0b413ecc7675]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.981]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.981]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [BEGIN]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [39fb99b0-ae4f-43ea-82ab-0c535e70e928]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.99]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.99]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [BY]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [01d82b6b-5e39-409a-a9c9-9212ebdbd606]
+2022-09-15 12:41:48 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:48.999]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:48.999]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CALL]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:48 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ea38f0a5-812b-4d7f-acdb-84fd7d1d6419]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.004]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.004]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CASCADE]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [84996972-7d21-4d56-8506-986d472a8ecf]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.018]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.018]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CASCADED]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e25cd07c-ca08-492a-affa-4eda4b632322]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.027]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.027]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CATALOG]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [40615cff-e834-44ba-ae28-a8a26cc945ca]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.032]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.032]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CHECK]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [11297027-f7b2-4b42-b79a-bd3e3f91f329]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.053]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.053]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CLOSE]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [92aefe77-6887-4974-b207-90014cef1c35]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.062]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.062]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [COLUMN]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [9a133730-d1bc-4f0d-92db-cceb5bb46932]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.073]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.073]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [COMMIT]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d2b9044b-8c90-4da5-9e28-70c1cb61d0e2]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.101]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.101]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [COMPRESS]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8d27aea7-02d2-4376-8a5a-cacd0a2f4e4c]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.115]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.115]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CONNECT]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7456af40-dd2e-479d-bc8a-a40b74173f66]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.128]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.128]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CONNECTION]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5dc350a4-5a0f-44e2-91c0-1dd7753334e7]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.141]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.141]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CONSTRAINT]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c0578fbc-87e4-4037-9574-55d197436dd6]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.151]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.151]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CONSTRAINTS]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ad9c9611-a995-46b6-908a-b4d988d6e3c5]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.17]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.17]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CONTINUE]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [f5a9baa0-7e93-4728-8fa4-ceb8f80db584]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.293]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.293]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CONVERT]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [fa20726d-c6c9-453e-a16e-0f410e81c4ed]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.305]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.305]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CORRESPONDING]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [9f942de3-6687-480b-8917-5e41464cc409]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.318]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.318]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CREATE]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e24b797c-4f4a-48e8-8b66-12c232343798]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.332]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.332]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CROSS]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1ac783ef-f8dd-497e-899d-870b7b86f3b4]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.35]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.35]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CURRENT]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [3b0cbd00-561f-4e4b-8137-9213f1eb1953]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.359]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.359]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CURRENT_PATH]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [28297f51-a7cb-4c14-b54c-2cb41cdb1d12]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.377]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.377]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CURRENT_SCHEMA]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d0f54f99-73b7-4e72-b0dd-38b01397f912]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.387]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.387]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CURRENT_SCHEMAID]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [de4e84d9-d12c-414b-9df0-168258f52a8d]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.407]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.407]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CURRENT_USER]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [4455c43c-dcfc-4fd0-a4c3-9edd7b32bdb9]
+2022-09-15 12:41:49 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:49.417]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:49.417]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CURRENT_USERID]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:49 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ead024c4-1f5a-4a2b-a70e-247d4e6bad03]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.006]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.006]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [CURSOR]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [cb57541d-aac1-473e-8a63-8ec6461e15f7]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.017]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.017]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DATA]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [44a0f039-e854-49fd-bd49-b78211b3dfc0]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.026]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.026]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DEALLOCATE]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [860ca663-0eb6-45b7-b5fa-134d0d0b018e]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.035]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.035]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DECLARE]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [3ee1b0ba-891d-4df5-9ffd-91ade4a23d04]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.041]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.041]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DEFAULT]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a378f5f6-c370-43f7-be52-c065e8365014]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.054]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.054]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DEFERRABLE]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c103c7aa-6847-4109-8f8b-6046bffd6f81]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.783]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.783]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DEFERRED]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [4b13eff1-aa22-44b5-8160-1ee80f7005cc]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.82]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.82]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DELETE]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a0cc8d4d-f0ca-4c44-9132-e5e49917df05]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.84]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.84]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DESC]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [dd5fb6fd-bb1e-48ec-9cfd-f9257662c11e]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.86]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.86]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DESCRIBE]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [4800d39a-12bd-46fe-ac2d-11d80d649c1a]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.877]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.877]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DESCRIPTOR]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7ae43bef-9a0f-4d7e-8fc4-3c2f9565745b]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.899]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.899]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DETERMINISTIC]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8c22c4f4-a0e2-42be-b604-2ed3b4f23b61]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.916]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.916]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DIAGNOSTICS]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7f9b95a1-b4f5-4ce4-ab1d-9372d0937412]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.926]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.926]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DIRECTORY]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7a1c868a-ada5-44ec-96b9-5fcafe5d0da1]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.939]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.939]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DISCONNECT]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [4325529b-9c3b-48a0-ab48-df37f0aab240]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.955]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.955]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DISTINCT]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [cadb0b06-c468-4e19-acf6-9e27864a219d]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.963]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.963]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DO]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5a699e98-e462-444a-9f15-ffca2ee16542]
+2022-09-15 12:41:50 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:50.972]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:50.972]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DOMAIN]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:50 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e80b0c8a-018c-43b2-bf13-b31ad8bfb2fa]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.047]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.047]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DOUBLEATTRIBUTE]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [032a40b8-2896-4686-92f7-c3980cc58db6]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.074]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.074]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DROP]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c350ca05-223f-4fcd-af29-1d4241797931]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.081]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.081]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EACH]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [13bf1fd9-78c3-4392-b9ac-61e3f14ce45c]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.09]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.091]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EXCEPT]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d86378ab-3f86-4bca-bf37-68e49fa90575]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.117]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.117]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EXCEPTION]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [bd344918-1b80-49d7-94fc-991cc4df2851]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.127]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.127]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EXEC]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1d957c57-eb39-435a-866f-14ae15d8ed9b]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.139]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.139]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EXECUTE]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [6abd6e63-d6c8-4354-a17e-a303effaf5a1]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.153]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.153]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EXTERNAL]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [25773be0-2100-4a0e-b2b7-7a2379ae73df]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.171]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.171]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [FETCH]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [849e781f-09f9-413f-a608-846c54a0d41f]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.186]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.186]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [FLOAT]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [9e9b438c-4b8a-4a8b-9ba9-9c0f534a691e]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.194]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.194]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [FOREIGN]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [816bef8c-30d8-4eec-bbe9-5fbfee568584]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.208]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.208]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [FOUND]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [86f7d397-ae47-4315-9653-b0addf381945]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.223]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.223]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [FULL]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e490d6a8-1fdd-43e4-bfa0-fe8b38f78e6b]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.249]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.249]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [FUNCTION]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [0681f05d-39d5-4b5a-8d65-c51d786aee49]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.258]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.258]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GET]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e8d15daa-c939-4c2e-8e11-d9db38189ac5]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.271]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.271]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GLOBAL]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [f80a2bf8-724b-4815-a447-ce0ed1faf838]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.293]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.293]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GO]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [aed1f94e-bc31-4f50-baa9-4224332473aa]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.304]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.304]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GOTO]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [53f9bd42-53a5-43b0-8567-296f4d7808fa]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.333]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.333]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GRANT]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [43145363-d5dc-46c8-89ad-fe10ac43b118]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.359]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.359]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [GROUP]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [cc8a3e1d-9e86-46e9-a3f6-b7914112955c]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.384]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.384]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [HANDLER]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [195ad3e0-3214-4fcf-a9bd-707973c20659]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.407]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.407]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [HAVING]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [563c3472-bf58-4acb-a658-23531f82f9aa]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.417]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.417]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [IDENTITY]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [afa289e0-151b-4227-9458-fe428e932c8b]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.427]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.427]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [IMMEDIATE]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a4913145-fffa-4429-8da2-f4fb25c262af]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.443]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.443]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INDEX]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1813bc1a-b606-44ea-9f01-8f369cb171df]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.455]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.455]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INDEXED]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a9258f9c-68aa-4153-8c13-2b795b855d37]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.482]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.483]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INDICATOR]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1ca54d0f-8b05-47ee-bfd0-fdb489427f47]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.497]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.497]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INITIALLY]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [654d870a-a6e3-4185-8466-3b9cc6380f18]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.513]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.513]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INNER]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [cf97af52-9597-4337-9b19-3139ef8c2495]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.527]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.527]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INOUT]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [620c2c74-20a5-4328-9d8f-ed2e6eb83b11]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.538]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.538]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INPUT]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d203476d-f5a2-4de7-834b-612e8c5769cc]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.552]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.552]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INSENSITIVE]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [79714716-3802-4040-8f81-e66a7f5f9e2c]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.572]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.572]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INSERT]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8bcf7fd9-a706-4900-8528-95845c8b3e6d]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.587]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.587]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INTERSECT]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [84705f3b-c19d-4222-a597-43a8a02bbbd7]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.612]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.612]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [INTO]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [dfae6d22-cfa4-46ca-9b73-21c220af18f7]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.637]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.637]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ISOLATION]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5ba5ff98-2d4c-4a9d-924f-dcab49c0d94f]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.675]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.675]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [JOIN]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [28946115-e653-48f6-809a-a1cd48f77615]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.703]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.703]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [KEY]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [f3f7a7e3-a531-4334-b107-61b5485d5a52]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.721]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.721]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [LANGUAGE]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [4b821849-d60b-44d2-9b16-e1274dd3e400]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.747]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.747]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [LAST]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [0a61f94f-7b2f-4e89-8c49-41f369f3f56e]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.77]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.77]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [LEAVE]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [469acccc-333c-4112-81d8-53cd09ec134b]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.793]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.793]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [LEVEL]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [838a977b-7b6b-4d55-817f-9b33db0874ad]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.813]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.813]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [LOCAL]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [93eaa853-24ad-4fc8-a71f-9e2fa7f6a3b8]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.827]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.827]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [LONGATTRIBUTE]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [adad8d52-a67f-41af-912d-3e38d1c6bc2d]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.84]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.84]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [LOOP]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [19e14fbe-f39e-42fe-b9eb-79c054819f00]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.856]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.856]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [MODIFIES]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [dc657a13-4d6b-4f0f-bcae-e336a4ca4cca]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.94]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.94]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [MODULE]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8f1486eb-8fda-4d63-83f2-97e9925140f6]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.957]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.957]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [NAMES]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8cfb38b4-b698-4254-9d7f-cb1ec2f67a96]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.971]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.971]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [NATIONAL]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7a476130-548b-46b4-9613-4aa52037091d]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.987]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.987]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [NATURAL]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [93f06647-ea53-4c2c-8645-77c88ffa9648]
+2022-09-15 12:41:51 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:51.996]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:51.996]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [NEXT]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:51 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a21f0159-8c70-4b1b-b425-9239513dad4e]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.013]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.013]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [NULLIF]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [bb256106-7616-4f69-9f66-889ff7677a9c]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.027]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.027]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ON]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d217293c-81f4-41b6-b8b8-e65a57729fb6]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.041]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.041]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ONLY]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e17b5a9a-fba7-403a-8ff6-e55781789726]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.056]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.056]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [OPEN]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [015e6fe5-2ea2-4d28-ae8a-ec86c3430964]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.07]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.07]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [OPTION]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [b88e1244-b827-402d-bea2-d84cbf488629]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.08]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.08]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ORDER]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [3bb3cfd2-cfcf-4eba-bb60-0e146794ba4f]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.088]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.088]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [OUT]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [fec07876-a47e-4afb-9919-40f0872638b8]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.102]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.102]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [OUTER]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5842b34b-6f23-4226-972f-ec11a74c21e8]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.107]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.107]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [OUTPUT]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [56269951-9519-4c00-a1ab-b79f230a6bf5]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.115]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.115]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [OVERLAPS]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [042b4946-b5bd-4080-b1c9-21ec926768ff]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.122]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.122]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [OWNER]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [14d89a0c-7c22-4d77-8929-3fd37d276f10]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.131]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.131]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PARTIAL]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [42fb6c9b-79d9-42f2-9631-9153813b8b2a]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.148]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.148]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PATH]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [fc97bf69-34a8-4893-b802-7fe8ee46621c]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.153]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.153]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PRECISION]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [2fe5008b-001e-4ece-92d5-4870cb1d0ed3]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.158]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.158]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PREPARE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [70261ca9-3009-4817-8276-42a8e5635ac0]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.166]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.166]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PRESERVE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c309c8d4-7752-4e93-b89d-814ff0657b74]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.178]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.178]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PRIMARY]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d64f4208-03f7-4eb2-ae51-82d9711a143c]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.191]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.191]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PRIOR]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [fa758ff1-7f38-4abf-8745-8e2c0dfef280]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.205]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.205]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PRIVILEGES]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [426fa63e-fe67-4047-983b-fe7d45bd2f6c]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.215]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.215]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PROCEDURE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [b26d1acc-be41-47ce-9e7b-c0bf538ada23]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.229]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.229]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [PUBLIC]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ead36128-a9c4-4b6d-a946-4a9dbbd44517]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.237]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.237]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [READ]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [3cb192c3-d37e-4934-b58a-afe0409a3f16]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.245]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.245]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [READS]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [cbbd82ee-8d7d-4656-8abd-40737ebc7851]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.254]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.254]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [REFERENCES]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [0c99fe1c-6db5-44b0-8203-e21ceb98f684]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.263]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.263]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [RELATIVE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a4f829cc-faa8-463f-8b5c-87935f7985f5]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.271]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.271]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [REPEAT]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [14226cdf-362d-4291-b794-eb1b32a22da9]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.284]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.284]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [RESIGNAL]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7e23cc36-ed2d-4531-949e-944be29c6c8a]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.294]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.294]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [RESTRICT]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c1719cd0-41d6-48e8-85c5-de0219a3391b]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.303]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.303]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [RETURN]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [42ef8f8f-0725-47a2-8db5-f2de934ecb3d]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.313]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.313]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [RETURNS]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [4c85ffb1-7ffe-49e4-b70a-c42bd5019d67]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.323]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.323]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [REVOKE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [57eca2a6-b56d-476f-bcf0-a6a918822187]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.33]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.33]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ROLLBACK]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [2285ca05-772c-4773-b935-8a89a78450d1]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.337]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.337]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ROUTINE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a6805218-220e-4f75-9770-401fa9e39374]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.366]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.366]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ROW]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c2a94404-ce29-409f-bf59-2c60ec675482]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.382]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.382]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ROWS]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [2994a80d-4d81-4fa8-8c1d-17b7f9d7f445]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.396]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.396]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SCHEMA]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8e2ead49-4fe6-41d3-ae62-064f6e3e184a]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.399]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.399]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SCROLL]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [3642f551-e994-49a0-afb5-a11c9695af7d]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.411]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.411]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SECTION]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [f4bb03b4-6f08-4af3-a0af-d1908e7847c9]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.42]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.42]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SELECT]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [948abec2-a95d-498f-96ba-ca293ea6fdb1]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.43]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.43]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SEQ]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8489310d-246c-4215-b213-b1c98e104223]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.442]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.442]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SEQUENCE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1ec9865f-b705-4f9e-808d-eba51bd7ee23]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.451]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.451]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SESSION]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [b1c1bfa8-c657-4260-9af1-4c975f2c4422]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.46]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.46]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SESSION_USER]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [456b0358-e47e-45af-b39a-b811b0f7fe61]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.471]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.471]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SESSION_USERID]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ae9866e5-7a96-48d4-b88f-29c256350a96]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.477]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.477]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SET]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [6659255d-3241-463e-8e85-0b9a7374e3e7]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.484]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.484]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SIGNAL]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [fbc786b8-767e-4f6d-93e9-eba8b61a3e32]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.517]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.517]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SOME]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d32bef2d-8d21-4ae6-aa3a-92d3e478b969]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.524]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.524]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SPACE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a3b0aae0-505b-49d3-8e5f-c287372af12a]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.533]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.533]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SPECIFIC]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c2f9a29b-6e23-4393-b864-1a6925c93ecb]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.539]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.539]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SQL]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [edee296f-30f3-451f-879a-d3e69b3188b3]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.548]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.548]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SQLCODE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [bc345b68-05a6-4835-8426-867d7fa9779a]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.565]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.565]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SQLERROR]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [db121f6d-3539-46f1-9310-c37108aa845a]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.574]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.574]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SQLEXCEPTION]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [10fa7d21-678b-4dca-b812-62d7bb37f3dd]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.583]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.583]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SQLSTATE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [55cf6e89-2066-4ac2-9977-3adb761f19d9]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.589]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.589]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SQLWARNING]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ddf7cffb-927f-4527-b871-b52594e1d0df]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.598]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.598]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [STATEMENT]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7326312f-76df-48d1-8889-48e564109c7b]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.605]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.605]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [STRINGATTRIBUTE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e8fdbbb6-6f33-4bd3-8597-b0617b3bdbb1]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.616]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.616]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SUM]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [2d3c4115-a964-4227-b424-b24c88a96718]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.627]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.627]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSACC]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [183a0f00-6c85-40e0-8f4e-80a677c6688a]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.64]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.64]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSHGH]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [340a9523-db39-4c59-bd80-c5404d4a61d8]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.653]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.653]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSLNK]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1edffde1-bbfa-4b4b-95dd-77acc2faba8e]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.659]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.659]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSNIX]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [67d963a9-40c1-438e-9261-9d46498a19be]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.67]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.67]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSTBLDEF]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [557dd5f8-766a-4a47-8774-c64a812df8d9]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.679]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.679]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSTBLDSC]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [b001ed97-684a-46e3-b03e-addf32faf618]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.692]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.692]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSTBT]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8dbc95d2-6a05-4bb4-bf64-c3b8d340522a]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.731]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.731]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSTBTATT]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [a25d455e-d818-40a8-9b6d-095ae08ea5a2]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.749]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.749]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSTBTDEF]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [13228ef3-b0e9-44ae-b57b-5e13c0ad0bde]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.764]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.764]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSUSR]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [67c65948-db40-4d1b-9fc1-109393fdd62e]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.777]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.777]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSTEM_USER]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [901a1e4d-206e-4989-81fa-92d279aca4eb]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.799]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.799]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSVIW]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [cb246d11-36ca-4562-9bf0-cdaf1ad0dc8f]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.824]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.824]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SYSVIWCOL]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1714b8bb-befc-4829-a9a3-5b08cfc53bb5]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.837]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.837]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TABLE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ec958071-b9f9-439d-8bb0-168ba261a9c9]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.851]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.851]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TABLETYPE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [67ea8690-9a9b-4ce3-ab96-f5d5b4fc04ee]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.866]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.866]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TEMPORARY]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [0015ff3e-67be-455a-ac3a-ce57c664c18b]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.882]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.882]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TRANSACTION]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5f2137ad-99c8-4707-a385-1a8d14af9fd8]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.898]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.898]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TRANSLATE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [f9ec84fb-998a-47a6-abe2-fab408786b35]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.911]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.911]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TRANSLATION]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ebbdf3ff-2925-49bb-acde-df66ae2a208f]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.919]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.919]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TRIGGER]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5876a502-0a1e-4bd1-aed1-f836a8dbb8bb]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.931]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.931]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [UNDO]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [9e0c65b5-e5fe-4220-8fb5-4c3133a920d5]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.944]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.944]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [UNION]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [29d740a4-b7cf-4581-8bbb-277e0f28805c]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.954]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.954]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [UNIQUE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e9194742-32e7-4528-9ab1-d81eb1b976e1]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.966]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.966]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [UNTIL]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [fed82496-5b5b-432e-9671-b601c8e4a7d1]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.976]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.977]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [UPDATE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e6628180-01b7-4b61-9edd-c7e54972c06c]
+2022-09-15 12:41:52 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:52.994]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:52.995]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [USAGE]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:52 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1e5bce1b-5cb9-4340-a3c2-68dc8f976246]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.026]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.026]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [USER]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [bd911a07-f418-4458-acff-d3cb22a96705]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.041]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.041]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [USING]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5a11151c-700f-42e0-8ee3-f67ab37bd800]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.057]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.057]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [VALUE]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [1dec1d70-223a-497a-b9fa-6fcaffa7f731]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.069]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.069]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [VALUES]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c976533a-c1b7-4bb8-931f-620990097b99]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.105]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.105]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [VIEW]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [70332cb5-6b40-4454-a6bc-c295f87d6e74]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.116]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.116]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [WHERE]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [4f6b4a42-a4aa-4e6f-9dda-ce3e241ef94f]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.133]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.133]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [WHILE]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [7af708c8-1b91-4539-beda-5679dfcd07c4]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.16]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.16]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [WITH]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d9867c54-f6be-4b6f-a03f-888e54bb2cc7]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.188]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.188]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [WORK]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ec11ca4c-d0ed-4d36-8920-21ef0bc8d967]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.211]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.211]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [WRITE]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [eea30000-0766-4a51-bb72-9f44d58e14ab]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.235]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.235]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLSCHEMAS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [eab83a5c-a7ac-478e-8dec-d716bd0d36ce]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.249]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.249]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLTABLES]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [6e3d7dc6-27ef-4ef8-b45d-00fbd995b982]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.275]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.275]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLVIEWS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ad8a1a7d-96ea-4f32-8d3a-3c62905749f9]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.346]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.346]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLVIEWTEXTS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8051c99f-182b-4df1-bb7a-a3b1c3a419d7]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.421]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.421]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLCOLUMNS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [4f851dd6-41d7-48ca-a202-64fc730ec807]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.43]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.43]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLINDEXES]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [380958c4-4197-481a-88a5-066a40cb1b09]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.446]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.446]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLINDEXCOLS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [98b42011-eb50-4f34-b7c1-4788b0812209]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.457]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.457]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLUSERS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5dbc8fbe-c14f-4e2b-80dd-81ea354a84d6]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.467]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.467]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [ALLTBTS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [5b26b18e-bf66-45a1-a871-c13e8ba5826e]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.475]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.475]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TABLEPRIVILEGES]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [3315e2bb-3bdc-4c45-8448-9022ecbf9425]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.482]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.482]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [TBTPRIVILEGES]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [168120ac-e7da-49e0-9f87-1ba53b7e2cd1]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.49]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.49]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [MYSCHEMAS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [45fde6c6-0aa5-4a39-9e78-13f15c02165d]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.501]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.501]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [MYTABLES]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [e17f8161-c6ef-4b68-b8cf-691696addb24]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.508]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.508]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [MYTBTS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [0514f1ac-a268-4251-822a-7990356ce718]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.514]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.514]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [MYVIEWS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [8a0b1fb0-6942-4aca-9785-d74b449ac44d]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.52]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.52]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SCHEMAVIEWS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ce1eecff-256e-4b83-ad55-d0693af15fa9]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.529]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.529]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DUAL]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [98ed00b2-0010-416c-9979-954b905deb01]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.543]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.543]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SCHEMAPRIVILEGES]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [f2fd16f9-f346-45ff-8ff4-304b50451df3]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.563]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.563]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SCHEMATABLES]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [87d8668a-0f6c-4f58-bf63-b3aa58b2c358]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.576]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.576]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [STATISTICS]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [ad114b07-0d2a-4dff-959c-13edcd26cf88]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.591]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.591]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [USRTBL]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d736b626-088b-417a-8418-f2b68566a136]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.611]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.611]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [STRINGTABLE]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [306fd755-4c97-4388-9242-d9a43b70629e]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.619]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.619]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [LONGTABLE]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d37b17e7-cb30-40b1-807b-495833773eed]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.626]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.626]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [DOUBLETABLE]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [d821be7b-e3e1-4269-8f5e-83b0e324e547]
+2022-09-15 12:41:53 [main] DEBUG org.hibernate.SQL - insert into sensitive_word (created_date, last_modified_date, text, version, id) values (?, ?, ?, ?, ?)
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2022-09-15 12:41:53.634]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2022-09-15 12:41:53.634]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [SELECT * FROM]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [0]
+2022-09-15 12:41:53 [main] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [c2e84a3f-1994-42ee-b41b-a9aaed0addd1]
+2022-09-15 12:44:10 [http-nio-8180-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-15 12:44:10 [http-nio-8180-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-09-15 12:44:10 [http-nio-8180-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 65 ms
+2022-09-15 12:44:11 [http-nio-8180-exec-1] DEBUG org.hibernate.SQL - select sensitivew0_.id as id1_0_, sensitivew0_.created_date as created_2_0_, sensitivew0_.last_modified_date as last_mod3_0_, sensitivew0_.text as text4_0_, sensitivew0_.version as version5_0_ from sensitive_word sensitivew0_
