@@ -14,7 +14,7 @@ spring:
   cloud:
     config:
       # We used the prefix "config-client" in the configuration of config server repository
-      # That means we want to get config data from that configuration file for bloop-censorship-service
+      # That means we want to get config data from that configuration file for bloop-client
       name: bloop-client, config-client
       uri: http://localhost:8888
       username: Bloop
