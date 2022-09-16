@@ -21,7 +21,7 @@ public class LoadBalanceRoutesConfig {
                             .uri("lb://bloop-censorship-service")
             )
             .route("bloop-client", 
-                    r -> r.path("/api/v1/message*", "/api/v1/message/*")
+                    r -> r.path("/messages*", "/messages/*", "/api/v1/message*", "/api/v1/message/*")
                             .uri("lb://bloop-client")
             )                                 
             .build();

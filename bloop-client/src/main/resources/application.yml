@@ -55,7 +55,7 @@ spring:
       # The number of connections that Hikari is going to do to MySQL
       maximum-pool-size: 5
 
-  # Only to initialize data when it is an embedded database. Therefore, this will only work when it's on H2. When not using the bootstrap BeerLoader
+  # Only to initialize data when it is an embedded database. Therefore, this will only work when it's on H2. When not using the bootstrap MailSettingLoader
   # ith Spring Boot 2.5.1 and above, the new SQL initialization properties support detection of embedded datasources for JDBC and R2DBC. By default, SQL database initialization is only performed when using an embedded in-memory database. To always initialize a SQL database, irrespective of its type, set spring.sql.init.mode to always. Similarly, to disable initialization, set spring.sql.init.mode to never
   # https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5-Release-Notes/99c8a8903c9a0a94e2ca29e520d09aee7ec6bac4
   sql:
