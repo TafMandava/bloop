@@ -18,7 +18,7 @@ services:
       context: .
       dockerfile: ./IdentityServer/Dockerfile
     depends_on:
-      - qlserver-container
+      - sqlserver-container
     entrypoint: /bin/sh/ -c "update-c-certificates && dotnet IdentityServer.dll"
 
 
